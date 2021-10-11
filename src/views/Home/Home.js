@@ -5,6 +5,7 @@ import { Section, SectionAlternate } from 'components/organisms';
 import {
   Hero,
   Experts,
+  Carouselview,
   Partners,
 } from './components';
 
@@ -39,9 +40,12 @@ const Home = () => {
         <Section className={classes.pagePaddingTop}>
           <Experts />
         </Section>
-      <Section>
-        <Partners data={integrations} />
-      </Section>
+        <Section className={classes.pagePaddingTop}>
+          <Carouselview />
+        </Section>
+        <Section>
+          <Partners data={integrations} />
+        </Section>
     </div>
   );
 };

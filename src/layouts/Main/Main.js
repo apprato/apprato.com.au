@@ -7,17 +7,17 @@ import { Topbar, Footer, Sidebar } from './components';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: '80px 15.8em 0',
+    padding: '80px 15.8em 40px',
     maxWidth: theme.layout.contentWidth,
     margin: '0 auto 0',
     [theme.breakpoints.down('xl')]: {
-      padding: '80px 11em 0',
+      padding: '80px 11em 40px',
     },
     [theme.breakpoints.down('lg')]: {
-      padding: '80px 7em 0',
+      padding: '80px 7em 40px',
     },
     [theme.breakpoints.down('md')]: {
-      padding: '80px 5em 0',
+      padding: '80px 5em 40px',
     },
     height: '100%',
   },
