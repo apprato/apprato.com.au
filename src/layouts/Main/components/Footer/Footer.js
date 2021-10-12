@@ -153,14 +153,13 @@ const Footer = props => {
             lg={3}
             data-aos={'fade-up'}
           >
-          <a href="javascript:void(0)" className={classes.sociallink}>Linkedin</a>
-          <a href="javascript:void(0)" className={classes.sociallink}>Insta</a>
-          <a href="javascript:void(0)" className={classes.sociallink}>Github</a>
+          <a href="#" className={classes.sociallink}>Linkedin</a>
+          <a href="#" className={classes.sociallink}>Insta</a>
+          <a href="#" className={classes.sociallink}>Github</a>
           </Grid>          
         </Grid>
-        
         <Divider className={classes.devider} />
-        <Typography variant="h7">
+        <Typography variant="subtitle1">
           © 2021 Apprato Pty Ltd. All Right Reserved.
         </Typography>
       </div>

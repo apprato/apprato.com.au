@@ -80,9 +80,6 @@ const Carouselview = props => {
         container
         justify="space-between"
         spacing={4}
-        xs={12}
-        md={12}
-        lg={12}
       >
       <Carousel
       animation='slide'

@@ -5,6 +5,8 @@ import { Section, SectionAlternate } from 'components/organisms';
 import {
   Hero,
   Experts,
+  Readysetcode,
+  Consultants,
   Carouselview,
   Partners,
 } from './components';
@@ -39,6 +41,12 @@ const Home = () => {
         </Section>
         <Section className={classes.pagePaddingTop}>
           <Experts />
+        </Section>        
+        <Section className={classes.pagePaddingTop}>
+          <Readysetcode />
+        </Section>
+        <Section className={classes.pagePaddingTop}>
+          <Consultants />
         </Section>
         <Section className={classes.pagePaddingTop}>
           <Carouselview />

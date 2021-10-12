@@ -7,6 +7,7 @@ import { Topbar, Footer, Sidebar } from './components';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    fontFamily: `'AktivGrotesk'`,
     padding: '80px 15.8em 40px',
     maxWidth: theme.layout.contentWidth,
     margin: '0 auto 0',

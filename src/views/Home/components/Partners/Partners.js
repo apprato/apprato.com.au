@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   root: {},
   logo: {
     maxWidth: '50vw',
-    opacity: '0.45',
+    opacity: '1',
   },
   navigationContainer: {
     display: 'table',

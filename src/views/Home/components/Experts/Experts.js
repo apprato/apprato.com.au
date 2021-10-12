@@ -57,7 +57,6 @@ const Experts = props => {
         container
         justify="space-between"
         spacing={4}
-        direction={isMd ? 'row' : 'column-reverse'}
         className={classes.expertbox}
       >
         <Grid
