@@ -7,8 +7,25 @@ import { SectionHeader } from 'components/molecules';
 import { LearnMoreLink, Image } from 'components/atoms';
 
 const useStyles = makeStyles(theme => ({
-  root: {},
+  root: {
+    "& main":{
+        color: 'pink',
+    }
+  },
+  heading: {
+    paddingRight: '5em',
+    "& h6": {
+      margin: '1.5em 0',
+    }
+  },
+  subtitleWrapper: {
+
+  },
   image: {
+    [theme.breakpoints.up('sm')]: {
+      maxWidth: '80%',
+      paddingLeft: '4rem',
+    },
     [theme.breakpoints.down('sm')]: {
       maxWidth: 500,
     },
@@ -29,8 +46,6 @@ const Hero = props => {
       <Grid
         container
         justify="space-between"
-        spacing={4}
-        direction={isMd ? 'row' : 'column-reverse'}
       >
         <Grid
           item
@@ -39,12 +54,13 @@ const Hero = props => {
           xs={12}
           md={6}
           data-aos={'fade-up'}
+          className={classes.heading}
         >
           <SectionHeader
             title={
-              <span>
+              <div>
                 eCommerce and digital transformation specialists.
-              </span>
+              </div>
             }
             subtitle="We leverage the power of partnerships, experience design and bespoke software development to drive digital transformation, eCommerce and product engineering initiatives."
             ctaGroup={[
@@ -73,7 +89,7 @@ const Hero = props => {
             alt=""
             className={classes.image}
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
+            data-aos-duration="1500"
           />
         </Grid>
       </Grid>

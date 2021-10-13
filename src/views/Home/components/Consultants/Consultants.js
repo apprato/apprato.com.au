@@ -11,17 +11,12 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
   },
-  placementGrid: {
-    display: 'flex',
-  },
-  placementGridItemMiddle: {
-    margin: `0 ${theme.spacing(3)}px`,
-  },
   consultant: {
     borderRadius: '30px',
     backgroundImage: 'linear-gradient(0deg, #ebf0ff 0%, #ffffff 100%)',
     border: '4px solid #ffffff',
     maxWidth: '100%',
+    height: 'auto',
   }
 }));
 

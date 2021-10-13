@@ -8,6 +8,7 @@ import AOS from 'aos';
 import theme from './theme';
 import Routes from './Routes';
 
+import './theme/AktivGrotesk/fonts.css'
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 import 'aos/dist/aos.css';
 

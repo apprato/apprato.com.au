@@ -7,12 +7,12 @@ import { Topbar, Footer, Sidebar } from './components';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    fontFamily: `'AktivGrotesk'`,
+    background: 'url(../images/bg-layers.png) no-repeat top',
     padding: '80px 15.8em 40px',
     maxWidth: theme.layout.contentWidth,
     margin: '0 auto 0',
     [theme.breakpoints.down('xl')]: {
-      padding: '80px 11em 40px',
+      padding: '80px 16.875rem 40px',
     },
     [theme.breakpoints.down('lg')]: {
       padding: '80px 7em 40px',
@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       padding: '0 5em 0',
     },
-  }
+  },
 }));
 
 const Main = props => {

@@ -1,0 +1,33 @@
+
+@font-face {
+    font-family: 'AktivGrotesk';
+    src:url('AktivGrotesk-Regular.woff2') format('woff2'),
+        url('AktivGrotesk-Regular.woff') format('woff'),
+        url('AktivGrotesk-Regular.ttf') format('truetype'),
+        url('AktivGrotesk-Regular.svg#AktivGrotesk-Regular') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AktivGrotesk-Medium';
+    src:url('AktivGrotesk-Medium.woff2') format('woff2'),
+        url('AktivGrotesk-Medium.woff') format('woff'),
+        url('AktivGrotesk-Medium.ttf') format('truetype'),
+        url('AktivGrotesk-Medium.svg#AktivGrotesk-Medium') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AktivGrotesk-Bold';
+    src:url('AktivGrotesk-Bold.woff2') format('woff2'),
+        url('AktivGrotesk-Bold.woff') format('woff'),
+        url('AktivGrotesk-Bold.ttf') format('truetype'),
+        url('AktivGrotesk-Bold.svg#AktivGrotesk-Bold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

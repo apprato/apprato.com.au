@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import {
+  Grid,
   Toolbar,
   Hidden,
   List,
@@ -24,25 +25,31 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    padding: '33px 0px 0',
   },
   toolbar: {
     maxWidth: theme.layout.contentWidth,
     width: '100%',
     margin: '0 auto',
-    padding: theme.spacing(0, 0),
+    padding: theme.spacing(0, 0, '11.0625rem'),
   },
   listItem: {
     cursor: 'pointer',
-    paddingTop: 0,
-    paddingBottom: 0,
+    padding: '0 1.875rem',
   },
   listItemText: {
     flex: '0 0 auto',
     whiteSpace: 'nowrap',
     textDecoration: 'none',
+    fontSize: '2rem',
+    color: '#202f43',
   },
   listItemButton: {
     whiteSpace: 'nowrap',
+    borderRadius: '16px',
+    minWidth: '246px',
+    fontSize: '2rem',
+    textTransform: 'initial',
   },
   iconButton: {
     padding: 0,
@@ -51,10 +58,8 @@ const useStyles = makeStyles(theme => ({
     },
   },
   logoContainer: {
-      width: '13.3rem',
+      width: '32.375rem',
       height: 'auto',
-  },
-  logoImage: {
   },
 }));
 
@@ -64,99 +69,138 @@ const Topbar = props => {
   const classes = useStyles();
 
   return (
-    <Toolbar disableGutters className={classes.toolbar} {...rest}>
-      <div className={classes.logoContainer}>
-        <a href="/" title="thefront">
-          <Image
-            className={classes.logoImage}
-            src="/images/Apprato_Logo.svg"
-            alt="thefront"
-            lazy={false}
-          />
-        </a>
-      </div>
-      <div className={classes.flexGrow} />
-      <Hidden smDown>
-        <List className={classes.navigationContainer}>
-          <ListItem className={classes.listItem}>
-            <Typography
-              variant="body1"
-              color="textSecondary"
-              className={classes.listItemText}
-              component="a"
-              href="/home"
-            >
-              Home
-            </Typography>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Typography
-              variant="body1"
-              color="textSecondary"
-              className={classes.listItemText}
-              component="a"
-              href="/about"
-            >
-              About
-            </Typography>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Typography
-              variant="body1"
-              color="textSecondary"
-              className={classes.listItemText}
-              component="a"
-              href="/services"
-            >
-              Services
-            </Typography>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Typography
-              variant="body1"
-              color="textSecondary"
-              className={classes.listItemText}
-              component="a"
-              href="/team"
-            >
-              Team
-            </Typography>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Typography
-              variant="body1"
-              color="textSecondary"
-              className={classes.listItemText}
-              component="a"
-              href="/case-studies"
-            >
-              Case Studies
-            </Typography>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Button
-              size="large"
-              variant="contained"
-              color="primary"
-              component="a"
-              target="blank"
-              href="/contact"
-              className={classes.listItemButton}
-            >
-              Contact
-            </Button>
-          </ListItem>
-        </List>
-      </Hidden>
-      <Hidden mdUp>
-        <IconButton
-          className={classes.iconButton}
-          onClick={onSidebarOpen}
-          aria-label="Menu"
+      <Toolbar disableGutters className={classes.toolbar} {...rest}>
+      <Grid
+          container
+          justify="space-between"
+          spacing={4}
         >
-          <MenuIcon />
-        </IconButton>
-      </Hidden>
+          <Grid
+            item
+            container
+            alignItems="center"
+            xs={4}
+            md={3}
+            lg={3}
+            xl={4}
+            data-aos={'fade-up'}
+          >
+
+        <div className={classes.logoContainer}>
+          <a href="/" title="thefront">
+            <Image
+              className={classes.logoImage}
+              src="/images/Apprato_Logo.svg"
+              alt="thefront"
+              lazy={false}
+            />
+          </a>
+        </div>
+        </Grid>
+        <Grid
+          item
+          container
+          alignItems="left"
+          justify="flex-start"
+          xs={4}
+          md={3}
+          lg={3}
+          xl={5}
+          data-aos={'fade-up'}
+        >
+          <Hidden smDown>
+            <List className={classes.navigationContainer}>
+              <ListItem className={classes.listItem}>
+                <Typography
+                  variant="body1"
+                  color="textSecondary"
+                  className={classes.listItemText}
+                  component="a"
+                  href="/home"
+                >
+                  Home
+                </Typography>
+              </ListItem>
+              <ListItem className={classes.listItem}>
+                <Typography
+                  variant="body1"
+                  color="textSecondary"
+                  className={classes.listItemText}
+                  component="a"
+                  href="/about"
+                >
+                  About
+                </Typography>
+              </ListItem>
+              <ListItem className={classes.listItem}>
+                <Typography
+                  variant="body1"
+                  color="textSecondary"
+                  className={classes.listItemText}
+                  component="a"
+                  href="/services"
+                >
+                  Services
+                </Typography>
+              </ListItem>
+              <ListItem className={classes.listItem}>
+                <Typography
+                  variant="body1"
+                  color="textSecondary"
+                  className={classes.listItemText}
+                  component="a"
+                  href="/team"
+                >
+                  Team
+                </Typography>
+              </ListItem>
+              <ListItem className={classes.listItem}>
+                <Typography
+                  variant="body1"
+                  color="textSecondary"
+                  className={classes.listItemText}
+                  component="a"
+                  href="/case-studies"
+                >
+                  Case Studies
+                </Typography>
+              </ListItem>
+            </List>
+          </Hidden>
+          <Hidden mdUp>
+            <IconButton
+              className={classes.iconButton}
+              onClick={onSidebarOpen}
+              aria-label="Menu"
+            >
+              <MenuIcon />
+            </IconButton>
+          </Hidden>
+          <div className={classes.flexGrow} />
+        </Grid>
+        <Grid
+          item
+          container
+          justify="flex-end"
+          alignItems="center"
+          xs={12}
+          md={4}
+          lg={3}
+          xl={2}
+        >
+          <Button
+            size="large"
+            variant="contained"
+            color="primary"
+            component="a"
+            target="blank"
+            href="/contact"
+            className={classes.listItemButton}
+          >
+            Contact
+          </Button>
+        </Grid>
+    </Grid>
     </Toolbar>
   );
 };

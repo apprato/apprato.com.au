@@ -1,7 +1,4 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core';
-import AktivGroteskReg from './AktivGrotesk/AktivGrotesk-Regular.woff2';
-import AktivGroteskMed from './AktivGrotesk/AktivGrotesk-Medium.ttf';
-import AktivGroteskBold from './AktivGrotesk/AktivGrotesk-Bold.ttf';
 import palette from './palette';
 
 const defaultTheme = createMuiTheme({});
@@ -9,10 +6,58 @@ const { breakpoints, typography: { pxToRem } } = defaultTheme
 
 const theme = responsiveFontSizes(
   createMuiTheme({
+
+    // Breakpoints
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 479,
+        md: 676,
+        lg: 1220,
+        xl: 1700,
+      },
+    },
+    // Custom fonts - calculated using Rem to pixel converton, 1 rem = 16px
+    // https://offroadcode.com/rem-calculator/
+    typography: {
+      fontFamily: "AktivGrotesk",
+      fontWeight: '500',
+      color: '#202f43',
+      h1: {
+        fontFamily: "AktivGrotesk-Bold",
+      },
+      h2: {
+        fontFamily: "AktivGrotesk-Medium",
+        fontSize: '6.5em',
+        letterSpacing: '-1px',
+      },
+      h3: {
+        fontFamily: "AktivGrotesk-Medium",
+        fontSize: '5.875em',
+      },
+      h4: {
+        fontFamily: "AktivGrotesk-Medium",
+      },
+      h5: {
+        fontFamily: "AktivGrotesk-Medium",
+      },
+      h6: {
+        fontFamily: "AktivGrotesk",
+        fontSize: '2em',
+      },
+      button: {
+        fontFamily: "AktivGrotesk-Medium",
+        fontWeight: '500',
+      },
+      body1: {
+        fontFamily: "AktivGrotesk",
+      },
+    },
+
     overrides: {
     MuiTypography: {
       headline: {
-        fontSize: pxToRem(24),
+        fontSize: pxToRem(50),
         [breakpoints.up("md")]: {
           fontSize: pxToRem(32)
         }
@@ -23,24 +68,8 @@ const theme = responsiveFontSizes(
       contentWidth: 2880,
       background: 'none',
     },
-    typography: {
-      fontSize: 20,
-      fontFamily: [
-        `'AktivGrotesk'`,
-      ].join(','),
-    },
     components: {
       MuiCssBaseline: {
-        styleOverrides: `
-          @font-face {
-            font-family: 'AktivGroteskReg';
-            font-style: normal;
-            font-display: swap;
-            font-weight: 400;
-            src: local('AktivGrotesk'), local('AktivGrotesk-Regular'), url(${AktivGroteskReg}) format('woff2');
-            unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
-          }
-        `,
       },
     },
     zIndex: {
@@ -49,8 +78,17 @@ const theme = responsiveFontSizes(
     },
     overrides: {
       MuiButton: {
-        containedSecondary: {
-          color: 'pink',
+        root: {
+          // Some CSS
+          boxShadow: 'none',
+          '&:hover': {
+            textDecoration: 'none',
+            backgroundColor: '#35C37D',
+            // Reset on touch devices, it doesn't add specificity
+            '@media (hover: none)': {
+              backgroundColor: '#35C37D',
+            },
+          },
         },
       },
     },
@@ -58,3 +96,5 @@ const theme = responsiveFontSizes(
 );
 
 export default theme;
+
+

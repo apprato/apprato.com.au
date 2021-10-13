@@ -12,12 +12,16 @@ import ListItemText from '@material-ui/core/ListItemText';
 const useStyles = makeStyles(theme => ({
   root: {},
   image:{
-    maxWidth: '10vw',
-    padding: '0 2.2vw',
+    width: '17.4em',
+    margin: '0 3em',
+  },
+  imagefirst:{
+    width: '17.4em',
+    margin: '0 3em 0 0',
   },
   imagelast:{
-    maxWidth: '10vw',
-    padding: '0 0',
+    width: '17.4em',
+    margin: '0 0 0 3em',
   },
   expertbox: {
     filter: 'drop-shadow(0px 20px 35px rgba(13,68,255,0.2))',
@@ -26,7 +30,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       maxWidth: 500,
     },
-    padding: '0 2.2vw',
+    padding: '4.375em 6.25rem',
+    margin: '9.375em auto',
+    width: '100%',
   },
 }));
 
@@ -56,7 +62,7 @@ const Experts = props => {
       <Grid
         container
         justify="space-between"
-        spacing={4}
+        spacing={0}
         className={classes.expertbox}
       >
         <Grid
@@ -64,19 +70,13 @@ const Experts = props => {
           container
           alignItems="center"
           xs={12}
-          md={4}
+          md={5}
           data-aos={'fade-up'}
         >
-          <SectionHeader
-            title={
-              <span>
-                certified experts.
-              </span>
-            }
-            align="left"
-            disableGutter
-            titleVariant="h2"
-          />
+        <Typography variant="h3">
+          certified experts.
+        </Typography>
+
         <List style={flexContainer}>
           <ListItem>Adobe Certified Expert Commerce Developer</ListItem>
           <ListItem>Magento2 Certified Cloud Developer</ListItem>
@@ -91,13 +91,13 @@ const Experts = props => {
           justify="flex-start"
           alignItems="center"
           xs={12}
-          md={8}
+          md={7}
           data-aos={'fade-up'}
         >
           <Image
             src="/images/Layer_125.png"
             alt=""
-            className={classes.image}
+            className={classes.imagefirst}
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
           />
