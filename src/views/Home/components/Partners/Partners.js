@@ -16,14 +16,14 @@ import {
 const useStyles = makeStyles(theme => ({
   root: {},
   logo: {
-    maxWidth: '50vw',
+    maxWidth: '7vw',
     opacity: '1',
   },
   navigationContainer: {
     display: 'table',
     alignItems: 'center',
     margin: '0 auto',
-    padding: '5em 0',
+    padding: '8rem 0',
   },
   listItem: {
     cursor: 'pointer',
@@ -36,6 +36,7 @@ const useStyles = makeStyles(theme => ({
     lineHeight: '0',
     color: '#202f43',
     fontWeight: 500,
+    padding: '0',
     flex: '0 0 auto',
     whiteSpace: 'nowrap',
     textDecoration: 'none',
@@ -49,8 +50,8 @@ const useStyles = makeStyles(theme => ({
     whiteSpace: 'nowrap',
   },  
   partners: {
-    alignItems: 'center',
-    margin: '0 auto',
+    textAlign: 'center',
+    margin: '0 auto 17.1875rem',
     display: 'block',
   },
 }));
@@ -66,21 +67,17 @@ const Partners = props => {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Grid container> 
-        <Grid item xs={12} md={12} data-aos="fade-up">
-          <SectionHeader
-            title="From connected services to commerce platforms, we provide you with the custom tools you need to emerge as a leader in your industry."
-            subtitle=""
-            align="center"
-            label=""
-            disableGutter
-          />
+      <Grid container spaces={0}> 
+        <Grid item xs={12} md={12} justify="flex-start" align="center">
+        <Typography variant="h4">
+          From connected services to commerce platforms, we provide you with the custom tools you need to emerge as a leader in your industry.
+        </Typography>
         </Grid>
       </Grid>
       <List className={classes.navigationContainer}>
           <ListItem className={classes.listItem}>
             <Typography
-              variant="body1"
+              variant="subtitle2"
               color="textSecondary"
               className={classes.listItemText}
               component="a"
@@ -91,7 +88,7 @@ const Partners = props => {
           </ListItem>
           <ListItem className={classes.listItem}>
             <Typography
-              variant="body1"
+              variant="subtitle2"
               color="textSecondary"
               className={classes.listItemText}
               component="a"
@@ -102,7 +99,7 @@ const Partners = props => {
           </ListItem>
           <ListItem className={classes.listItem}>
             <Typography
-              variant="body1"
+              variant="subtitle2"
               color="textSecondary"
               className={classes.listItemText}
               component="a"
@@ -113,7 +110,7 @@ const Partners = props => {
           </ListItem>
           <ListItem className={classes.listItem}>
             <Typography
-              variant="body1"
+              variant="subtitle2"
               color="textSecondary"
               className={classes.listItemText}
               component="a"
@@ -124,7 +121,7 @@ const Partners = props => {
           </ListItem>
           <ListItem className={classes.listItem}>
             <Typography
-              variant="body1"
+              variant="subtitle2"
               color="textSecondary"
               className={classes.listItemText}
               component="a"
@@ -135,8 +132,8 @@ const Partners = props => {
           </ListItem>
         </List>
       <Grid container className={classes.partners}>
-        <Grid item data-aos="fade-up">
-          <Grid container spacing={6} justif="center" alignItems="center">
+        <Grid item data-aos="fade-up" justif="center" >
+          <Grid container justif="center" alignItems="center">
             {data.map((item, index) => (
               <Grid item xs={5} md={2} key={index}>
                   <Image

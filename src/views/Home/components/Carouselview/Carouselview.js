@@ -27,38 +27,23 @@ const useStyles = makeStyles(theme => ({
   },
   imageleft: {
     backgroundImage: `url(${"../images/Aquila_Image.jpg"})`,
-    minHeight: '862px',
+    minHeight: '23.35vw',
     backgroundSize: 'cover',
     backgroundPosition: '-179px -116px',
     backgroundRepeat: 'no-repeat',
     width: `calc(100vw + 48px)`,
+  },
+  whitebg: {
+    background: '#fff',
+    padding: '6.25em',
+  },
+  headingh2:{
+    marginBottom: '180px',
+  },
+  title:{
+    marginBottom: '120px',
   }
 }));
-
-var items = [
-    {
-        name: "Random Name #1",
-        description: "Probably the most random thing you have ever seen!"
-    },
-    {
-        name: "Random Name #2",
-        description: "Hello World!"
-    }
-]
-
-function Item(props)
-{
-    return (
-        <Paper>
-            <h2>{props.item.name}</h2>
-            <p>{props.item.description}</p>
-
-            <Button className="CheckButton">
-                Check it out!
-            </Button>
-        </Paper>
-    )
-}
 
 const Carouselview = props => {
   const { className, ...rest } = props;
@@ -67,19 +52,16 @@ const Carouselview = props => {
   return (
     <div>
      <Grid
+        className={classes.title}
         container
-        justify="space-between"
-        spacing={4}
         xs={12}
         md={6}
         lg={6}
       >
-        <Typography variant="h6">Delivering accelerated outcomes by working in accountable partnership.</Typography>
-      </Grid>
-     <Grid
+        <Typography variant="h5">Delivering accelerated outcomes by working in accountable partnership.</Typography>
+    </Grid>
+   <Grid
         container
-        justify="space-between"
-        spacing={4}
       >
       <Carousel
       animation='slide'
@@ -89,7 +71,6 @@ const Carouselview = props => {
       <Grid
         container
         justify="space-between"
-        spacing={4}
       >
         <Grid
           item
@@ -104,58 +85,28 @@ const Carouselview = props => {
         <Grid
           item
           container
+          className={classes.whitebg}
+          justify="flex-start"
           alignItems="center"
           xs={12}
           md={6}
           lg={6}
         > 
-        <Typography variant="h3" display="block">
+        <Typography variant="h2" display="block" className={classes.headingh2}>
+          Aquila
+        </Typography>
+        <Typography variant="h4" display="block">
           Supporting  Aquilas growth
         </Typography>
 
-        <Typography variant="h6">
+        <Typography variant="body1">
           Development
         </Typography>
-        <Typography>
+        <Typography variant="subtitle1">
           As part of the brand expansion, Apprato worked with Aquila to increase their digital reach and support their growing eCommerce requirements . We integrated Emarsys Omnichannel Customer Engagement Platform to allow Aquila to export data feeds and develop mail lists and record sales metric engagements with front-end engagement trackers. We updated the payment gateway to Braintree with Kount for AI Driven Fraud Protection. And implemented an Advanced Look Book Engine to show case seasonal fashion apparel.
         </Typography>
         </Grid>
-      </Grid>
-      <Grid
-        container
-        justify="space-between"
-        spacing={4}
-      >
-        <Grid
-          item
-          container
-          alignItems="center"
-          xs={12}
-          md={6}
-          lg={6}
-        >
-        <div className={classes.imageleft}></div>
-        </Grid>
-        <Grid
-          item
-          container
-          alignItems="center"
-          xs={12}
-          md={6}
-          lg={6}
-        > 
-        <Typography variant="h3" display="block">
-          Supporting  Aquilas growth
-        </Typography>
-
-        <Typography variant="h6">
-          Development
-        </Typography>
-        <Typography>
-          As part of the brand expansion, Apprato worked with Aquila to increase their digital reach and support their growing eCommerce requirements . We integrated Emarsys Omnichannel Customer Engagement Platform to allow Aquila to export data feeds and develop mail lists and record sales metric engagements with front-end engagement trackers. We updated the payment gateway to Braintree with Kount for AI Driven Fraud Protection. And implemented an Advanced Look Book Engine to show case seasonal fashion apparel.
-        </Typography>
-        </Grid>
-      </Grid>
+      </Grid>      
     </Carousel>
     </Grid>
     </div>

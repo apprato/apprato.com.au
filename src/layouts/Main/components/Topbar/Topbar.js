@@ -32,6 +32,9 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     margin: '0 auto',
     padding: theme.spacing(0, 0, '11.0625rem'),
+    [theme.breakpoints.down('md')]: {
+      padding: theme.spacing(0, 0, '50px'),
+    }
   },
   listItem: {
     cursor: 'pointer',
@@ -58,8 +61,11 @@ const useStyles = makeStyles(theme => ({
     },
   },
   logoContainer: {
-      width: '32.375rem',
-      height: 'auto',
+    width: '32.375rem',
+    height: 'auto',
+      [theme.breakpoints.down('md')]: {
+        width: '18.75em',
+      }
   },
 }));
 
@@ -73,19 +79,17 @@ const Topbar = props => {
       <Grid
           container
           justify="space-between"
-          spacing={4}
         >
           <Grid
             item
             container
             alignItems="center"
-            xs={4}
-            md={3}
+            xs={8}
+            md={8}
             lg={3}
             xl={4}
             data-aos={'fade-up'}
           >
-
         <div className={classes.logoContainer}>
           <a href="/" title="thefront">
             <Image
@@ -102,8 +106,8 @@ const Topbar = props => {
           container
           alignItems="left"
           justify="flex-start"
-          xs={4}
-          md={3}
+          xs={2}
+          md={2}
           lg={3}
           xl={5}
           data-aos={'fade-up'}
@@ -167,6 +171,29 @@ const Topbar = props => {
               </ListItem>
             </List>
           </Hidden>
+        </Grid>
+        <Grid
+          item
+          container
+          justify="flex-end"
+          alignItems="center"
+          xs={2}
+          md={2}
+          lg={3}
+          xl={2}
+        >
+        <Hidden smDown>
+          <Button
+            size="large"
+            variant="contained"
+            color="primary"
+            component="a"
+            href="/contact"
+            className={classes.listItemButton}
+          >
+            Contact
+          </Button>
+          </Hidden>
           <Hidden mdUp>
             <IconButton
               className={classes.iconButton}
@@ -176,31 +203,9 @@ const Topbar = props => {
               <MenuIcon />
             </IconButton>
           </Hidden>
-          <div className={classes.flexGrow} />
         </Grid>
-        <Grid
-          item
-          container
-          justify="flex-end"
-          alignItems="center"
-          xs={12}
-          md={4}
-          lg={3}
-          xl={2}
-        >
-          <Button
-            size="large"
-            variant="contained"
-            color="primary"
-            component="a"
-            target="blank"
-            href="/contact"
-            className={classes.listItemButton}
-          >
-            Contact
-          </Button>
-        </Grid>
-    </Grid>
+      </Grid>
+    <div className={classes.flexGrow} />
     </Toolbar>
   );
 };

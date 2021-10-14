@@ -46,39 +46,61 @@ const SidebarNav = props => {
           <CloseIcon fontSize="small" />
         </ListItemIcon>
       </ListItem>
-      <ListItem className={classes.listItem}>
-        <Typography
+        <ListItem className={classes.listItem}>
+          <Typography
           variant="h6"
-          color="primary"
-          component="a"
-          href="/home"
-          className={classes.listItemLink}
-        >
-          Home
-        </Typography>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Typography
+            color="textSecondary"
+            className={classes.listItemLink}
+            component="a"
+            href="/home"
+          >
+            Home
+          </Typography>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+          <Typography
           variant="h6"
-          color="primary"
-          component="a"
-          href="/signup-simple"
-          className={classes.listItemLink}
-        >
-          Sign up
-        </Typography>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Typography
+            color="textSecondary"
+            className={classes.listItemLink}
+            component="a"
+            href="/about"
+          >
+            About
+          </Typography>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+          <Typography
           variant="h6"
-          color="primary"
-          component="a"
-          href="/not-found"
-          className={classes.listItemLink}
-        >
-          Error page
-        </Typography>
-      </ListItem>
+            color="textSecondary"
+            className={classes.listItemLink}
+            component="a"
+            href="/services"
+          >
+            Services
+          </Typography>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+          <Typography
+          variant="h6"
+            color="textSecondary"
+            className={classes.listItemLink}
+            component="a"
+            href="/team"
+          >
+            Team
+          </Typography>
+        </ListItem>
+        <ListItem className={classes.listItem}>
+          <Typography
+          variant="h6"
+            color="textSecondary"
+            className={classes.listItemLink}
+            component="a"
+            href="/case-studies"
+          >
+            Case Studies
+          </Typography>
+        </ListItem>
       <ListItem className={classes.listItem}>
         <Button
           size="large"
@@ -86,10 +108,9 @@ const SidebarNav = props => {
           color="primary"
           fullWidth
           component="a"
-          target="blank"
-          href="https://material-ui.com/store/items/the-front-landing-page/"
+          href="/contact"
         >
-          Upgrade Now
+          Contact
         </Button>
       </ListItem>
     </List>

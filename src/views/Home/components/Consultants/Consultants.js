@@ -11,12 +11,28 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
   },
+  consultantTitle:{
+    marginTop: '18.75rem',
+    marginBottom: '6.25rem',
+  },
   consultant: {
     borderRadius: '30px',
     backgroundImage: 'linear-gradient(0deg, #ebf0ff 0%, #ffffff 100%)',
     border: '4px solid #ffffff',
-    maxWidth: '100%',
+    width: '100%',
     height: 'auto',
+  },
+  consultantimage:{
+    lineHeight: '2.75rem',
+    padding: '0 3.75em',
+  },
+  subline: {
+    display: 'inline-block',
+    lineHeight: '60px',
+    marginBottom: '50px',
+  },
+  sectionstyle: {
+    marginBottom: '400px',
   }
 }));
 
@@ -25,29 +41,28 @@ const Consultants = props => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.sectionstyle}>
      <Grid
         container
         justify="space-between"
-        spacing={4}
+        className={classes.consultantTitle}
       >
-        <Typography variant="h3">featured consultants.</Typography>
-    </Grid>
-     <Grid
+      <Typography variant="h2">featured consultants.</Typography>
+      </Grid>
+      <Grid
         container
         justify="space-between"
-        spacing={4}
       >
       <Carousel
       animation='slide'
       autoplay='0'
+      indicators='false'
       //NextIcon={<img src="http://random.com/next"/>}
       //PrevIcon={<img src="http://random.com/prev"/>}
       >
       <Grid
         container
         justify="space-between"
-        spacing={4}
       >
         <Grid
           item
@@ -63,6 +78,7 @@ const Consultants = props => {
         <Grid
           item
           container
+          className={classes.consultantimage}
           justify="flex-start"
           alignItems="left"
           xs={12}
@@ -74,7 +90,7 @@ const Consultants = props => {
           Jordan Pierce
         </Typography>
 
-        <Typography variant="subtitle1">
+        <Typography variant="subtitle2" className={classes.subline}>
           Senior Software Developer
         </Typography>
         <Typography variant="subtitle1">
@@ -82,7 +98,7 @@ const Consultants = props => {
           AWS Certified<br/>
           System Integration<br/>
         </Typography>
-        <Typography>
+        <Typography variant="h6">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex onsequat.
         </Typography>
         </Grid>
@@ -100,6 +116,7 @@ const Consultants = props => {
         <Grid
           item
           container
+          className={classes.consultantimage}
           justify="flex-start"
           alignItems="left"
           xs={12}
@@ -110,7 +127,7 @@ const Consultants = props => {
           Vishal Panchal
         </Typography>
 
-        <Typography variant="subtitle1">
+        <Typography variant="subtitle2" className={classes.subline}>
           Senior Software Developer
         </Typography>
         <Typography variant="subtitle1">
@@ -118,15 +135,14 @@ const Consultants = props => {
           AWS Certified<br/>
           System Integration<br/>
         </Typography>
-        <Typography>
+        <Typography variant="h6">
           We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
         </Typography>
         </Grid>
       </Grid>
-      <Grid
+            <Grid
         container
         justify="space-between"
-        spacing={4}
       >      
         <Grid
           item
@@ -142,6 +158,7 @@ const Consultants = props => {
         <Grid
           item
           container
+          className={classes.consultantimage}
           justify="flex-start"
           alignItems="left"
           xs={12}
@@ -152,7 +169,7 @@ const Consultants = props => {
           Stephen Goudy
         </Typography>
 
-        <Typography variant="subtitle1">
+        <Typography variant="subtitle2" className={classes.subline}>
           Senior Software Developer
         </Typography>
         <Typography variant="subtitle1">
@@ -160,11 +177,11 @@ const Consultants = props => {
           AWS Certified<br/>
           System Integration<br/>
         </Typography>
-        <Typography  variant="body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex onsequat.
+        <Typography variant="h6">
+          We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
         </Typography>
-        </Grid>        
-      </Grid>      
+        </Grid>
+      </Grid>
     </Carousel>
     </Grid>
     </div>

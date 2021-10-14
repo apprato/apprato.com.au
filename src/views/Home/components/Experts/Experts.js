@@ -12,16 +12,19 @@ import ListItemText from '@material-ui/core/ListItemText';
 const useStyles = makeStyles(theme => ({
   root: {},
   image:{
-    width: '17.4em',
-    margin: '0 3em',
+    margin: '0 5%',
+    padding: 0,
+    display: 'inline',
   },
   imagefirst:{
-    width: '17.4em',
-    margin: '0 3em 0 0',
+    margin: '0 5% 0 1%',
+    padding: 0,
+    display: 'inline',
   },
   imagelast:{
-    width: '17.4em',
-    margin: '0 0 0 3em',
+    margin: '0 0 0 5%',
+    padding: 0,
+    display: 'inline',
   },
   expertbox: {
     filter: 'drop-shadow(0px 20px 35px rgba(13,68,255,0.2))',
@@ -31,9 +34,15 @@ const useStyles = makeStyles(theme => ({
       maxWidth: 500,
     },
     padding: '4.375em 6.25rem',
-    margin: '9.375em auto',
-    width: '100%',
+    margin: '9.375em -30px',
+    width: 'auto',
   },
+  experts: {
+    margin: '40px 20px 0',
+  },
+  images:{
+    //display: 'contents',
+  }
 }));
 
 function generate(element) {
@@ -53,8 +62,12 @@ const Experts = props => {
     defaultMatches: true,
   });
 
-  const flexContainer = {
+  const flexitems = {
+    lineHeight: '42px',
+    fontSize: '32px',
     padding: 0,
+    listStyle: 'inside',
+    display: 'list-item',
   };
 
   return (
@@ -62,7 +75,7 @@ const Experts = props => {
       <Grid
         container
         justify="space-between"
-        spacing={0}
+        spacing={10, 0}
         className={classes.expertbox}
       >
         <Grid
@@ -73,55 +86,63 @@ const Experts = props => {
           md={5}
           data-aos={'fade-up'}
         >
-        <Typography variant="h3">
+        <Typography variant="h3" style={{ color: "#0e44ff" }}>
           certified experts.
         </Typography>
 
-        <List style={flexContainer}>
-          <ListItem>Adobe Certified Expert Commerce Developer</ListItem>
-          <ListItem>Magento2 Certified Cloud Developer</ListItem>
-          <ListItem>AWS Certified Cloud Practitioner</ListItem>
-          <ListItem>Prince2 Foundation Certified Developer</ListItem>
+        <List className={classes.experts}>
+          <ListItem style={flexitems}>Adobe Certified Expert Commerce Developer</ListItem>
+          <ListItem style={flexitems}>Magento2 Certified Cloud Developer</ListItem>
+          <ListItem style={flexitems}>AWS Certified Cloud Practitioner</ListItem>
+          <ListItem style={flexitems}>Prince2 Foundation Certified Developer</ListItem>
         </List>
 
         </Grid>
         <Grid
           item
           container
-          justify="flex-start"
           alignItems="center"
+          justifyContent="center"
+          justify="flex-start"
           xs={12}
           md={7}
           data-aos={'fade-up'}
+          className={classes.images}
         >
+        <List style={{width: '100%'}}>
+          <ListItem className={classes.imagefirst}>
           <Image
             src="/images/Layer_125.png"
             alt=""
-            className={classes.imagefirst}
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
           />
+          </ListItem>
+          <ListItem className={classes.image}>
           <Image
             src="/images/Layer_129.png"
             alt=""
-            className={classes.image}
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
           />
+          </ListItem>
+          <ListItem className={classes.image}>
           <Image
             src="/images/Layer_123.png"
             alt=""
-            className={classes.image}
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
           />
+          </ListItem>
+          <ListItem className={classes.imagelast}>
           <Image
             src="/images/Layer_128.png"
             alt=""
-            className={classes.imagelast}
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
           />
+          </ListItem>
+          </List>
         </Grid>
       </Grid>
     </div>

@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
       padding: '80px 7em 40px',
     },
     [theme.breakpoints.down('md')]: {
-      padding: '80px 5em 40px',
+      padding: '30px 2em 0',
     },
     height: '100%',
   },
@@ -74,7 +74,6 @@ const Main = props => {
       <main>
         {children}
       </main>
-      <Divider />
     </div>
     <div>
       <div className={clsx({

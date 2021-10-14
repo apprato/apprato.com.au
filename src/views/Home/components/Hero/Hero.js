@@ -26,10 +26,15 @@ const useStyles = makeStyles(theme => ({
       maxWidth: '80%',
       paddingLeft: '4rem',
     },
-    [theme.breakpoints.down('sm')]: {
-      maxWidth: 500,
+    [theme.breakpoints.down('md')]: {
+      maxWidth: '576px',
     },
   },
+  reversemob:{
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column-reverse',
+    },
+  }
 }));
 
 const Hero = props => {
@@ -46,6 +51,7 @@ const Hero = props => {
       <Grid
         container
         justify="space-between"
+        className={classes.reversemob}
       >
         <Grid
           item

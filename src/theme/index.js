@@ -12,14 +12,16 @@ const theme = responsiveFontSizes(
       values: {
         xs: 0,
         sm: 479,
-        md: 676,
+        md: 768,
         lg: 1220,
         xl: 1700,
       },
     },
+    spacing: 4,
     // Custom fonts - calculated using Rem to pixel converton, 1 rem = 16px
     // https://offroadcode.com/rem-calculator/
     typography: {
+      fontSize: 16,
       fontFamily: "AktivGrotesk",
       fontWeight: '500',
       color: '#202f43',
@@ -28,6 +30,7 @@ const theme = responsiveFontSizes(
       },
       h2: {
         fontFamily: "AktivGrotesk-Medium",
+        //fontSize: pxToRem(50),
         fontSize: '6.5em',
         letterSpacing: '-1px',
       },
@@ -37,13 +40,28 @@ const theme = responsiveFontSizes(
       },
       h4: {
         fontFamily: "AktivGrotesk-Medium",
+        fontSize: '3.75em',
+        fontWeight: '500',
       },
       h5: {
         fontFamily: "AktivGrotesk-Medium",
+        fontSize: '3em',
+        fontWeight: '500',
       },
       h6: {
         fontFamily: "AktivGrotesk",
         fontSize: '2em',
+        fontWeight: '500',
+      },
+      subtitle1: {
+        fontFamily: "AktivGrotesk-Medium",
+        fontSize: '1.75em',
+        fontWeight: '500',
+      },
+      subtitle2: {
+        fontFamily: "AktivGrotesk-Medium",
+        fontSize: '2em',
+        fontWeight: '500',
       },
       button: {
         fontFamily: "AktivGrotesk-Medium",
@@ -57,9 +75,8 @@ const theme = responsiveFontSizes(
     overrides: {
     MuiTypography: {
       headline: {
-        fontSize: pxToRem(50),
         [breakpoints.up("md")]: {
-          fontSize: pxToRem(32)
+        //fontSize: pxToRem(32)
         }
       }
     }},
@@ -67,10 +84,6 @@ const theme = responsiveFontSizes(
     layout: {
       contentWidth: 2880,
       background: 'none',
-    },
-    components: {
-      MuiCssBaseline: {
-      },
     },
     zIndex: {
       appBar: 1200,
