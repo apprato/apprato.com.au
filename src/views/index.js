@@ -1,3 +1,6 @@
 export { default as Home } from './Home';
-export { default as NotFound } from './NotFound';
-export { default as SignupSimple } from './SignupSimple';
+export { default as About } from './About';
+export { default as Services } from './Services';
+export { default as Team } from './Team';
+export { default as CaseStudies } from './CaseStudies';
+export { default as Contact } from './Contact';

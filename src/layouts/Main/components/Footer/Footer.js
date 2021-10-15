@@ -14,6 +14,8 @@ import { SectionHeader, CountUpNumber } from 'components/molecules';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    color: '#fff',
+    "& h6 a": {color: '#fff', textDecoration:'none'},
     padding: theme.spacing(3, 0),
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(6, 0),
@@ -23,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: theme.layout.contentWidth,
     width: '100%',
     margin: '0 auto',
-    padding: theme.spacing(0, 2),
+    padding: theme.spacing(30, 0, 0),
   },
   logoContainerItem: {
     paddingTop: 0,
@@ -31,6 +33,7 @@ const useStyles = makeStyles(theme => ({
   logoContainer: {
     width: '33em',
     height: 'auto',
+    margin: '9.375em 0 6.25em',
     [theme.breakpoints.down('lg')]: {
       width: '15em',
     },    
@@ -61,6 +64,8 @@ const useStyles = makeStyles(theme => ({
     float: 'right',
     display: 'inline-block',
     paddingLeft: '35px',
+    fontSize: '2.5em',
+    color: '#0e43f2',
   }
 }));
 
@@ -74,40 +79,39 @@ const Footer = props => {
       <div className={classes.footerContainer}>
       <Grid
         container
-        justify="space-between"
-        spacing={4}
+        spacing={10}
       >
         <Grid
           item
           container
           alignItems="center"
           xs={12}
-          md={4}
+          md={8}
           lg={6}
-          data-aos={'fade-up'}
         >
+         <Typography variant="h1">
+            let’s work together.
+          </Typography>
+         <Typography style={{fontSize:'2.625em'}}>
+            Our goal is to help you achieve yours, now and into the future. Speak to a digital specialist now - not a salesaman.
+          </Typography>
           <SectionHeader
-            title={
+            subtitle={
               <span>
-                let’s work together.                    
-              </span>
-            }
-            subtitle="Our goal is to help you achieve yours, now and into the future. Speak to a digital specialist now - not a salesaman."
-            ctaGroup={[
-              <LearnMoreLink
+                <LearnMoreLink
                 title="Discuss your project"
                 href="#"
-                variant="h6"
-              />,
-            ]}            
+                typographyProps={{ variant: 'h5' }}
+                style={{margin: '5rem 0'}}
+              />
+              </span>
+            }
             align="left"
-            fadeUp
             disableGutter
-            titleVariant="h3"
           />
         </Grid>
       </Grid>
-        <Typography variant="h6">
+        <Typography variant="h6" style={{fontSize:'2.25em'}}>
           <a href="mailto:hello@apprato.com.au">hello@apprato.com.au</a><br/>
           <a href="tel:+6410477418257">Tel: +6410477418 257</a><br/>
           257 Chapel St, Prahran VIC 3181
@@ -126,7 +130,6 @@ const Footer = props => {
             xs={12}
             md={8}
             lg={9}
-            data-aos={'fade-up'}
           >        
           <List disablePadding>
             <ListItem disableGutters className={classes.logoContainerItem}>
@@ -151,7 +154,6 @@ const Footer = props => {
             xs={12}
             md={4}
             lg={3}
-            data-aos={'fade-up'}
           >
           <a href="#" className={classes.sociallink}>Linkedin</a>
           <a href="#" className={classes.sociallink}>Insta</a>
@@ -159,7 +161,7 @@ const Footer = props => {
           </Grid>          
         </Grid>
         <Divider className={classes.devider} />
-        <Typography variant="subtitle1">
+        <Typography style={{fontSize:'1.875em'}}>
           © 2021 Apprato Pty Ltd. All Right Reserved.
         </Typography>
       </div>

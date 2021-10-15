@@ -39,16 +39,16 @@ const Topbar = props => {
 
   return (
     <Toolbar className={clsx(classes.toolbar, className)} {...rest}>
-      <div className={classes.logoContainer}>
-        <a href="/" title="thefront">
-          <Image
-            className={classes.logoImage}
-            src="/images/logos/logo.svg"
-            alt="thefront"
-            lazy={false}
-          />
-        </a>
-      </div>
+        <div className={classes.logoContainer}>
+          <a href="/" title="thefront">
+            <Image
+              className={classes.logoImage}
+              src="/images/Apprato_Logo.svg"
+              alt="thefront"
+              lazy={false}
+            />
+          </a>
+        </div>
     </Toolbar>
   );
 };

@@ -85,7 +85,7 @@ const Topbar = props => {
             container
             alignItems="center"
             xs={8}
-            md={8}
+            md={3}
             lg={3}
             xl={4}
             data-aos={'fade-up'}
@@ -107,9 +107,9 @@ const Topbar = props => {
           alignItems="left"
           justify="flex-start"
           xs={2}
-          md={2}
-          lg={3}
-          xl={5}
+          md={7}
+          lg={6}
+          xl={6}
           data-aos={'fade-up'}
         >
           <Hidden smDown>

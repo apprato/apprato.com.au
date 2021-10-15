@@ -11,11 +11,11 @@ const useStyles = makeStyles(theme => ({
     padding: '80px 15.8em 40px',
     maxWidth: theme.layout.contentWidth,
     margin: '0 auto 0',
-    [theme.breakpoints.down('xl')]: {
+    [theme.breakpoints.up('xl')]: {
       padding: '80px 16.875rem 40px',
     },
     [theme.breakpoints.down('lg')]: {
-      padding: '80px 7em 40px',
+      padding: '80px 3em 40px',
     },
     [theme.breakpoints.down('md')]: {
       padding: '30px 2em 0',

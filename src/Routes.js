@@ -6,8 +6,11 @@ import { Main as MainLayout, Minimal as MinimalLayout } from './layouts';
 
 import {
   Home as HomeView,
-  SignupSimple as SignupSimpleView,
-  NotFound as NotFoundView,
+  About as AboutView,
+  Services as ServicesView,
+  Team as TeamView,
+  CaseStudies as CaseStudiesView,
+  Contact as ContactView,
 } from './views';
 
 const Routes = () => {
@@ -21,16 +24,34 @@ const Routes = () => {
         path="/home"
       />
       <RouteWithLayout
-        component={SignupSimpleView}
-        exact
-        layout={MainLayout}
-        path="/signup-simple"
-      />
-      <RouteWithLayout
-        component={NotFoundView}
+        component={AboutView}
         exact
         layout={MinimalLayout}
-        path="/not-found"
+        path="/about"
+      />
+      <RouteWithLayout
+        component={ServicesView}
+        exact
+        layout={MinimalLayout}
+        path="/services"
+      />
+      <RouteWithLayout
+        component={TeamView}
+        exact
+        layout={MinimalLayout}
+        path="/team"
+      />
+      <RouteWithLayout
+        component={CaseStudiesView}
+        exact
+        layout={MinimalLayout}
+        path="/case-studies"
+      />
+      <RouteWithLayout
+        component={ContactView}
+        exact
+        layout={MinimalLayout}
+        path="/contact"
       />
       <Redirect to="/not-found" status="404" />
     </Switch>
