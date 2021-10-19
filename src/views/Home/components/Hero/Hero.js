@@ -7,31 +7,34 @@ import { SectionHeader } from 'components/molecules';
 import { LearnMoreLink, Image } from 'components/atoms';
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    "& main":{
-        color: 'pink',
-    }
-  },
   heading: {
-    paddingRight: '5em',
     "& h6": {
       margin: '1.5em 0',
-    }
+    },
+    [theme.breakpoints.up('md')]: {
+      paddingRight: '3rem',
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingRight: '12rem',
+    },
+    [theme.breakpoints.up('xl')]: {
+      paddingRight: '23rem',
+    },
   },
   subtitleWrapper: {
 
   },
   image: {
-    [theme.breakpoints.up('sm')]: {
-      maxWidth: '80%',
+    maxWidth: '80%',
+    [theme.breakpoints.up('lg')]: {
       paddingLeft: '4rem',
     },
-    [theme.breakpoints.down('md')]: {
-      maxWidth: '576px',
+    [theme.breakpoints.down('lg')]: {
+      paddingLeft: '2rem',
     },
   },
   reversemob:{
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       flexDirection: 'column-reverse',
     },
   }
@@ -59,6 +62,8 @@ const Hero = props => {
           alignItems="center"
           xs={12}
           md={6}
+          lg={6}
+          xl={6}
           data-aos={'fade-up'}
           className={classes.heading}
         >
@@ -85,9 +90,11 @@ const Hero = props => {
           item
           container
           justify="flex-start"
-          alignItems="center"
+          alignItems="top"
           xs={12}
           md={6}
+          lg={6}
+          xl={6}
           data-aos={'fade-up'}
         >
           <Image

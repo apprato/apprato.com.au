@@ -12,19 +12,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 const useStyles = makeStyles(theme => ({
   root: {},
   image:{
-    margin: '0 5%',
     padding: 0,
-    display: 'inline',
-  },
-  imagefirst:{
-    margin: '0 5% 0 1%',
-    padding: 0,
-    display: 'inline',
-  },
-  imagelast:{
-    margin: '0 0 0 5%',
-    padding: 0,
-    display: 'inline',
+    textAlign: 'center',
+    display: 'unset',
   },
   expertbox: {
     filter: 'drop-shadow(0px 20px 35px rgba(13,68,255,0.2))',
@@ -33,15 +23,47 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       maxWidth: 500,
     },
-    padding: '4.375em 6.25rem',
-    margin: '9.375em -30px',
+    padding: '5rem 6.25rem',
+    margin: '9.375rem -30px',
     width: 'auto',
+    [theme.breakpoints.down('xl')]: {
+      padding: '3rem 3.25rem',
+      margin: '6.375rem -30px',
+    },
   },
   experts: {
     margin: '40px 20px 0',
+    '& li':{
+        lineHeight: '42px',
+        padding: 0,
+        listStyle: 'inside',
+        display: 'list-item',
+        fontSize: '2rem',
+        [theme.breakpoints.down('lg')]: {
+          fontSize: '1.2rem',
+          lineHeight: '32px',
+        },
+        [theme.breakpoints.down('md')]: {
+          fontSize: '1rem',
+          lineHeight: '28px',
+        },
+    },
+    [theme.breakpoints.down('lg')]: {
+      margin: '20px 20px 0',
+    },
   },
   images:{
-    //display: 'contents',
+    "& img":{
+      [theme.breakpoints.up('sm')]: {
+        height: '8rem',
+      },
+      [theme.breakpoints.up('md')]: {
+        height: '9.5rem',
+      },
+      [theme.breakpoints.up('lg')]: {
+        height: '18rem',
+      },
+    },
   }
 }));
 
@@ -61,14 +83,6 @@ const Experts = props => {
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
-
-  const flexitems = {
-    lineHeight: '42px',
-    fontSize: '32px',
-    padding: 0,
-    listStyle: 'inside',
-    display: 'list-item',
-  };
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
@@ -91,10 +105,10 @@ const Experts = props => {
         </Typography>
 
         <List className={classes.experts}>
-          <ListItem style={flexitems}>Adobe Certified Expert Commerce Developer</ListItem>
-          <ListItem style={flexitems}>Magento2 Certified Cloud Developer</ListItem>
-          <ListItem style={flexitems}>AWS Certified Cloud Practitioner</ListItem>
-          <ListItem style={flexitems}>Prince2 Foundation Certified Developer</ListItem>
+          <ListItem >Adobe Certified Expert Commerce Developer</ListItem>
+          <ListItem >Magento2 Certified Cloud Developer</ListItem>
+          <ListItem >AWS Certified Cloud Practitioner</ListItem>
+          <ListItem >Prince2 Foundation Certified Developer</ListItem>
         </List>
 
         </Grid>
@@ -109,10 +123,10 @@ const Experts = props => {
           data-aos={'fade-up'}
           className={classes.images}
         >
-        <List style={{width: '100%'}}>
-          <ListItem className={classes.imagefirst}>
+        <List style={{width: '100%', display: 'flex'}}>
+          <ListItem className={classes.image}>
           <Image
-            src="/images/Layer_125.png"
+            src="/images/Layer_125.svg"
             alt=""
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
@@ -120,7 +134,7 @@ const Experts = props => {
           </ListItem>
           <ListItem className={classes.image}>
           <Image
-            src="/images/Layer_129.png"
+            src="/images/Layer_129.svg"
             alt=""
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
@@ -128,15 +142,15 @@ const Experts = props => {
           </ListItem>
           <ListItem className={classes.image}>
           <Image
-            src="/images/Layer_123.png"
+            src="/images/Layer_123.svg"
             alt=""
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
           />
           </ListItem>
-          <ListItem className={classes.imagelast}>
+          <ListItem className={classes.image}>
           <Image
-            src="/images/Layer_128.png"
+            src="/images/Layer_128.svg"
             alt=""
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"

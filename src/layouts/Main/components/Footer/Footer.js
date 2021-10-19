@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { IconButton, List, ListItem } from '@material-ui/core';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import PinterestIcon from '@material-ui/icons/Pinterest';
 import { Grid, Typography, Divider } from '@material-ui/core';
 import { LearnMoreLink, Image } from 'components/atoms';
 import { SectionHeader, CountUpNumber } from 'components/molecules';
@@ -18,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     "& h6 a": {color: '#fff', textDecoration:'none'},
     padding: theme.spacing(3, 0),
     [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(6, 0),
+      padding: theme.spacing(2, 0),
     },
   },
   footerContainer: {
@@ -26,6 +22,9 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     margin: '0 auto',
     padding: theme.spacing(30, 0, 0),
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(15, 0, 0),
+    },
   },
   logoContainerItem: {
     paddingTop: 0,
@@ -36,6 +35,7 @@ const useStyles = makeStyles(theme => ({
     margin: '9.375em 0 6.25em',
     [theme.breakpoints.down('lg')]: {
       width: '15em',
+      margin: '4.5em 0 3.5em',
     },    
   },
   logoImage: {
@@ -53,9 +53,6 @@ const useStyles = makeStyles(theme => ({
       marginRight: 0,
     },
   },
-  icon: {
-    fontSize: 24,
-  },
   devider: {
     background: '#8998c0',
     marginBottom: '50px',
@@ -66,6 +63,36 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: '35px',
     fontSize: '2.5em',
     color: '#0e43f2',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.25em',
+    },    
+  },
+  toptitle: {
+    marginBottom: '2.5rem',
+  },
+  submsg: {
+    fontSize:'2.625rem',
+    [theme.breakpoints.down('lg')]: {
+      fontSize:'1.5rem',
+    },
+  },
+  learnmore: {
+    margin: '5rem 0',
+    [theme.breakpoints.down('lg')]: {
+        margin: '2rem 0',
+    },
+  },
+  address: {
+    fontSize:'2.25rem',
+    [theme.breakpoints.down('lg')]: {
+      fontSize:'1.25rem',
+    },
+  },
+  copy: {
+    fontSize:'1.875rem',
+    [theme.breakpoints.down('lg')]: {
+      fontSize:'1.25rem',
+    },
   }
 }));
 
@@ -76,7 +103,7 @@ const Footer = props => {
 
   return (
     <div {...rest} className={clsx(classes.root, className)}>
-      <div className={classes.footerContainer}>
+      <div id="contact" className={classes.footerContainer}>
       <Grid
         container
         spacing={10}
@@ -89,10 +116,10 @@ const Footer = props => {
           md={8}
           lg={6}
         >
-         <Typography variant="h1">
+         <Typography variant="h1" className={classes.toptitle}>
             let’s work together.
           </Typography>
-         <Typography style={{fontSize:'2.625em'}}>
+         <Typography className={classes.submsg}>
             Our goal is to help you achieve yours, now and into the future. Speak to a digital specialist now - not a salesaman.
           </Typography>
           <SectionHeader
@@ -102,7 +129,7 @@ const Footer = props => {
                 title="Discuss your project"
                 href="#"
                 typographyProps={{ variant: 'h5' }}
-                style={{margin: '5rem 0'}}
+                className={classes.learnmore}
               />
               </span>
             }
@@ -111,7 +138,7 @@ const Footer = props => {
           />
         </Grid>
       </Grid>
-        <Typography variant="h6" style={{fontSize:'2.25em'}}>
+        <Typography variant="h6" className={classes.address}>
           <a href="mailto:hello@apprato.com.au">hello@apprato.com.au</a><br/>
           <a href="tel:+6410477418257">Tel: +6410477418 257</a><br/>
           257 Chapel St, Prahran VIC 3181
@@ -128,8 +155,8 @@ const Footer = props => {
             container
             alignItems="center"
             xs={12}
-            md={8}
-            lg={9}
+            md={7}
+            lg={8}
           >        
           <List disablePadding>
             <ListItem disableGutters className={classes.logoContainerItem}>
@@ -152,8 +179,8 @@ const Footer = props => {
             justify="flex-end"
             alignItems="center"
             xs={12}
-            md={4}
-            lg={3}
+            md={5}
+            lg={4}
           >
           <a href="#" className={classes.sociallink}>Linkedin</a>
           <a href="#" className={classes.sociallink}>Insta</a>
@@ -161,7 +188,7 @@ const Footer = props => {
           </Grid>          
         </Grid>
         <Divider className={classes.devider} />
-        <Typography style={{fontSize:'1.875em'}}>
+        <Typography className={classes.copy}>
           © 2021 Apprato Pty Ltd. All Right Reserved.
         </Typography>
       </div>

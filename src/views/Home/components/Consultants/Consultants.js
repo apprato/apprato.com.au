@@ -14,6 +14,10 @@ const useStyles = makeStyles(theme => ({
   consultantTitle:{
     marginTop: '18.75rem',
     marginBottom: '6.25rem',
+    [theme.breakpoints.down('lg')]: {
+      marginTop: '8.75rem',
+      marginBottom: '3.25rem',
+    },    
   },
   consultant: {
     borderRadius: '30px',
@@ -25,14 +29,29 @@ const useStyles = makeStyles(theme => ({
   consultantimage:{
     lineHeight: '2.75rem',
     padding: '0 3.75em',
+    [theme.breakpoints.down('lg')]: {
+      lineHeight: '0.5rem',
+      padding: '0 1.5em',
+    },    
   },
   subline: {
     display: 'inline-block',
+    width: '100%',
     lineHeight: '60px',
     marginBottom: '50px',
+    [theme.breakpoints.down('lg')]: {
+      lineHeight: '40px',
+      marginBottom: '15px',
+    },    
+  },
+  imageroot:{
+      display: 'block',
   },
   sectionstyle: {
     marginBottom: '400px',
+    [theme.breakpoints.down('lg')]: {
+      marginBottom: '100px',
+    },    
   }
 }));
 
@@ -68,10 +87,12 @@ const Consultants = props => {
           item
           container
           justify="flex-start"
-          alignItems="left"
+          alignItems="center"
           xs={12}
-          md={3}
+          md={2}
           lg={3}
+          xl={3}
+          className={classes.imageroot}
         >
         <img src="../images/Jordan Pierce.png" className={classes.consultant}/>
         </Grid>
@@ -80,36 +101,37 @@ const Consultants = props => {
           container
           className={classes.consultantimage}
           justify="flex-start"
-          alignItems="left"
+          alignItems="top"
           xs={12}
-          md={3}
+          md={4}
           lg={3}
           xl={3}
         > 
         <Typography variant="h5" display="block">
           Jordan Pierce
         </Typography>
-
         <Typography variant="subtitle2" className={classes.subline}>
           Senior Software Developer
         </Typography>
         <Typography variant="subtitle1">
           Adobe Certifed Developer<br/>
           AWS Certified<br/>
-          System Integration<br/>
+          System Integration<br/><br/>
         </Typography>
         <Typography variant="h6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex onsequat.
+          We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
         </Typography>
         </Grid>
         <Grid
           item
           container
           justify="flex-start"
-          alignItems="left"
+          alignItems="center"
           xs={12}
-          md={3}
+          md={2}
           lg={3}
+          xl={3}
+          className={classes.imageroot}
         >
         <img src="../images/vishal panchal.png" className={classes.consultant}/>
         </Grid>
@@ -118,10 +140,11 @@ const Consultants = props => {
           container
           className={classes.consultantimage}
           justify="flex-start"
-          alignItems="left"
+          alignItems="top"
           xs={12}
-          md={3}
+          md={4}
           lg={3}
+          xl={3}
         > 
         <Typography variant="h5" display="block">
           Vishal Panchal
@@ -133,55 +156,13 @@ const Consultants = props => {
         <Typography variant="subtitle1">
           Adobe Certifed Developer<br/>
           AWS Certified<br/>
-          System Integration<br/>
+          System Integration<br/><br/>
         </Typography>
         <Typography variant="h6">
           We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
         </Typography>
         </Grid>
-      </Grid>
-            <Grid
-        container
-        justify="space-between"
-      >      
-        <Grid
-          item
-          container
-          justify="flex-start"
-          alignItems="left"
-          xs={12}
-          md={3}
-          lg={3}
-        >
-        <img src="../images/stephen goudy.png" className={classes.consultant}/>
-        </Grid>
-        <Grid
-          item
-          container
-          className={classes.consultantimage}
-          justify="flex-start"
-          alignItems="left"
-          xs={12}
-          md={3}
-          lg={3}
-        > 
-        <Typography variant="h5" display="block">
-          Stephen Goudy
-        </Typography>
-
-        <Typography variant="subtitle2" className={classes.subline}>
-          Senior Software Developer
-        </Typography>
-        <Typography variant="subtitle1">
-          Adobe Certifed Developer<br/>
-          AWS Certified<br/>
-          System Integration<br/>
-        </Typography>
-        <Typography variant="h6">
-          We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
-        </Typography>
-        </Grid>
-      </Grid>
+      </Grid>      
     </Carousel>
     </Grid>
     </div>

@@ -18,12 +18,18 @@ const useStyles = makeStyles(theme => ({
   logo: {
     maxWidth: '7vw',
     opacity: '1',
+    [theme.breakpoints.down('lg')]: {
+      maxWidth: '11vw',
+    },    
   },
   navigationContainer: {
     display: 'table',
     alignItems: 'center',
     margin: '0 auto',
     padding: '8rem 0',
+    [theme.breakpoints.down('lg')]: {
+      padding: '4rem 0',
+    },    
   },
   listItem: {
     cursor: 'pointer',
@@ -53,6 +59,9 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     margin: '0 auto 17.1875rem',
     display: 'block',
+    [theme.breakpoints.down('lg')]: {
+      margin: '0 auto 5rem',
+    },    
   },
 }));
 

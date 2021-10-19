@@ -8,17 +8,16 @@ import { Topbar, Footer, Sidebar } from './components';
 const useStyles = makeStyles(theme => ({
   root: {
     background: 'url(../images/bg-layers.png) no-repeat top',
-    padding: '80px 15.8em 40px',
-    maxWidth: theme.layout.contentWidth,
     margin: '0 auto 0',
+
+    [theme.breakpoints.up('xs')]: {
+      padding: '30px 2em 0',
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: '30px 3em 0',
+    },
     [theme.breakpoints.up('xl')]: {
       padding: '80px 16.875rem 40px',
-    },
-    [theme.breakpoints.down('lg')]: {
-      padding: '80px 3em 40px',
-    },
-    [theme.breakpoints.down('md')]: {
-      padding: '30px 2em 0',
     },
     height: '100%',
   },

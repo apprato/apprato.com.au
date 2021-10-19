@@ -1,5 +1,6 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core';
 import palette from './palette';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 const defaultTheme = createMuiTheme({});
 const { breakpoints, typography: { pxToRem } } = defaultTheme
@@ -11,10 +12,10 @@ const theme = responsiveFontSizes(
     breakpoints: {
       values: {
         xs: 0,
-        sm: 479,
-        md: 768,
-        lg: 1220,
-        xl: 1700,
+        sm: 768,
+        md: 1024,
+        lg: 1884,
+        xl: 2880,
       },
     },
     spacing: 4,
@@ -25,22 +26,20 @@ const theme = responsiveFontSizes(
       fontFamily: "AktivGrotesk",
       fontWeight: '500',
       color: '#202f43',
+
       h1: {
         fontFamily: "AktivGrotesk-Bold",
       },
       h2: {
         fontFamily: "AktivGrotesk-Medium",
-        //fontSize: pxToRem(50),
-        fontSize: '6.5em',
         letterSpacing: '-1px',
       },
       h3: {
         fontFamily: "AktivGrotesk-Medium",
-        fontSize: '5.875em',
+        fontWeight: '500',
       },
       h4: {
         fontFamily: "AktivGrotesk-Medium",
-        fontSize: '3.75em',
         fontWeight: '500',
       },
       h5: {
@@ -104,10 +103,98 @@ const theme = responsiveFontSizes(
           },
         },
       },
+      MuiTypography: {
+        h1: {
+          [breakpoints.up('md')]: {
+            fontSize: pxToRem(40)
+          },
+          [breakpoints.up('lg')]: {
+            fontSize: pxToRem(50)
+          },
+          [breakpoints.up('xl')]: {
+            fontSize: pxToRem(108)
+          },
+        },
+        h2: {
+          [breakpoints.up('md')]: {
+            fontSize: pxToRem(40)
+          },
+          [breakpoints.up('lg')]: {
+            fontSize: pxToRem(55)
+          },
+          [breakpoints.up('xl')]: {
+            fontSize: pxToRem(104)
+          },
+        },
+        h6: {
+          [breakpoints.up('md')]: {
+            fontSize: pxToRem(12)
+          },
+          [breakpoints.up('lg')]: {
+            fontSize: pxToRem(16)
+          },
+          [breakpoints.up('xl')]: {
+            fontSize: pxToRem(32)
+          },
+        },
+        h3: {
+          [breakpoints.up('md')]: {
+            fontSize: pxToRem(30)
+          },
+          [breakpoints.up('lg')]: {
+            fontSize: pxToRem(46)
+          },
+          [breakpoints.up('xl')]: {
+            fontSize: pxToRem(92)
+          },
+        },
+        h5: {
+          [breakpoints.up('md')]: {
+            fontSize: pxToRem(20)
+          },
+          [breakpoints.up('lg')]: {
+            fontSize: pxToRem(24)
+          },
+          [breakpoints.up('xl')]: {
+            fontSize: pxToRem(48)
+          },
+        },
+        h4: {
+          [breakpoints.up('md')]: {
+            fontSize: pxToRem(25)
+          },
+          [breakpoints.up('lg')]: {
+            fontSize: pxToRem(30)
+          },
+          [breakpoints.up('xl')]: {
+            fontSize: pxToRem(60)
+          },
+        },
+        subtitle2: {
+          [breakpoints.up('md')]: {
+            fontSize: pxToRem(12)
+          },
+          [breakpoints.up('lg')]: {
+            fontSize: pxToRem(16)
+          },
+          [breakpoints.up('xl')]: {
+            fontSize: pxToRem(32)
+          },
+        },
+        subtitle1: {
+          [breakpoints.up('md')]: {
+            fontSize: pxToRem(11)
+          },
+          [breakpoints.up('lg')]: {
+            fontSize: pxToRem(14)
+          },
+          [breakpoints.up('xl')]: {
+            fontSize: pxToRem(28)
+          },
+        },
+      },
     },
   }),
 );
 
 export default theme;
-
-

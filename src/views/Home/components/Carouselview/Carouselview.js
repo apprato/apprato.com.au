@@ -27,21 +27,34 @@ const useStyles = makeStyles(theme => ({
   },
   imageleft: {
     backgroundImage: `url(${"../images/Aquila_Image.jpg"})`,
-    minHeight: '23.35vw',
+    minHeight: '33vw',
     backgroundSize: 'cover',
-    backgroundPosition: '-179px -116px',
+    backgroundPosition: '-222px -230px',
     backgroundRepeat: 'no-repeat',
-    width: `calc(100vw + 48px)`,
+    width: `100vw`,
+    [theme.breakpoints.down('lg')]: {
+      minHeight: '60vw',
+      backgroundPosition: '-140px -120px',
+    },    
   },
   whitebg: {
     background: '#fff',
     padding: '6.25em',
+    [theme.breakpoints.down('lg')]: {
+      padding: '3.25em',
+    },    
   },
   headingh2:{
     marginBottom: '180px',
+    [theme.breakpoints.down('lg')]: {
+      marginBottom: '50px',
+    },    
   },
   title:{
     marginBottom: '120px',
+    [theme.breakpoints.down('lg')]: {
+      marginBottom: '50px',
+    },    
   }
 }));
 
@@ -70,12 +83,11 @@ const Carouselview = props => {
       >
       <Grid
         container
-        justify="space-between"
       >
         <Grid
           item
           container
-          alignItems="center"
+          alignItems="top"
           xs={12}
           md={6}
           lg={6}
@@ -87,7 +99,7 @@ const Carouselview = props => {
           container
           className={classes.whitebg}
           justify="flex-start"
-          alignItems="center"
+          alignItems="top"
           xs={12}
           md={6}
           lg={6}
@@ -95,7 +107,7 @@ const Carouselview = props => {
         <Typography variant="h2" display="block" className={classes.headingh2}>
           Aquila
         </Typography>
-        <Typography variant="h4" display="block">
+        <Typography variant="h4" style={{width:'100%'}}>
           Supporting  Aquilas growth
         </Typography>
 

@@ -34,15 +34,25 @@ const useStyles = makeStyles(theme => ({
   },
   myimg: {
       margin: '6.25em 0',
+      [theme.breakpoints.down('lg')]: {
+        margin: '0em 0 4rem',
+        maxWidth: '25%',
+      },
   },
   mydesc: {
     marginRight: '10.125em',
+    [theme.breakpoints.down('lg')]: {
+      marginRight: '4.125em',
+    },
     "& h4": {
       marginBottom: '40px',
     }
   },
   mytext: {
-    margin:'1em 0 6.25rem', maxWidth: '1800px', display:'block',
+    margin:'1em 0 6.25rem', paddingRight: '74rem', display:'block',
+    [theme.breakpoints.down('lg')]: {
+      paddingRight: '25rem'
+    },
   }
 }));
 

@@ -25,33 +25,56 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '33px 0px 0',
+    padding: theme.spacing(0, 0, '0px'),
+    [theme.breakpoints.down('lg')]: {
+      padding: theme.spacing(0, 0, '0px'),
+    }
   },
   toolbar: {
     maxWidth: theme.layout.contentWidth,
     width: '100%',
     margin: '0 auto',
     padding: theme.spacing(0, 0, '11.0625rem'),
-    [theme.breakpoints.down('md')]: {
-      padding: theme.spacing(0, 0, '50px'),
+    [theme.breakpoints.down('lg')]: {
+      padding: theme.spacing(0, 0, 20),
     }
   },
   listItem: {
     cursor: 'pointer',
     padding: '0 1.875rem',
+      [theme.breakpoints.down('lg')]: {
+        padding: '0 1.2rem',
+      },
+      [theme.breakpoints.down('md')]: {
+        padding: '0 1rem',
+      },
   },
   listItemText: {
     flex: '0 0 auto',
     whiteSpace: 'nowrap',
     textDecoration: 'none',
     fontSize: '2rem',
+      [theme.breakpoints.down('lg')]: {
+        fontSize: '1.5rem',
+      },
+      [theme.breakpoints.down('md')]: {
+        fontSize: '1rem',
+      },
     color: '#202f43',
   },
   listItemButton: {
     whiteSpace: 'nowrap',
     borderRadius: '16px',
-    minWidth: '246px',
+    minWidth: '15.375rem',
     fontSize: '2rem',
+      [theme.breakpoints.down('lg')]: {
+        fontSize: '1.5rem',
+        minWidth: '10rem',
+      },
+      [theme.breakpoints.down('md')]: {
+        fontSize: '1rem',
+        minWidth: '8rem',
+      },
     textTransform: 'initial',
   },
   iconButton: {
@@ -64,7 +87,7 @@ const useStyles = makeStyles(theme => ({
     width: '32.375rem',
     height: 'auto',
       [theme.breakpoints.down('md')]: {
-        width: '18.75em',
+        width: '18.75rem',
       }
   },
 }));
@@ -85,9 +108,9 @@ const Topbar = props => {
             container
             alignItems="center"
             xs={8}
-            md={3}
+            md={4}
             lg={3}
-            xl={4}
+            xl={3}
             data-aos={'fade-up'}
           >
         <div className={classes.logoContainer}>
@@ -105,9 +128,9 @@ const Topbar = props => {
           item
           container
           alignItems="left"
-          justify="flex-start"
+          justify="flex-end"
           xs={2}
-          md={7}
+          md={6}
           lg={6}
           xl={6}
           data-aos={'fade-up'}
@@ -180,7 +203,7 @@ const Topbar = props => {
           xs={2}
           md={2}
           lg={3}
-          xl={2}
+          xl={3}
         >
         <Hidden smDown>
           <Button
@@ -188,7 +211,7 @@ const Topbar = props => {
             variant="contained"
             color="primary"
             component="a"
-            href="/contact"
+            href="#contact"
             className={classes.listItemButton}
           >
             Contact
