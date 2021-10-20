@@ -11,7 +11,6 @@ import {
   IconButton,
   Button,
 } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
 
 import { Image } from 'components/atoms';
 
@@ -106,7 +105,7 @@ const Topbar = props => {
           <Grid
             item
             container
-            alignItems="center"
+            alignItems="left"
             xs={8}
             md={4}
             lg={3}
@@ -223,7 +222,7 @@ const Topbar = props => {
               onClick={onSidebarOpen}
               aria-label="Menu"
             >
-              <MenuIcon />
+              <img src="../images/Hamburger_Menu.png"/>
             </IconButton>
           </Hidden>
         </Grid>

@@ -12,9 +12,9 @@ const useStyles = makeStyles(theme => ({
   root: {
     color: '#fff',
     "& h6 a": {color: '#fff', textDecoration:'none'},
-    padding: theme.spacing(3, 0),
+    padding: theme.spacing(1, 0),
     [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(2, 0),
+      padding: theme.spacing(5, 0),
     },
   },
   footerContainer: {
@@ -22,6 +22,9 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     margin: '0 auto',
     padding: theme.spacing(30, 0, 0),
+    [theme.breakpoints.down('md')]: {
+      padding: theme.spacing(10, 0, 0),
+    },
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(15, 0, 0),
     },
@@ -103,7 +106,7 @@ const Footer = props => {
 
   return (
     <div {...rest} className={clsx(classes.root, className)}>
-      <div id="contact" className={classes.footerContainer}>
+      <div className={classes.footerContainer}>
       <Grid
         container
         spacing={10}
@@ -154,7 +157,7 @@ const Footer = props => {
             item
             container
             alignItems="center"
-            xs={12}
+            xs={6}
             md={7}
             lg={8}
           >        
@@ -178,7 +181,7 @@ const Footer = props => {
             container 
             justify="flex-end"
             alignItems="center"
-            xs={12}
+            xs={6}
             md={5}
             lg={4}
           >

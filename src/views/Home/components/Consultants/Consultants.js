@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-import { SectionHeader, CountUpNumber } from 'components/molecules';
 import Carousel from 'react-material-ui-carousel';
-import { Grid, Typography, Paper, Button } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 
 
 const useStyles = makeStyles(theme => ({
@@ -25,11 +23,21 @@ const useStyles = makeStyles(theme => ({
     border: '4px solid #ffffff',
     width: '100%',
     height: 'auto',
+    [theme.breakpoints.down('md')]: {
+      width: '50%',
+    },    
+    [theme.breakpoints.up('md')]: {
+      width: '100%',
+    },    
   },
   consultantimage:{
     lineHeight: '2.75rem',
     padding: '0 3.75em',
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('md')]: {
+      lineHeight: '0.5rem',
+      padding: '3em 1.5em',
+    },
+    [theme.breakpoints.between('md', 'lg') ]: {
       lineHeight: '0.5rem',
       padding: '0 1.5em',
     },    
@@ -52,11 +60,10 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('lg')]: {
       marginBottom: '100px',
     },    
-  }
+  },
 }));
 
 const Consultants = props => {
-  const { className, ...rest } = props;
   const classes = useStyles();
 
   return (
@@ -73,11 +80,31 @@ const Consultants = props => {
         justify="space-between"
       >
       <Carousel
-      animation='slide'
-      autoplay='0'
-      indicators='false'
-      //NextIcon={<img src="http://random.com/next"/>}
-      //PrevIcon={<img src="http://random.com/prev"/>}
+      NextIcon={<img src="./images/right.png" width="20" alt=""/>}
+      PrevIcon={<img src="./images/left.png" width="20" alt=""/>}
+      className = 'consultantreel'
+      animation = 'fade'
+      autoPlay =  'false'
+      stopAutoPlayOnHover = 'true'
+      cycleNavigation = 'false'
+      navButtonsAlwaysVisible= 'false'
+      navButtonsProps={{
+        style: {
+            backgroundColor: 'transparent',
+            borderRadius: 0
+        }
+      }}
+      indicatorIconButtonProps={{
+        style: {
+            padding: '4px',
+            color: '#fff'
+        }
+      }}
+      activeIndicatorIconButtonProps={{
+        style: {
+            color: '#3377ff',
+        }
+      }}
       >
       <Grid
         container
@@ -94,7 +121,7 @@ const Consultants = props => {
           xl={3}
           className={classes.imageroot}
         >
-        <img src="../images/Jordan Pierce.png" className={classes.consultant}/>
+        <img src="../images/Jordan Pierce.png" className={classes.consultant} alt="Jordan Pierce"/>
         </Grid>
         <Grid
           item
@@ -133,7 +160,7 @@ const Consultants = props => {
           xl={3}
           className={classes.imageroot}
         >
-        <img src="../images/vishal panchal.png" className={classes.consultant}/>
+        <img src="../images/vishal panchal.png" className={classes.consultant} alt="Vishal Panchal"/>
         </Grid>
         <Grid
           item
@@ -163,6 +190,92 @@ const Consultants = props => {
         </Typography>
         </Grid>
       </Grid>      
+      
+
+      <Grid
+        container
+        justify="space-between"
+      >
+        <Grid
+          item
+          container
+          justify="flex-start"
+          alignItems="center"
+          xs={12}
+          md={2}
+          lg={3}
+          xl={3}
+          className={classes.imageroot}
+        >
+        <img src="../images/Jordan Pierce.png" className={classes.consultant} alt="Jordan Pierce"/>
+        </Grid>
+        <Grid
+          item
+          container
+          className={classes.consultantimage}
+          justify="flex-start"
+          alignItems="top"
+          xs={12}
+          md={4}
+          lg={3}
+          xl={3}
+        > 
+        <Typography variant="h5" display="block">
+          Jordan Pierce
+        </Typography>
+        <Typography variant="subtitle2" className={classes.subline}>
+          Senior Software Developer
+        </Typography>
+        <Typography variant="subtitle1">
+          Adobe Certifed Developer<br/>
+          AWS Certified<br/>
+          System Integration<br/><br/>
+        </Typography>
+        <Typography variant="h6">
+          We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
+        </Typography>
+        </Grid>
+        <Grid
+          item
+          container
+          justify="flex-start"
+          alignItems="center"
+          xs={12}
+          md={2}
+          lg={3}
+          xl={3}
+          className={classes.imageroot}
+        >
+        <img src="../images/vishal panchal.png" className={classes.consultant} alt="Vishal Panchal"/>
+        </Grid>
+        <Grid
+          item
+          container
+          className={classes.consultantimage}
+          justify="flex-start"
+          alignItems="top"
+          xs={12}
+          md={4}
+          lg={3}
+          xl={3}
+        > 
+        <Typography variant="h5" display="block">
+          Vishal Panchal
+        </Typography>
+
+        <Typography variant="subtitle2" className={classes.subline}>
+          Senior Software Developer
+        </Typography>
+        <Typography variant="subtitle1">
+          Adobe Certifed Developer<br/>
+          AWS Certified<br/>
+          System Integration<br/><br/>
+        </Typography>
+        <Typography variant="h6">
+          We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
+        </Typography>
+        </Grid>
+      </Grid>
     </Carousel>
     </Grid>
     </div>

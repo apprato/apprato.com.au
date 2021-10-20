@@ -8,6 +8,11 @@ import { LearnMoreLink, Image } from 'components/atoms';
 
 const useStyles = makeStyles(theme => ({
   heading: {
+    "& h2": {
+      [theme.breakpoints.down('md')]: {
+        margin: '1.5em 0 0',
+      },
+    },
     "& h6": {
       margin: '1.5em 0',
     },
@@ -21,9 +26,6 @@ const useStyles = makeStyles(theme => ({
       paddingRight: '23rem',
     },
   },
-  subtitleWrapper: {
-
-  },
   image: {
     maxWidth: '80%',
     [theme.breakpoints.up('lg')]: {
@@ -31,6 +33,10 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.down('lg')]: {
       paddingLeft: '2rem',
+    },
+    [theme.breakpoints.down('md')]: {
+      paddingLeft: '0',
+      margin: '0 auto',
     },
   },
   reversemob:{

@@ -1,7 +1,5 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core';
 import palette from './palette';
-import ScrollableAnchor from 'react-scrollable-anchor';
-
 const defaultTheme = createMuiTheme({});
 const { breakpoints, typography: { pxToRem } } = defaultTheme
 
@@ -105,10 +103,7 @@ const theme = responsiveFontSizes(
       },
       MuiTypography: {
         h1: {
-          [breakpoints.up('md')]: {
-            fontSize: pxToRem(40)
-          },
-          [breakpoints.up('lg')]: {
+          [breakpoints.up('xs')]: {
             fontSize: pxToRem(50)
           },
           [breakpoints.up('xl')]: {
@@ -116,6 +111,9 @@ const theme = responsiveFontSizes(
           },
         },
         h2: {
+          [breakpoints.up('xs')]: {
+            fontSize: pxToRem(64)
+          },
           [breakpoints.up('md')]: {
             fontSize: pxToRem(40)
           },
@@ -127,6 +125,9 @@ const theme = responsiveFontSizes(
           },
         },
         h6: {
+          [breakpoints.up('xs')]: {
+            fontSize: pxToRem(24)
+          },
           [breakpoints.up('md')]: {
             fontSize: pxToRem(12)
           },
@@ -138,6 +139,9 @@ const theme = responsiveFontSizes(
           },
         },
         h3: {
+          [breakpoints.up('xs')]: {
+            fontSize: pxToRem(64)
+          },
           [breakpoints.up('md')]: {
             fontSize: pxToRem(30)
           },
@@ -149,6 +153,9 @@ const theme = responsiveFontSizes(
           },
         },
         h5: {
+          [breakpoints.up('xs')]: {
+            fontSize: pxToRem(28)
+          },
           [breakpoints.up('md')]: {
             fontSize: pxToRem(20)
           },
@@ -160,6 +167,9 @@ const theme = responsiveFontSizes(
           },
         },
         h4: {
+          [breakpoints.up('xs')]: {
+            fontSize: pxToRem(42)
+          },
           [breakpoints.up('md')]: {
             fontSize: pxToRem(25)
           },

@@ -15,20 +15,24 @@ const useStyles = makeStyles(theme => ({
     padding: 0,
     textAlign: 'center',
     display: 'unset',
+    [theme.breakpoints.down('md')]: {
+      padding: '3em 1em 1em',
+    },
   },
   expertbox: {
     filter: 'drop-shadow(0px 20px 35px rgba(13,68,255,0.2))',
-    borderRadius: theme.spacing(2),
+    borderRadius: theme.spacing(3),
     background: '#ffffff',
-    [theme.breakpoints.down('sm')]: {
-      maxWidth: 500,
-    },
     padding: '5rem 6.25rem',
     margin: '9.375rem -30px',
     width: 'auto',
     [theme.breakpoints.down('xl')]: {
       padding: '3rem 3.25rem',
       margin: '6.375rem -30px',
+    },
+    [theme.breakpoints.down('md')]: {
+      padding: '2.5em 2em',
+      margin: '6em 0px',
     },
   },
   experts: {
@@ -44,7 +48,7 @@ const useStyles = makeStyles(theme => ({
           lineHeight: '32px',
         },
         [theme.breakpoints.down('md')]: {
-          fontSize: '1rem',
+          fontSize: '1.25rem',
           lineHeight: '28px',
         },
     },

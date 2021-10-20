@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Divider } from '@material-ui/core';
+import { useMediaQuery} from '@material-ui/core';
 import { Topbar, Footer, Sidebar } from './components';
 
 const useStyles = makeStyles(theme => ({
@@ -11,10 +11,10 @@ const useStyles = makeStyles(theme => ({
     margin: '0 auto 0',
 
     [theme.breakpoints.up('xs')]: {
-      padding: '30px 2em 0',
+      padding: '30px 4em 0',
     },
     [theme.breakpoints.up('md')]: {
-      padding: '30px 3em 0',
+      padding: '30px 6em 0',
     },
     [theme.breakpoints.up('xl')]: {
       padding: '80px 16.875rem 40px',

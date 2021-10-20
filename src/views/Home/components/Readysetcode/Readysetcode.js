@@ -34,23 +34,40 @@ const useStyles = makeStyles(theme => ({
   },
   myimg: {
       margin: '6.25em 0',
-      [theme.breakpoints.down('lg')]: {
+      [theme.breakpoints.down('md')]: {
+        margin: '0em 0 2rem',
+        maxWidth: '20%',
+      },
+      [theme.breakpoints.between('md', 'lg')]: {
         margin: '0em 0 4rem',
         maxWidth: '25%',
       },
   },
   mydesc: {
     marginRight: '10.125em',
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('md')]: {
+      float: 'right',
+      margin: '0 0 0 2.5em',
+      display: 'inline-block',
+      width: '72%',
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
       marginRight: '4.125em',
+      margin: 0,
     },
     "& h4": {
       marginBottom: '40px',
+      [theme.breakpoints.down('md')]: {
+        marginBottom: '10px',
+      },
     }
   },
   mytext: {
     margin:'1em 0 6.25rem', paddingRight: '74rem', display:'block',
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('md')]: {
+      paddingRight: '2rem',
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
       paddingRight: '25rem'
     },
   }
@@ -74,6 +91,7 @@ const Readysetcode = props => {
       <Grid
         container
         justify="space-between"
+        spacing={5}
       >
        <Grid
           item

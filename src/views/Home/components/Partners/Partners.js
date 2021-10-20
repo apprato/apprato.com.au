@@ -16,27 +16,37 @@ import {
 const useStyles = makeStyles(theme => ({
   root: {},
   logo: {
-    maxWidth: '7vw',
     opacity: '1',
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('md')]: {
+      maxWidth: '20vw',
+      marginTop: '40px',
+    },
+    [theme.breakpoints.up('md')]: {
       maxWidth: '11vw',
-    },    
+    },
+    [theme.breakpoints.up('xl')]: {
+      maxWidth: '7vw',
+    },
   },
   navigationContainer: {
-    display: 'table',
-    alignItems: 'center',
+    textAlign: 'center',
     margin: '0 auto',
     padding: '8rem 0',
     [theme.breakpoints.down('lg')]: {
       padding: '4rem 0',
+    },    
+    [theme.breakpoints.down('md')]: {
+      padding: '4rem 0 3rem',
     },    
   },
   listItem: {
     cursor: 'pointer',
     paddingTop: 0,
     paddingBottom: 0,
-    display: 'inline',
+    display: 'inline-block',
     margin: '',
+    width: 'auto',
+    lineHeight: '4rem',
   },
   listItemText: {
     lineHeight: '0',
@@ -77,12 +87,13 @@ const Partners = props => {
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Grid container spaces={0}> 
-        <Grid item xs={12} md={12} justify="flex-start" align="center">
+        <Grid item justify="flex-start" align="center" style={{margin:'0 7vw'}}>
         <Typography variant="h4">
           From connected services to commerce platforms, we provide you with the custom tools you need to emerge as a leader in your industry.
         </Typography>
         </Grid>
       </Grid>
+      <Grid container spaces={0}> 
       <List className={classes.navigationContainer}>
           <ListItem className={classes.listItem}>
             <Typography
@@ -140,13 +151,14 @@ const Partners = props => {
             </Typography>
           </ListItem>
         </List>
+      </Grid>
       <Grid container className={classes.partners}>
         <Grid item data-aos="fade-up" justif="center" >
           <Grid container justif="center" alignItems="center">
             {data.map((item, index) => (
-              <Grid item xs={5} md={2} key={index}>
+              <Grid item xs={4} md={2} key={index}>
                   <Image
-                    sx={{ color: '#202f43' }}
+                    style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
                     src={item.logo}
                     alt={item.name}
                     className={classes.logo}

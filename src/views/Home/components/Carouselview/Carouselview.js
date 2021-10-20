@@ -27,14 +27,23 @@ const useStyles = makeStyles(theme => ({
   },
   imageleft: {
     backgroundImage: `url(${"../images/Aquila_Image.jpg"})`,
+    width: '100vw',
     minHeight: '33vw',
     backgroundSize: 'cover',
     backgroundPosition: '-222px -230px',
     backgroundRepeat: 'no-repeat',
-    width: `100vw`,
-    [theme.breakpoints.down('lg')]: {
-      minHeight: '60vw',
-      backgroundPosition: '-140px -120px',
+    [theme.breakpoints.up('lg')]: {
+      backgroundPosition: '-140px 0px',
+    },    
+    [theme.breakpoints.between('xs','md')]: {
+      minHeight: '55vw',
+      backgroundPosition: '-15px -65px',
+      minWidth: '100vw',
+    },    
+    [theme.breakpoints.between('md','lg')]: {
+      backgroundPosition: '-145px -112px',
+      minHeight: '45vw',
+      minWidth: '90vw',
     },    
   },
   whitebg: {
@@ -43,11 +52,17 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('lg')]: {
       padding: '3.25em',
     },    
+    "& h6":{
+      margin: '1.5em 0 0',
+    }
   },
   headingh2:{
     marginBottom: '180px',
     [theme.breakpoints.down('lg')]: {
       marginBottom: '50px',
+    },    
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '0',
     },    
   },
   title:{
@@ -77,9 +92,31 @@ const Carouselview = props => {
         container
       >
       <Carousel
-      animation='slide'
-      //NextIcon={<img src="http://random.com/next"/>}
-      //PrevIcon={<img src="http://random.com/prev"/>}
+      NextIcon={<img src="./images/right.png" width="20" alt=""/>}
+      PrevIcon={<img src="./images/left.png" width="20" alt=""/>}
+      className = 'consultantreel'
+      animation = 'fade'
+      autoPlay =  'false'
+      stopAutoPlayOnHover = 'true'
+      cycleNavigation = 'false'
+      navButtonsAlwaysVisible= 'false'
+      navButtonsProps={{
+        style: {
+            backgroundColor: 'transparent',
+            borderRadius: 0
+        }
+      }}
+      indicatorIconButtonProps={{
+        style: {
+            padding: '4px',
+            color: '#fff'
+        }
+      }}
+      activeIndicatorIconButtonProps={{
+        style: {
+            color: '#3377ff',
+        }
+      }}
       >
       <Grid
         container
@@ -111,10 +148,86 @@ const Carouselview = props => {
           Supporting  Aquilas growth
         </Typography>
 
-        <Typography variant="body1">
+        <Typography variant="subtitle2">
           Development
         </Typography>
-        <Typography variant="subtitle1">
+        <Typography variant="h6">
+          As part of the brand expansion, Apprato worked with Aquila to increase their digital reach and support their growing eCommerce requirements . We integrated Emarsys Omnichannel Customer Engagement Platform to allow Aquila to export data feeds and develop mail lists and record sales metric engagements with front-end engagement trackers. We updated the payment gateway to Braintree with Kount for AI Driven Fraud Protection. And implemented an Advanced Look Book Engine to show case seasonal fashion apparel.
+        </Typography>
+        </Grid>
+      </Grid>      
+      <Grid
+        container
+      >
+        <Grid
+          item
+          container
+          alignItems="top"
+          xs={12}
+          md={6}
+          lg={6}
+        >
+        <div className={classes.imageleft}></div>
+        </Grid>
+        <Grid
+          item
+          container
+          className={classes.whitebg}
+          justify="flex-start"
+          alignItems="top"
+          xs={12}
+          md={6}
+          lg={6}
+        > 
+        <Typography variant="h2" display="block" className={classes.headingh2}>
+          Aquila
+        </Typography>
+        <Typography variant="h4" style={{width:'100%'}}>
+          Supporting  Aquilas growth
+        </Typography>
+
+        <Typography variant="subtitle2">
+          Development
+        </Typography>
+        <Typography variant="h6">
+          As part of the brand expansion, Apprato worked with Aquila to increase their digital reach and support their growing eCommerce requirements . We integrated Emarsys Omnichannel Customer Engagement Platform to allow Aquila to export data feeds and develop mail lists and record sales metric engagements with front-end engagement trackers. We updated the payment gateway to Braintree with Kount for AI Driven Fraud Protection. And implemented an Advanced Look Book Engine to show case seasonal fashion apparel.
+        </Typography>
+        </Grid>
+      </Grid>      
+      <Grid
+        container
+      >
+        <Grid
+          item
+          container
+          alignItems="top"
+          xs={12}
+          md={6}
+          lg={6}
+        >
+        <div className={classes.imageleft}></div>
+        </Grid>
+        <Grid
+          item
+          container
+          className={classes.whitebg}
+          justify="flex-start"
+          alignItems="top"
+          xs={12}
+          md={6}
+          lg={6}
+        > 
+        <Typography variant="h2" display="block" className={classes.headingh2}>
+          Aquila
+        </Typography>
+        <Typography variant="h4" style={{width:'100%'}}>
+          Supporting  Aquilas growth
+        </Typography>
+
+        <Typography variant="subtitle2">
+          Development
+        </Typography>
+        <Typography variant="h6">
           As part of the brand expansion, Apprato worked with Aquila to increase their digital reach and support their growing eCommerce requirements . We integrated Emarsys Omnichannel Customer Engagement Platform to allow Aquila to export data feeds and develop mail lists and record sales metric engagements with front-end engagement trackers. We updated the payment gateway to Braintree with Kount for AI Driven Fraud Protection. And implemented an Advanced Look Book Engine to show case seasonal fashion apparel.
         </Typography>
         </Grid>
