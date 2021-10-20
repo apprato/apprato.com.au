@@ -68,15 +68,6 @@ const theme = responsiveFontSizes(
         fontFamily: "AktivGrotesk",
       },
     },
-
-    overrides: {
-    MuiTypography: {
-      headline: {
-        [breakpoints.up("md")]: {
-        //fontSize: pxToRem(32)
-        }
-      }
-    }},
     palette,
     layout: {
       contentWidth: 2880,

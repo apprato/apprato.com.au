@@ -222,7 +222,7 @@ const Topbar = props => {
               onClick={onSidebarOpen}
               aria-label="Menu"
             >
-              <img src="../images/Hamburger_Menu.png"/>
+              <img src="../images/Hamburger_Menu.png" alt=""/>
             </IconButton>
           </Hidden>
         </Grid>

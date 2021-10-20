@@ -1,16 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid } from '@material-ui/core';
-import { LearnMoreLink, Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
-import { CardBase } from 'components/organisms';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core';
+import { Image } from 'components/atoms';
 import {
   List,
   ListItem,
   Typography,
-  Button,
 } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -78,11 +75,6 @@ const useStyles = makeStyles(theme => ({
 const Partners = props => {
   const { data, className, ...rest } = props;
   const classes = useStyles();
-
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>

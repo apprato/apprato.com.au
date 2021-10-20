@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Carousel from 'react-material-ui-carousel';
 import { Grid, Typography } from '@material-ui/core';
 
-
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',

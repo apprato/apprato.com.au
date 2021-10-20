@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { colors, Divider } from '@material-ui/core';
-import { Section, SectionAlternate } from 'components/organisms';
+import { Section } from 'components/organisms';
 import {
   Hero,
   Experts,

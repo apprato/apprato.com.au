@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid, Button, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core';
 import { SectionHeader } from 'components/molecules';
 import { LearnMoreLink, Image } from 'components/atoms';
 
@@ -49,11 +49,6 @@ const useStyles = makeStyles(theme => ({
 const Hero = props => {
   const { className, ...rest } = props;
   const classes = useStyles();
-
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>

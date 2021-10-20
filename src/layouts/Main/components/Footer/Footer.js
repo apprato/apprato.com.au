@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-import { IconButton, List, ListItem } from '@material-ui/core';
+import { List, ListItem } from '@material-ui/core';
 import { Grid, Typography, Divider } from '@material-ui/core';
 import { LearnMoreLink, Image } from 'components/atoms';
-import { SectionHeader, CountUpNumber } from 'components/molecules';
+import { SectionHeader } from 'components/molecules';
 
 
 const useStyles = makeStyles(theme => ({
@@ -185,9 +185,9 @@ const Footer = props => {
             md={5}
             lg={4}
           >
-          <a href="#" className={classes.sociallink}>Linkedin</a>
-          <a href="#" className={classes.sociallink}>Insta</a>
-          <a href="#" className={classes.sociallink}>Github</a>
+          <a href="/" className={classes.sociallink}>Linkedin</a>
+          <a href="/" className={classes.sociallink}>Insta</a>
+          <a href="/" className={classes.sociallink}>Github</a>
           </Grid>          
         </Grid>
         <Divider className={classes.devider} />

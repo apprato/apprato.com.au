@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-import { SectionHeader, CountUpNumber } from 'components/molecules';
 import Carousel from 'react-material-ui-carousel';
-import { Grid, Typography, Paper, Button } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 
 
 const useStyles = makeStyles(theme => ({
@@ -74,7 +72,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Carouselview = props => {
-  const { className, ...rest } = props;
   const classes = useStyles();
 
   return (

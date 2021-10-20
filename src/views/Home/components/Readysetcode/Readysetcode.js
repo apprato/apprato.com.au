@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-import { SectionHeader, CountUpNumber } from 'components/molecules';
-import { Grid, Typography, Paper, Button } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 
 
 const useStyles = makeStyles(theme => ({
@@ -74,7 +72,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Readysetcode = props => {
-  const { className, ...rest } = props;
   const classes = useStyles();
 
   return (
@@ -101,7 +98,7 @@ const Readysetcode = props => {
           md={4}
           lg={4}
         >
-            <img src="../images/agile.png" className={classes.myimg}/>
+            <img src="../images/agile.png" className={classes.myimg} alt=""/>
             <div className={classes.mydesc} spacing={10}>
             <Typography variant="h4">
               agile
@@ -119,7 +116,7 @@ const Readysetcode = props => {
           md={4}
           lg={4}
         >
-            <img src="../images/inspiring.png" className={classes.myimg}/>
+            <img src="../images/inspiring.png" className={classes.myimg} alt=""/>
             <div className={classes.mydesc}>
             <Typography variant="h4">
               inspiring
@@ -137,7 +134,7 @@ const Readysetcode = props => {
           md={4}
           lg={4}
         >
-            <img src="../images/skilled.png" className={classes.myimg}/>
+            <img src="../images/skilled.png" className={classes.myimg} alt=""/>
             <div className={classes.mydesc}>
             <Typography variant="h4">
               skilled
