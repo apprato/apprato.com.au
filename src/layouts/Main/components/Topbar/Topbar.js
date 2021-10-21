@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
+import * as Scroll from 'react-scroll';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+
 import {
   Grid,
   Toolbar,
@@ -137,59 +140,59 @@ const Topbar = props => {
           <Hidden smDown>
             <List className={classes.navigationContainer}>
               <ListItem className={classes.listItem}>
-                <Typography
-                  variant="body1"
-                  color="textSecondary"
-                  className={classes.listItemText}
-                  component="a"
-                  href="/home"
-                >
-                  Home
-                </Typography>
+                <Link to="home" smooth={true}>
+                  <Typography
+                    variant="body1"
+                    color="textSecondary"
+                    className={classes.listItemText}
+                  >
+                    Home
+                  </Typography>
+                </Link>
               </ListItem>
               <ListItem className={classes.listItem}>
+                <Link to="about" smooth={true} duration={2500}>
                 <Typography
                   variant="body1"
                   color="textSecondary"
                   className={classes.listItemText}
-                  component="a"
-                  href="/about"
                 >
                   About
                 </Typography>
+                </Link>
               </ListItem>
               <ListItem className={classes.listItem}>
+              <Link to="services" smooth={true} duration={2500}>
                 <Typography
                   variant="body1"
                   color="textSecondary"
                   className={classes.listItemText}
-                  component="a"
-                  href="/services"
                 >
                   Services
                 </Typography>
+                </Link>
               </ListItem>
               <ListItem className={classes.listItem}>
+              <Link to="team" smooth={true} duration={2500}>
                 <Typography
                   variant="body1"
                   color="textSecondary"
                   className={classes.listItemText}
-                  component="a"
-                  href="/team"
                 >
                   Team
                 </Typography>
+                </Link>
               </ListItem>
               <ListItem className={classes.listItem}>
+              <Link to="case-studies" smooth={true} duration={2500}>
                 <Typography
                   variant="body1"
                   color="textSecondary"
                   className={classes.listItemText}
-                  component="a"
-                  href="/case-studies"
                 >
                   Case Studies
                 </Typography>
+                </Link>
               </ListItem>
             </List>
           </Hidden>
@@ -209,11 +212,9 @@ const Topbar = props => {
             size="large"
             variant="contained"
             color="primary"
-            component="a"
-            href="#contact"
             className={classes.listItemButton}
-          >
-            Contact
+          ><Link to="contact" smooth={true} duration={2500}>
+            Contact</Link>
           </Button>
           </Hidden>
           <Hidden mdUp>

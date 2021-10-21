@@ -66,7 +66,7 @@ const Consultants = props => {
   const classes = useStyles();
 
   return (
-    <div className={classes.sectionstyle}>
+    <div className={classes.sectionstyle} name="team">
      <Grid
         container
         justify="space-between"

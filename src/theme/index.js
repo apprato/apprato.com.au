@@ -78,6 +78,70 @@ const theme = responsiveFontSizes(
       drawer: 1100,
     },
     overrides: {
+        MuiTabs: {
+          root: {
+            "& .MuiTabs-flexContainer":{
+              display: 'flex',
+              flexWrap: 'wrap',
+              flex: 'auto',
+              [breakpoints.up('lg')]: {
+                  display: 'inline-block',
+              },
+            },
+            "& .MuiTabs-indicator": {
+              display: "none",
+            },
+          },
+        },
+        MuiTab: {
+          root: {
+            minWidth: 'auto',
+            maxWidth: 'auto',
+            [breakpoints.down('lg')]: {
+              margin: '0 0.5em',
+              flex: 'auto',
+            },
+            [breakpoints.down('md')]: {
+              display: 'inline-block',
+              float: 'left',
+              padding: '0',
+              margin: '0 auto',
+            },
+            [breakpoints.up('md')]: {
+                margin: '0 0.5em',
+            },
+            [breakpoints.up('xl')]: {
+                margin: '0 2em',
+            },              
+            "& .MuiTab-wrapper": {
+                [breakpoints.up('md')]: {
+                  fontSize: pxToRem(15),
+                },
+                [breakpoints.up('lg')]: {
+                  fontSize: pxToRem(19),
+                },
+                [breakpoints.up('xl')]: {
+                  fontSize: pxToRem(32)
+                },              
+            },
+            "&.MuiTab-root": {
+              opacity: 1,
+              textTransform: 'capitalize',
+              paddingBottom: 0,
+              paddingTop: 0,
+              "&:hover": {
+                color: "#0d44ff",
+                opacity: 1,
+                borderBottom: "0.2em solid #0d44ff",
+                paddingBottom: 0,
+                paddingTop: 0,
+              },
+            },
+            "&.Mui-selected": {
+              borderBottom: "0.2em solid #0d44ff",
+            }
+          }
+      },
       MuiButton: {
         root: {
           // Some CSS

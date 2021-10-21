@@ -5,11 +5,46 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 import { Image } from 'components/atoms';
 import {
+  Box,
+  Tab,
+  Tabs,
   List,
   ListItem,
   Typography,
 } from '@material-ui/core';
 
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
 const useStyles = makeStyles(theme => ({
   root: {},
   logo: {
@@ -28,13 +63,17 @@ const useStyles = makeStyles(theme => ({
   navigationContainer: {
     textAlign: 'center',
     margin: '0 auto',
-    padding: '8rem 0',
+    padding: '8rem 0 0',
+    minHeight: '35em',
+
     [theme.breakpoints.down('lg')]: {
       padding: '4rem 0',
+      minHeight: '35em',
     },    
     [theme.breakpoints.down('md')]: {
-      padding: '4rem 0 3rem',
-    },    
+      padding: '4rem 0 0',
+      minHeight: '20em',
+    },
   },
   listItem: {
     cursor: 'pointer',
@@ -73,11 +112,17 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Partners = props => {
-  const { data, className, ...rest } = props;
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const { data1, data2, data3, data4, data5, className, ...rest } = props;
   const classes = useStyles();
 
   return (
-    <div className={clsx(classes.root, className)} {...rest}>
+    <div className={clsx(classes.root, className)} {...rest} name="services">
       <Grid container spaces={0}> 
         <Grid item justify="flex-start" align="center" style={{margin:'0 7vw'}}>
         <Typography variant="h4">
@@ -85,81 +130,94 @@ const Partners = props => {
         </Typography>
         </Grid>
       </Grid>
-      <Grid container spaces={0}> 
-      <List className={classes.navigationContainer}>
-          <ListItem className={classes.listItem}>
-            <Typography
-              variant="subtitle2"
-              color="textSecondary"
-              className={classes.listItemText}
-              component="a"
-              href="/home"
-            >
-              Platform as a Service
-            </Typography>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Typography
-              variant="subtitle2"
-              color="textSecondary"
-              className={classes.listItemText}
-              component="a"
-              href="/about"
-            >
-              Marketing           
-            </Typography>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Typography
-              variant="subtitle2"
-              color="textSecondary"
-              className={classes.listItemText}
-              component="a"
-              href="/services"
-            >
-              Inventory & Integration
-            </Typography>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Typography
-              variant="subtitle2"
-              color="textSecondary"
-              className={classes.listItemText}
-              component="a"
-              href="/team"
-            >
-              Payments and Security
-            </Typography>
-          </ListItem>
-          <ListItem className={classes.listItem}>
-            <Typography
-              variant="subtitle2"
-              color="textSecondary"
-              className={classes.listItemText}
-              component="a"
-              href="/case-studies"
-            >
-              Shipping & Fulfillment
-            </Typography>
-          </ListItem>
-        </List>
-      </Grid>
-      <Grid container className={classes.partners}>
-        <Grid item data-aos="fade-up" justif="center" >
-          <Grid container justif="center" alignItems="center">
-            {data.map((item, index) => (
-              <Grid item xs={4} md={2} key={index}>
-                  <Image
-                    //style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
-                    src={item.logo}
-                    alt={item.name}
-                    className={classes.logo}
-                    lazy={false}
-                  />
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
+      <Grid container spaces={0}>
+
+      <Box className={classes.navigationContainer}>
+        <Box>
+          <Tabs value={value} onChange={handleChange}>
+            <Tab label="Platform as a Service" {...a11yProps(0)} />
+            <Tab label="Item Marketing" {...a11yProps(1)} />
+            <Tab label="Inventory & Integration" {...a11yProps(2)} />
+            <Tab label="Payments and Security" {...a11yProps(3)} />
+            <Tab label="Shipping & Fulfillment" {...a11yProps(4)} />
+          </Tabs>
+        </Box>
+        <TabPanel value={value} index={0}>
+            <Grid container justif="center" alignItems="center">
+              {data1.map((item, index) => (
+                <Grid item xs={4} md={2} key={index}>
+                    <Image
+                      style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
+                      src={item.logo}
+                      alt={item.name}
+                      className={classes.logo}
+                      lazy={false}
+                    />
+                </Grid>
+              ))}
+            </Grid>
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+            <Grid container justif="center" alignItems="center">
+              {data2.map((item, index) => (
+                <Grid item xs={4} md={2} key={index}>
+                    <Image
+                      style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
+                      src={item.logo}
+                      alt={item.name}
+                      className={classes.logo}
+                      lazy={false}
+                    />
+                </Grid>
+              ))}
+            </Grid>
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+            <Grid container justif="center" alignItems="center">
+              {data3.map((item, index) => (
+                <Grid item xs={4} md={2} key={index}>
+                    <Image
+                      style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
+                      src={item.logo}
+                      alt={item.name}
+                      className={classes.logo}
+                      lazy={false}
+                    />
+                </Grid>
+              ))}
+            </Grid>
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+            <Grid container justif="center" alignItems="center">
+              {data4.map((item, index) => (
+                <Grid item xs={4} md={2} key={index}>
+                    <Image
+                      style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
+                      src={item.logo}
+                      alt={item.name}
+                      className={classes.logo}
+                      lazy={false}
+                    />
+                </Grid>
+              ))}
+            </Grid>
+        </TabPanel>
+        <TabPanel value={value} index={4}>
+            <Grid container justif="center" alignItems="center">
+              {data5.map((item, index) => (
+                <Grid item xs={4} md={2} key={index}>
+                    <Image
+                      style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
+                      src={item.logo}
+                      alt={item.name}
+                      className={classes.logo}
+                      lazy={false}
+                    />
+                </Grid>
+              ))}
+            </Grid>
+        </TabPanel>
+      </Box>
       </Grid>
     </div>
   );
@@ -173,7 +231,11 @@ Partners.propTypes = {
   /**
    * data to be rendered
    */
-  data: PropTypes.array.isRequired,
+  data1: PropTypes.array.isRequired,
+  data2: PropTypes.array.isRequired,
+  data3: PropTypes.array.isRequired,
+  data4: PropTypes.array.isRequired,
+  data5: PropTypes.array.isRequired,
 };
 
 export default Partners;

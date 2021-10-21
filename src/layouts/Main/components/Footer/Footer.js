@@ -7,7 +7,6 @@ import { Grid, Typography, Divider } from '@material-ui/core';
 import { LearnMoreLink, Image } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 
-
 const useStyles = makeStyles(theme => ({
   root: {
     color: '#fff',
@@ -105,7 +104,7 @@ const Footer = props => {
   const classes = useStyles();
 
   return (
-    <div {...rest} className={clsx(classes.root, className)}>
+    <div {...rest} className={clsx(classes.root, className)} name="contact">
       <div className={classes.footerContainer}>
       <Grid
         container

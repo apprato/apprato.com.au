@@ -98,6 +98,27 @@ const useStyles = makeStyles(theme => ({
       height: 'auto',
     },
   },
+  imageleft4: {
+    backgroundImage: `url(${"../images/casestudies/Farm2_Market_graphic.jpg"})`,
+    width: '100%',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    [theme.breakpoints.down('md')]: {
+      minHeight: '46vw',
+      backgroundPosition: '0px -30px',
+      minWidth: '80vw',
+    },    
+    [theme.breakpoints.between('md','lg')]: {
+      backgroundPosition: '0 0',
+      minHeight: '35vw',
+      minWidth: 'auto',
+    },    
+    [theme.breakpoints.up('lg')]: {
+      backgroundPosition: '0 0',
+      minWidth: 'auto',
+      height: 'auto',
+    },
+  },
   whitebg: {
     background: '#fff',
     padding: '6.25em',
@@ -132,7 +153,7 @@ const Carouselview = props => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div name="case-studies">
      <Grid
         className={classes.title}
         container
@@ -268,6 +289,42 @@ const Carouselview = props => {
           lg={6}
         > 
         <img src="images/casestudies/Adorn Cosmetics.png" className={classes.logoimage} alt="" />
+        <Typography variant="h4" style={{width:'100%'}}>
+          Supporting  Aquilas growth
+        </Typography>
+
+        <Typography variant="subtitle2">
+          Development
+        </Typography>
+        <Typography variant="h6">
+          As part of the brand expansion, Apprato worked with Aquila to increase their digital reach and support their growing eCommerce requirements . We integrated Emarsys Omnichannel Customer Engagement Platform to allow Aquila to export data feeds and develop mail lists and record sales metric engagements with front-end engagement trackers. We updated the payment gateway to Braintree with Kount for AI Driven Fraud Protection. And implemented an Advanced Look Book Engine to show case seasonal fashion apparel.
+        </Typography>
+        </Grid>
+      </Grid>            
+      <Grid
+        container
+      >
+        <Grid
+          item
+          container
+          alignItems="top"
+          xs={12}
+          md={6}
+          lg={6}
+        >
+        <div className={classes.imageleft4}></div>
+        </Grid>
+        <Grid
+          item
+          container
+          className={classes.whitebg}
+          justify="flex-start"
+          alignItems="top"
+          xs={12}
+          md={6}
+          lg={6}
+        > 
+        <img src="images/casestudies/farm2Market_Logo.svg" className={classes.logoimage} alt="" />
         <Typography variant="h4" style={{width:'100%'}}>
           Supporting  Aquilas growth
         </Typography>

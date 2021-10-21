@@ -78,7 +78,7 @@ const Experts = props => {
   const classes = useStyles();
 
   return (
-    <div className={clsx(classes.root, className)} {...rest}>
+    <div className={clsx(classes.root, className)} {...rest} name="about">
       <Grid
         container
         justify="space-between"

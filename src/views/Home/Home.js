@@ -10,7 +10,7 @@ import {
   Partners,
 } from './components';
 
-import { integrations } from './data';
+import { sas1, sas2, sas3, sas4, sas5 } from './data';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -51,7 +51,7 @@ const Home = () => {
           <Carouselview />
         </Section>
         <Section>
-          <Partners data={integrations} />
+          <Partners data1={sas1} data2={sas2} data3={sas3} data4={sas4} data5={sas5} />
         </Section>
     </div>
   );
