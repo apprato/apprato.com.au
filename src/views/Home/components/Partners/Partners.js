@@ -14,9 +14,9 @@ const useStyles = makeStyles(theme => ({
   root: {},
   logo: {
     opacity: '1',
+    margin: '20px',
     [theme.breakpoints.down('md')]: {
       maxWidth: '20vw',
-      marginTop: '40px',
     },
     [theme.breakpoints.up('md')]: {
       maxWidth: '11vw',
@@ -150,7 +150,7 @@ const Partners = props => {
             {data.map((item, index) => (
               <Grid item xs={4} md={2} key={index}>
                   <Image
-                    style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
+                    //style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
                     src={item.logo}
                     alt={item.name}
                     className={classes.logo}

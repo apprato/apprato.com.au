@@ -28,6 +28,10 @@ const useStyles = makeStyles(theme => ({
       padding: '3rem 3.25rem',
       margin: '6.375rem -30px',
     },
+    [theme.breakpoints.down('lg')]: {
+      padding: '2.5rem 1.5rem',
+      margin: '6.375rem -30px',
+    },
     [theme.breakpoints.down('md')]: {
       padding: '2.5em 2em',
       margin: '6em 0px',
@@ -63,7 +67,7 @@ const useStyles = makeStyles(theme => ({
         height: '9.5rem',
       },
       [theme.breakpoints.up('lg')]: {
-        height: '18rem',
+        height: '12rem',
       },
     },
   }
@@ -78,7 +82,7 @@ const Experts = props => {
       <Grid
         container
         justify="space-between"
-        spacing={10}
+        spacing={5}
         className={classes.expertbox}
       >
         <Grid

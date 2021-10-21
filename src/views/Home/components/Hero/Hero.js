@@ -28,6 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     maxWidth: '80%',
+    height: 'auto',
     [theme.breakpoints.up('lg')]: {
       paddingLeft: '4rem',
     },
