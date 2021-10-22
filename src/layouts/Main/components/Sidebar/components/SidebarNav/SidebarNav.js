@@ -12,6 +12,7 @@ import {
   Button,
 } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -47,6 +48,7 @@ const SidebarNav = props => {
         </ListItemIcon>
       </ListItem>
         <ListItem className={classes.listItem}>
+        <Link to="home" smooth={true}>
           <Typography
           variant="h6"
             color="textSecondary"
@@ -56,61 +58,61 @@ const SidebarNav = props => {
           >
             Home
           </Typography>
+          </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
+          <Link to="about" smooth={true} duration={2500}>
           <Typography
-          variant="h6"
+            variant="body1"
             color="textSecondary"
-            className={classes.listItemLink}
-            component="a"
-            href="/about"
+            className={classes.listItemText}
           >
             About
           </Typography>
+          </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
+        <Link to="services" smooth={true} duration={2500}>
           <Typography
-          variant="h6"
+            variant="body1"
             color="textSecondary"
-            className={classes.listItemLink}
-            component="a"
-            href="/services"
+            className={classes.listItemText}
           >
             Services
           </Typography>
+          </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
+        <Link to="team" smooth={true} duration={2500}>
           <Typography
-          variant="h6"
+            variant="body1"
             color="textSecondary"
-            className={classes.listItemLink}
-            component="a"
-            href="/team"
+            className={classes.listItemText}
           >
             Team
           </Typography>
+          </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
+        <Link to="case-studies" smooth={true} duration={2500}>
           <Typography
-          variant="h6"
+            variant="body1"
             color="textSecondary"
-            className={classes.listItemLink}
-            component="a"
-            href="/case-studies"
+            className={classes.listItemText}
           >
             Case Studies
           </Typography>
-        </ListItem>
+          </Link>
+      </ListItem>
       <ListItem className={classes.listItem}>
         <Button
           size="large"
           variant="contained"
           color="primary"
           fullWidth
-          component="a"
-          href="/contact"
         >
-          Contact
+          <Link to="contact" smooth={true} duration={2500}>
+            Contact</Link>
         </Button>
       </ListItem>
     </List>
