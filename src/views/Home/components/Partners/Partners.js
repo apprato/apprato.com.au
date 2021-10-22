@@ -213,8 +213,7 @@ const Partners = props => {
             <Grid container justif="center" alignItems="center">
               {data5.map((item, index) => (
                 <Grid item xs={4} md={2} key={index}>
-                    <Image
-                      style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
+                    <Image                      
                       src={item.logo}
                       alt={item.name}
                       className={classes.logo}
