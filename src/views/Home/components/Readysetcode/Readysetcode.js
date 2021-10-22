@@ -53,6 +53,11 @@ const useStyles = makeStyles(theme => ({
       marginRight: '4.125em',
       margin: 0,
     },
+    [theme.breakpoints.down('sm')]: {
+      margin: '0 0 0 1.5em',
+      display: 'inline-block',
+      width: '72%',
+    },
     "& h4": {
       marginBottom: '40px',
       [theme.breakpoints.down('md')]: {
@@ -67,6 +72,10 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.between('md', 'lg')]: {
       paddingRight: '25rem'
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingRight: '1rem',
+      margin:'1em 0 3.25rem',
     },
   }
 }));

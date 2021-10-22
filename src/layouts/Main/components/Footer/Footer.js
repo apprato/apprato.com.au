@@ -39,6 +39,10 @@ const useStyles = makeStyles(theme => ({
       width: '15em',
       margin: '4.5em 0 3.5em',
     },    
+    [theme.breakpoints.down('sm')]: {
+      width: '75%',
+      margin: '2.5em 0 1em',
+    },    
   },
   logoImage: {
     width: '100%',
@@ -68,6 +72,11 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('lg')]: {
       fontSize: '1.25em',
     },    
+    [theme.breakpoints.down('sm')]: {
+      float: 'left',
+      paddingLeft: '0',
+      padding: '0 2em 1em',
+    },    
   },
   toptitle: {
     marginBottom: '2.5rem',
@@ -76,6 +85,12 @@ const useStyles = makeStyles(theme => ({
     fontSize:'2.625rem',
     [theme.breakpoints.down('lg')]: {
       fontSize:'1.5rem',
+    },
+    [theme.breakpoints.down('md')]: {
+      fontSize:'1.25rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize:'1rem',
     },
   },
   learnmore: {
@@ -92,8 +107,12 @@ const useStyles = makeStyles(theme => ({
   },
   copy: {
     fontSize:'1.875rem',
+    marginBottom: '1em',
     [theme.breakpoints.down('lg')]: {
       fontSize:'1.25rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize:'1rem',
     },
   }
 }));
@@ -156,7 +175,8 @@ const Footer = props => {
             item
             container
             alignItems="center"
-            xs={6}
+            xs={12}
+            sm={6}
             md={7}
             lg={8}
           >        
@@ -180,7 +200,8 @@ const Footer = props => {
             container 
             justify="flex-end"
             alignItems="center"
-            xs={6}
+            xs={12}
+            sm={6}
             md={5}
             lg={4}
           >

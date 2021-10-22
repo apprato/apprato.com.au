@@ -39,6 +39,9 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(0, 0, '11.0625rem'),
     [theme.breakpoints.down('lg')]: {
       padding: theme.spacing(0, 0, 20),
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(0, 0, 12),
     }
   },
   listItem: {

@@ -12,9 +12,15 @@ const useStyles = makeStyles(theme => ({
       [theme.breakpoints.down('md')]: {
         margin: '1.5em 0 0',
       },
+      [theme.breakpoints.down('sm')]: {
+        margin: '1em 0 0',
+      },
     },
     "& h6": {
       margin: '1.5em 0',
+      [theme.breakpoints.down('sm')]: {
+        margin: '1em 0 0',
+      },
     },
     [theme.breakpoints.up('md')]: {
       paddingRight: '3rem',

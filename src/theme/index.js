@@ -10,7 +10,7 @@ const theme = responsiveFontSizes(
     breakpoints: {
       values: {
         xs: 0,
-        sm: 768,
+        sm: 786,
         md: 1024,
         lg: 1884,
         xl: 2880,
@@ -78,6 +78,22 @@ const theme = responsiveFontSizes(
       drawer: 1100,
     },
     overrides: {
+        MuiDivider:{
+          root: {
+              [breakpoints.down('sm')]: {
+                  margin: '1em auto !important',
+              },              
+          }
+        },
+        MuiGrid:{
+          root: {
+            "& .MuiGrid-item":{
+              [breakpoints.down('sm')]: {
+                  justifyContent: 'flex-start',
+              },
+            },
+          },
+        },
         MuiTabs: {
           root: {
             "& .MuiTabs-flexContainer":{
@@ -86,6 +102,9 @@ const theme = responsiveFontSizes(
               flex: 'auto',
               [breakpoints.up('lg')]: {
                   display: 'inline-block',
+              },
+              [breakpoints.down('sm')]: {
+                  display: 'inline-grid',
               },
             },
             "& .MuiTabs-indicator": {
@@ -106,6 +125,9 @@ const theme = responsiveFontSizes(
               float: 'left',
               padding: '0',
               margin: '0 auto',
+            },
+            [breakpoints.down('sm')]: {
+              margin: '0 15px',
             },
             [breakpoints.up('md')]: {
                 margin: '0 0.5em',
@@ -159,7 +181,16 @@ const theme = responsiveFontSizes(
       MuiTypography: {
         h1: {
           [breakpoints.up('xs')]: {
-            fontSize: pxToRem(50)
+            fontSize: pxToRem(35)
+          },
+          [breakpoints.up('sm')]: {
+            fontSize: pxToRem(70)
+          },
+          [breakpoints.up('md')]: {
+            fontSize: pxToRem(45)
+          },
+          [breakpoints.up('lg')]: {
+            fontSize: pxToRem(60)
           },
           [breakpoints.up('xl')]: {
             fontSize: pxToRem(108)
@@ -167,6 +198,9 @@ const theme = responsiveFontSizes(
         },
         h2: {
           [breakpoints.up('xs')]: {
+            fontSize: pxToRem(35)
+          },
+          [breakpoints.up('sm')]: {
             fontSize: pxToRem(64)
           },
           [breakpoints.up('md')]: {
@@ -181,6 +215,9 @@ const theme = responsiveFontSizes(
         },
         h6: {
           [breakpoints.up('xs')]: {
+            fontSize: pxToRem(15)
+          },
+          [breakpoints.up('sm')]: {
             fontSize: pxToRem(24)
           },
           [breakpoints.up('md')]: {
@@ -195,6 +232,9 @@ const theme = responsiveFontSizes(
         },
         h3: {
           [breakpoints.up('xs')]: {
+            fontSize: pxToRem(30)
+          },
+          [breakpoints.up('sm')]: {
             fontSize: pxToRem(64)
           },
           [breakpoints.up('md')]: {
@@ -209,6 +249,9 @@ const theme = responsiveFontSizes(
         },
         h5: {
           [breakpoints.up('xs')]: {
+            fontSize: pxToRem(20)
+          },
+          [breakpoints.up('sm')]: {
             fontSize: pxToRem(28)
           },
           [breakpoints.up('md')]: {
@@ -223,6 +266,9 @@ const theme = responsiveFontSizes(
         },
         h4: {
           [breakpoints.up('xs')]: {
+            fontSize: pxToRem(25)
+          },
+          [breakpoints.up('sm')]: {
             fontSize: pxToRem(42)
           },
           [breakpoints.up('md')]: {
@@ -236,6 +282,12 @@ const theme = responsiveFontSizes(
           },
         },
         subtitle2: {
+          [breakpoints.up('xs')]: {
+            fontSize: pxToRem(12)
+          },
+          [breakpoints.up('sm')]: {
+            fontSize: pxToRem(12)
+          },
           [breakpoints.up('md')]: {
             fontSize: pxToRem(12)
           },
@@ -247,6 +299,12 @@ const theme = responsiveFontSizes(
           },
         },
         subtitle1: {
+          [breakpoints.up('xs')]: {
+            fontSize: pxToRem(11)
+          },
+          [breakpoints.up('sm')]: {
+            fontSize: pxToRem(14)
+          },
           [breakpoints.up('md')]: {
             fontSize: pxToRem(11)
           },

@@ -16,6 +16,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       padding: '3em 1em 1em',
     },
+    [theme.breakpoints.down('sm')]: {
+      padding: '1.5em 0.5em 0.5em',
+    },
   },
   expertbox: {
     filter: 'drop-shadow(0px 20px 35px rgba(13,68,255,0.2))',
@@ -36,6 +39,10 @@ const useStyles = makeStyles(theme => ({
       padding: '2.5em 2em',
       margin: '6em 0px',
     },
+    [theme.breakpoints.down('sm')]: {
+      padding: '1.5em 1em 1em',
+      margin: '3em 0px',
+    },
   },
   experts: {
     margin: '40px 20px 0',
@@ -52,6 +59,10 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('md')]: {
           fontSize: '1.25rem',
           lineHeight: '28px',
+        },
+        [theme.breakpoints.down('sm')]: {
+          fontSize: '1rem',
+          lineHeight: '25px',
         },
     },
     [theme.breakpoints.down('lg')]: {

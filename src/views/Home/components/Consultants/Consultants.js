@@ -14,7 +14,11 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('lg')]: {
       marginTop: '8.75rem',
       marginBottom: '3.25rem',
-    },    
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '3.75rem',
+      marginBottom: '1.25rem',
+    },
   },
   consultant: {
     borderRadius: '30px',
@@ -40,6 +44,10 @@ const useStyles = makeStyles(theme => ({
       lineHeight: '0.5rem',
       padding: '0 1.5em',
     },    
+    [theme.breakpoints.down('sm')]: {
+      lineHeight: '0.5rem',
+      padding: '1em 0.5em',
+    },
   },
   subline: {
     display: 'inline-block',
@@ -58,6 +66,12 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '400px',
     [theme.breakpoints.down('lg')]: {
       marginBottom: '100px',
+    },    
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '50px',
+    },    
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: '25px',
     },    
   },
 }));

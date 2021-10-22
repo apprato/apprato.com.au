@@ -9,15 +9,17 @@ const useStyles = makeStyles(theme => ({
   root: {
     background: 'url(../images/bg-layers.png) no-repeat top',
     margin: '0 auto 0',
-
-    [theme.breakpoints.up('xs')]: {
-      padding: '30px 4em 0',
+    [theme.breakpoints.down('sm')]: {
+      padding: '30px 1em 0',
     },
     [theme.breakpoints.up('md')]: {
       padding: '30px 6em 0',
     },
     [theme.breakpoints.up('xl')]: {
       padding: '80px 16.875rem 40px',
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+      padding: '30px 4em 0',
     },
     height: '100%',
   },
@@ -32,6 +34,9 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.down('md')]: {
       padding: '0 5em 0',
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: '0 2em 0',
     },
   },
 }));

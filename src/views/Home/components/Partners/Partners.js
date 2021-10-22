@@ -50,6 +50,9 @@ const useStyles = makeStyles(theme => ({
   logo: {
     opacity: '1',
     margin: '20px',
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '25vw',
+    },
     [theme.breakpoints.down('md')]: {
       maxWidth: '20vw',
     },
@@ -73,6 +76,10 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       padding: '4rem 0 0',
       minHeight: '20em',
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: '3rem 0 0',
+      minHeight: '30em',
     },
   },
   listItem: {
