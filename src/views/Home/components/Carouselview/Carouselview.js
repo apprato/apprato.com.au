@@ -124,6 +124,12 @@ const useStyles = makeStyles(theme => ({
     padding: '6.25em',
     [theme.breakpoints.down('lg')]: {
       padding: '3.25em',
+    },
+    [theme.breakpoints.down('md')]: {
+      padding: '2.75em',
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: '2em',
     },    
     "& h6":{
       margin: '1.5em 0 0',

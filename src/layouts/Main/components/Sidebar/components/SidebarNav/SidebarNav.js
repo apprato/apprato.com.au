@@ -12,7 +12,7 @@ import {
   Button,
 } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,12 +20,14 @@ const useStyles = makeStyles(theme => ({
   listItem: {
     flexDirection: 'column',
     alignItems: 'flex-start',
+    padding: '0 20px 15px',
   },
   listItemIcon: {
     minWidth: 'auto',
   },
   listItemLink: {
     textDecoration: 'none',
+    cursor: 'pointer',
   },
   closeIcon: {
     justifyContent: 'flex-end',
@@ -50,11 +52,9 @@ const SidebarNav = props => {
         <ListItem className={classes.listItem}>
         <Link to="home" smooth={true}>
           <Typography
-          variant="h6"
+            variant="body1"
             color="textSecondary"
             className={classes.listItemLink}
-            component="a"
-            href="/home"
           >
             Home
           </Typography>
@@ -65,7 +65,7 @@ const SidebarNav = props => {
           <Typography
             variant="body1"
             color="textSecondary"
-            className={classes.listItemText}
+            className={classes.listItemLink}
           >
             About
           </Typography>
@@ -76,7 +76,7 @@ const SidebarNav = props => {
           <Typography
             variant="body1"
             color="textSecondary"
-            className={classes.listItemText}
+            className={classes.listItemLink}
           >
             Services
           </Typography>
@@ -87,7 +87,7 @@ const SidebarNav = props => {
           <Typography
             variant="body1"
             color="textSecondary"
-            className={classes.listItemText}
+            className={classes.listItemLink}
           >
             Team
           </Typography>
@@ -98,7 +98,7 @@ const SidebarNav = props => {
           <Typography
             variant="body1"
             color="textSecondary"
-            className={classes.listItemText}
+            className={classes.listItemLink}
           >
             Case Studies
           </Typography>
@@ -111,8 +111,7 @@ const SidebarNav = props => {
           color="primary"
           fullWidth
         >
-          <Link to="contact" smooth={true} duration={2500}>
-            Contact</Link>
+          <Link to="contact" smooth={true} duration={2500}>Contact</Link>
         </Button>
       </ListItem>
     </List>

@@ -54,7 +54,7 @@ const useStyles = makeStyles(theme => ({
       margin: 0,
     },
     [theme.breakpoints.down('sm')]: {
-      margin: '0 0 0 1.5em',
+      margin: '0 0 1.5em 1.5em',
       display: 'inline-block',
       width: '72%',
     },
@@ -84,7 +84,7 @@ const Readysetcode = props => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div name="services">
       <Grid
         container
         justify="space-between"

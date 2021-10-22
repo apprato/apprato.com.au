@@ -181,7 +181,7 @@ const theme = responsiveFontSizes(
       MuiTypography: {
         h1: {
           [breakpoints.up('xs')]: {
-            fontSize: pxToRem(35)
+            fontSize: pxToRem(32)
           },
           [breakpoints.up('sm')]: {
             fontSize: pxToRem(70)

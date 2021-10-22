@@ -31,7 +31,14 @@
     font-display: swap;
 }
 
-.consultantreel {
-  margin: 0 -5em;
-  padding: 0 5em;
+@media only screen and (max-width: 1024px) {
+    .consultantreel .Carousel-buttonWrapper-60 .MuiIconButton-root {
+        display: none;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .consultantreel {
+      margin: 0 -4em;
+      padding: 0 4em;
+    }
 }

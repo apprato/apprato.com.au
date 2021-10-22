@@ -8,8 +8,6 @@ import {
   Box,
   Tab,
   Tabs,
-  List,
-  ListItem,
   Typography,
 } from '@material-ui/core';
 
@@ -129,7 +127,7 @@ const Partners = props => {
   const classes = useStyles();
 
   return (
-    <div className={clsx(classes.root, className)} {...rest} name="services">
+    <div className={clsx(classes.root, className)} {...rest}>
       <Grid container spaces={0}> 
         <Grid item justify="flex-start" align="center" style={{margin:'0 7vw'}}>
         <Typography variant="h4">
@@ -213,7 +211,8 @@ const Partners = props => {
             <Grid container justif="center" alignItems="center">
               {data5.map((item, index) => (
                 <Grid item xs={4} md={2} key={index}>
-                    <Image                      
+                    <Image
+                      style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
                       src={item.logo}
                       alt={item.name}
                       className={classes.logo}

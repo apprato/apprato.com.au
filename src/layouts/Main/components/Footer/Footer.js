@@ -75,7 +75,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       float: 'left',
       paddingLeft: '0',
-      padding: '0 2em 1em',
+      padding: '0 1.5em 1em',
     },    
   },
   toptitle: {
@@ -112,7 +112,7 @@ const useStyles = makeStyles(theme => ({
       fontSize:'1.25rem',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize:'1rem',
+      fontSize:'0.9rem',
     },
   }
 }));
