@@ -267,7 +267,7 @@ const Carouselview = props => {
           Development
         </Typography>
         <Typography variant="h6">
-          As part of the brand expansion, Apprato worked with Aquila to increase their digital reach and support their growing eCommerce requirements . We integrated Emarsys Omnichannel Customer Engagement Platform to allow Aquila to export data feeds and develop mail lists and record sales metric engagements with front-end engagement trackers. We updated the payment gateway to Braintree with Kount for AI Driven Fraud Protection. And implemented an Advanced Look Book Engine to show case seasonal fashion apparel.
+          Apprato assisted A.C.E.R in Migrating and upgrading their old project from the Magento 1 platform to the Magento 2 platform. We also advised on solutions to better support Multiple auto scaling architecture and admin node processes of staging and production systems through continuous deployment & integration of ERP product stock, exporting data to financial systems and backorder & On Account processes.
         </Typography>
         </Grid>
       </Grid>      
@@ -339,7 +339,7 @@ const Carouselview = props => {
           Development
         </Typography>
         <Typography variant="h6">
-          As part of the brand expansion, Apprato worked with Aquila to increase their digital reach and support their growing eCommerce requirements . We integrated Emarsys Omnichannel Customer Engagement Platform to allow Aquila to export data feeds and develop mail lists and record sales metric engagements with front-end engagement trackers. We updated the payment gateway to Braintree with Kount for AI Driven Fraud Protection. And implemented an Advanced Look Book Engine to show case seasonal fashion apparel.
+           ur online farmers market has a number of exciting benefits for farmers and customers alike. Firstly, all of our products are grown by local farmers and are available in their freshest possible condition. We avoid processing and packaging our various food products in order to maximise quality and freshness. Secondly, we understand that attending farmers markets can be difficult. Our online grocery shopping platform makes selling products easier for farmers and grocers who might not be able to attend a farmers market. The ability to buy groceries online also benefits customers, allowing them to enjoy the highest quality produce and enjoy fresh fruit and veg delivery.
         </Typography>
         </Grid>
       </Grid>            
