@@ -151,8 +151,7 @@ const Partners = props => {
             <Grid container justif="center" alignItems="center">
               {data1.map((item, index) => (
                 <Grid item xs={4} md={2} key={index}>
-                    <Image
-                      style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
+                    <embed
                       src={item.logo}
                       alt={item.name}
                       className={classes.logo}
@@ -166,8 +165,7 @@ const Partners = props => {
             <Grid container justif="center" alignItems="center">
               {data2.map((item, index) => (
                 <Grid item xs={4} md={2} key={index}>
-                    <Image
-                      style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
+                    <embed
                       src={item.logo}
                       alt={item.name}
                       className={classes.logo}
@@ -181,8 +179,7 @@ const Partners = props => {
             <Grid container justif="center" alignItems="center">
               {data3.map((item, index) => (
                 <Grid item xs={4} md={2} key={index}>
-                    <Image
-                      style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
+                    <embed
                       src={item.logo}
                       alt={item.name}
                       className={classes.logo}
@@ -196,8 +193,7 @@ const Partners = props => {
             <Grid container justif="center" alignItems="center">
               {data4.map((item, index) => (
                 <Grid item xs={4} md={2} key={index}>
-                    <Image
-                      style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
+                    <embed
                       src={item.logo}
                       alt={item.name}
                       className={classes.logo}
@@ -211,8 +207,7 @@ const Partners = props => {
             <Grid container justif="center" alignItems="center">
               {data5.map((item, index) => (
                 <Grid item xs={4} md={2} key={index}>
-                    <Image
-                      style={{ filter: 'invert(12%) sepia(8%) saturate(4209%) hue-rotate(175deg) brightness(96%) contrast(85%)' }}
+                    <embed
                       src={item.logo}
                       alt={item.name}
                       className={classes.logo}
