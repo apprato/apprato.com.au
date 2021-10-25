@@ -144,6 +144,7 @@ const Footer = props => {
             Our goal is to help you achieve yours, now and into the future. Speak to a digital specialist now - not a salesaman.
           </Typography>
           <SectionHeader
+            title=""
             subtitle={
               <span>
                 <LearnMoreLink

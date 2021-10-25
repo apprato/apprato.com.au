@@ -120,7 +120,7 @@ const Experts = props => {
           item
           container
           alignItems="center"
-          justifyContent="center"
+          justifycontent="center"
           justify="flex-start"
           xs={12}
           md={7}

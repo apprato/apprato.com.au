@@ -141,7 +141,6 @@ const Consultants = props => {
           container
           className={classes.consultantimage}
           justify="flex-start"
-          alignItems="top"
           xs={12}
           md={4}
           lg={3}
@@ -180,7 +179,6 @@ const Consultants = props => {
           container
           className={classes.consultantimage}
           justify="flex-start"
-          alignItems="top"
           xs={12}
           md={4}
           lg={3}
@@ -227,7 +225,6 @@ const Consultants = props => {
           container
           className={classes.consultantimage}
           justify="flex-start"
-          alignItems="top"
           xs={12}
           md={4}
           lg={3}
@@ -266,7 +263,6 @@ const Consultants = props => {
           container
           className={classes.consultantimage}
           justify="flex-start"
-          alignItems="top"
           xs={12}
           md={4}
           lg={3}

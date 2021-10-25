@@ -50,7 +50,7 @@ const SidebarNav = props => {
         </ListItemIcon>
       </ListItem>
         <ListItem className={classes.listItem}>
-        <Link to="home" smooth={true} onClick={onClose}>
+        <Link to="/" smooth={true} onClick={onClose}>
           <Typography
             variant="body1"
             color="textSecondary"

@@ -149,8 +149,13 @@ const useStyles = makeStyles(theme => ({
   },
   title:{
     marginBottom: '120px',
-    [theme.breakpoints.down('lg')]: {
+    maxWidth: '45%',
+    [theme.breakpoints.down('md')]: {
       marginBottom: '50px',
+      maxWidth: '550px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '100vw',
     },    
   }
 }));
@@ -163,9 +168,6 @@ const Carouselview = props => {
      <Grid
         className={classes.title}
         container
-        xs={12}
-        md={6}
-        lg={6}
       >
         <Typography variant="h5">Delivering accelerated outcomes by working in accountable partnership.</Typography>
     </Grid>
@@ -205,7 +207,6 @@ const Carouselview = props => {
         <Grid
           item
           container
-          alignItems="top"
           xs={12}
           md={6}
           lg={6}
@@ -217,7 +218,6 @@ const Carouselview = props => {
           container
           className={classes.whitebg}
           justify="flex-start"
-          alignItems="top"
           xs={12}
           md={6}
           lg={6}
@@ -241,7 +241,6 @@ const Carouselview = props => {
         <Grid
           item
           container
-          alignItems="top"
           xs={12}
           md={6}
           lg={6}
@@ -253,7 +252,6 @@ const Carouselview = props => {
           container
           className={classes.whitebg}
           justify="flex-start"
-          alignItems="top"
           xs={12}
           md={6}
           lg={6}
@@ -277,7 +275,6 @@ const Carouselview = props => {
         <Grid
           item
           container
-          alignItems="top"
           xs={12}
           md={6}
           lg={6}
@@ -289,7 +286,6 @@ const Carouselview = props => {
           container
           className={classes.whitebg}
           justify="flex-start"
-          alignItems="top"
           xs={12}
           md={6}
           lg={6}
@@ -313,7 +309,6 @@ const Carouselview = props => {
         <Grid
           item
           container
-          alignItems="top"
           xs={12}
           md={6}
           lg={6}
@@ -325,7 +320,6 @@ const Carouselview = props => {
           container
           className={classes.whitebg}
           justify="flex-start"
-          alignItems="top"
           xs={12}
           md={6}
           lg={6}

@@ -23,7 +23,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -47,15 +47,22 @@ const useStyles = makeStyles(theme => ({
   root: {},
   logo: {
     opacity: '1',
-    margin: '20px',
+    margin: '80px 5em',
     [theme.breakpoints.down('sm')]: {
       maxWidth: '25vw',
+      margin: '20px 2em',
     },
     [theme.breakpoints.down('md')]: {
       maxWidth: '20vw',
+      margin: '20px 3em 0',
     },
     [theme.breakpoints.up('md')]: {
       maxWidth: '11vw',
+      margin: '60px 1.5em 0',
+    },
+    [theme.breakpoints.up('lg')]: {
+      maxWidth: '11vw',
+      margin: '80px 3.5em 0',
     },
     [theme.breakpoints.up('xl')]: {
       maxWidth: '7vw',
@@ -65,19 +72,19 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     margin: '0 auto',
     padding: '8rem 0 0',
-    minHeight: '35em',
+    minHeight: '30em',
 
     [theme.breakpoints.down('lg')]: {
       padding: '4rem 0',
-      minHeight: '35em',
+      minHeight: '20em',
     },    
     [theme.breakpoints.down('md')]: {
       padding: '4rem 0 0',
-      minHeight: '20em',
+      minHeight: '17em',
     },
     [theme.breakpoints.down('sm')]: {
       padding: '3rem 0 0',
-      minHeight: '30em',
+      minHeight: 'auto',
     },
   },
   listItem: {
@@ -114,6 +121,15 @@ const useStyles = makeStyles(theme => ({
       margin: '0 auto 5rem',
     },    
   },
+  parentp:{
+    display: 'block',
+    margin: '0 auto',
+    width: '100%'
+  },
+  childp:{
+    display: 'inline-block',
+    verticalAlign: 'middle',
+  }
 }));
 
 const Partners = props => {
@@ -128,15 +144,13 @@ const Partners = props => {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Grid container spaces={0}> 
-        <Grid item justify="flex-start" align="center" style={{margin:'0 7vw'}}>
+      <Grid container spaces={0} justify="flex-start"> 
+        <Grid item align="center" style={{margin:'0 7vw'}}>
         <Typography variant="h4">
           From connected services to commerce platforms, we provide you with the custom tools you need to emerge as a leader in your industry.
         </Typography>
         </Grid>
       </Grid>
-      <Grid container spaces={0}>
-
       <Box className={classes.navigationContainer}>
         <Box>
           <Tabs value={value} onChange={handleChange}>
@@ -148,77 +162,71 @@ const Partners = props => {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-            <Grid container justif="center" alignItems="center">
+            <Grid container justif="center" alignItems="center" className={classes.parentp}>
               {data1.map((item, index) => (
-                <Grid item xs={4} md={2} key={index}>
+                <Grid item xs={4} md={2} key={index} className={classes.childp}>
                     <embed
                       src={item.logo}
                       alt={item.name}
                       className={classes.logo}
-                      lazy={false}
                     />
                 </Grid>
               ))}
             </Grid>
         </TabPanel>
         <TabPanel value={value} index={1}>
-            <Grid container justif="center" alignItems="center">
+            <Grid container justif="center" alignItems="center" className={classes.parentp}>
               {data2.map((item, index) => (
-                <Grid item xs={4} md={2} key={index}>
+                <Grid item xs={4} md={2} key={index} className={classes.childp}>
                     <embed
                       src={item.logo}
                       alt={item.name}
                       className={classes.logo}
-                      lazy={false}
                     />
                 </Grid>
               ))}
             </Grid>
         </TabPanel>
         <TabPanel value={value} index={2}>
-            <Grid container justif="center" alignItems="center">
+            <Grid container justif="center" alignItems="center" className={classes.parentp}>
               {data3.map((item, index) => (
-                <Grid item xs={4} md={2} key={index}>
+                <Grid item xs={4} md={2} key={index} className={classes.childp}>
                     <embed
                       src={item.logo}
                       alt={item.name}
                       className={classes.logo}
-                      lazy={false}
                     />
                 </Grid>
               ))}
             </Grid>
         </TabPanel>
         <TabPanel value={value} index={3}>
-            <Grid container justif="center" alignItems="center">
+            <Grid container justif="center" alignItems="center" className={classes.parentp}>
               {data4.map((item, index) => (
-                <Grid item xs={4} md={2} key={index}>
+                <Grid item xs={4} md={2} key={index} className={classes.childp}>
                     <embed
                       src={item.logo}
                       alt={item.name}
                       className={classes.logo}
-                      lazy={false}
                     />
                 </Grid>
               ))}
             </Grid>
         </TabPanel>
         <TabPanel value={value} index={4}>
-            <Grid container justif="center" alignItems="center">
+            <Grid container justif="center" alignItems="center" className={classes.parentp}>
               {data5.map((item, index) => (
-                <Grid item xs={4} md={2} key={index}>
+                <Grid item xs={4} md={2} key={index} className={classes.childp}>
                     <embed
                       src={item.logo}
                       alt={item.name}
                       className={classes.logo}
-                      lazy={false}
                     />
                 </Grid>
               ))}
             </Grid>
         </TabPanel>
       </Box>
-      </Grid>
     </div>
   );
 };

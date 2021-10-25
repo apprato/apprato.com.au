@@ -98,7 +98,6 @@ const Hero = props => {
           item
           container
           justify="flex-start"
-          alignItems="top"
           xs={12}
           md={6}
           lg={6}

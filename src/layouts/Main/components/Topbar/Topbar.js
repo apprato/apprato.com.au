@@ -110,7 +110,6 @@ const Topbar = props => {
           <Grid
             item
             container
-            alignItems="left"
             xs={8}
             md={4}
             lg={3}
@@ -131,7 +130,6 @@ const Topbar = props => {
         <Grid
           item
           container
-          alignItems="left"
           justify="flex-end"
           xs={2}
           md={6}
@@ -142,7 +140,7 @@ const Topbar = props => {
           <Hidden smDown>
             <List className={classes.navigationContainer}>
               <ListItem className={classes.listItem}>
-                <Link to="home" smooth={true}>
+                <Link to="/" smooth={true}>
                   <Typography
                     variant="body1"
                     color="textSecondary"
