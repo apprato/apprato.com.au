@@ -1,8 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import Carousel from 'react-material-ui-carousel';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 import { Grid, Typography } from '@material-ui/core';
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 10000, min: 2880 },
+    items: 2,
+    slidesToSlide: 2,
+    partialVisibilityGutter: 0,
+  },
+    desktop: {
+    breakpoint: { max: 2880, min: 1024 },
+    items: 2,
+    slidesToSlide: 2,
+    partialVisibilityGutter: 0,
+  },
+  mobile: {
+    breakpoint: { max: 1024, min: 0 },
+    items: 1,
+    slidesToSlide: 1,
+    partialVisibilityGutter: 0,
+  }
+};
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -63,7 +85,8 @@ const useStyles = makeStyles(theme => ({
       display: 'block',
   },
   sectionstyle: {
-    marginBottom: '400px',
+    marginBottom: '200px',
+
     [theme.breakpoints.down('lg')]: {
       marginBottom: '100px',
     },    
@@ -72,12 +95,30 @@ const useStyles = makeStyles(theme => ({
     },    
     [theme.breakpoints.down('sm')]: {
       marginBottom: '25px',
-    },    
+    },
   },
 }));
 
 const Consultants = props => {
   const classes = useStyles();
+
+const CustomRightArrow = ({ onClick, ...rest }) => {
+  const {
+    onMove,
+    carouselState: { currentSlide, deviceType }
+  } = rest;
+  // onMove means if dragging or swiping in progress.
+  return <button class="react-multiple-carousel__arrow react-multiple-carousel__arrow--right" onClick={() => onClick()}><img src="./images/right.png" width="20" /></button>;
+};
+
+const CustomLeftArrow = ({ onClick, ...rest }) => {
+  const {
+    onMove,
+    carouselState: { currentSlide, deviceType }
+  } = rest;
+  // onMove means if dragging or swiping in progress.
+  return <button class="react-multiple-carousel__arrow react-multiple-carousel__arrow--left" onClick={() => onClick()}><img src="./images/left.png" width="20" /></button>;
+};
 
   return (
     <div className={classes.sectionstyle} name="team">
@@ -88,37 +129,25 @@ const Consultants = props => {
       >
       <Typography variant="h2">featured consultants.</Typography>
       </Grid>
-      <Grid
-        container
-        justify="space-between"
-      >
-      <Carousel
-      NextIcon={<img src="./images/right.png" width="20" alt=""/>}
-      PrevIcon={<img src="./images/left.png" width="20" alt=""/>}
-      className = 'consultantreel'
-      animation = 'fade'
-      autoPlay =  'false'
-      stopAutoPlayOnHover = 'true'
-      cycleNavigation = 'false'
-      navButtonsAlwaysVisible= 'false'
-      navButtonsProps={{
-        style: {
-            backgroundColor: 'transparent',
-            borderRadius: 0
-        }
-      }}
-      indicatorIconButtonProps={{
-        style: {
-            padding: '4px',
-            color: '#fff'
-        }
-      }}
-      activeIndicatorIconButtonProps={{
-        style: {
-            color: '#3377ff',
-        }
-      }}
-      >
+
+      <div className={classes.carouselContainer}>
+      <Carousel 
+        showDots={true}
+        infinite={true}
+        autoPlay={true}
+        autoPlaySpeed={5000}
+        keyBoardControl={true}
+        transitionDuration={500}
+        removeArrowOnDeviceType={[]}
+        responsive={responsive}
+        centerMode={false} 
+        ssr={false} 
+        partialVisible={false} 
+        renderButtonOutside={true}
+        customRightArrow={<CustomRightArrow />}
+        customLeftArrow={<CustomLeftArrow />}
+        >
+
       <Grid
         container
         justify="space-between"
@@ -129,9 +158,9 @@ const Consultants = props => {
           justify="flex-start"
           alignItems="center"
           xs={12}
-          md={2}
-          lg={3}
-          xl={3}
+          md={4}
+          lg={6}
+          xl={6}
           className={classes.imageroot}
         >
         <img src="../images/Jordan Pierce.png" className={classes.consultant} alt="Jordan Pierce"/>
@@ -142,9 +171,9 @@ const Consultants = props => {
           className={classes.consultantimage}
           justify="flex-start"
           xs={12}
-          md={4}
-          lg={3}
-          xl={3}
+          md={8}
+          lg={6}
+          xl={6}
         > 
         <Typography variant="h5" display="block">
           Jordan Pierce
@@ -161,15 +190,20 @@ const Consultants = props => {
           We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
         </Typography>
         </Grid>
+      </Grid>     
+        <Grid
+        container
+        justify="space-between"
+      >
         <Grid
           item
           container
           justify="flex-start"
           alignItems="center"
           xs={12}
-          md={2}
-          lg={3}
-          xl={3}
+          md={4}
+          lg={6}
+          xl={6}
           className={classes.imageroot}
         >
         <img src="../images/vishal panchal.png" className={classes.consultant} alt="Vishal Panchal"/>
@@ -180,14 +214,13 @@ const Consultants = props => {
           className={classes.consultantimage}
           justify="flex-start"
           xs={12}
-          md={4}
-          lg={3}
-          xl={3}
+          md={8}
+          lg={6}
+          xl={6}
         > 
         <Typography variant="h5" display="block">
           Vishal Panchal
         </Typography>
-
         <Typography variant="subtitle2" className={classes.subline}>
           Senior Software Developer
         </Typography>
@@ -200,10 +233,8 @@ const Consultants = props => {
           We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
         </Typography>
         </Grid>
-      </Grid>      
-      
-
-      <Grid
+      </Grid>     
+        <Grid
         container
         justify="space-between"
       >
@@ -213,9 +244,9 @@ const Consultants = props => {
           justify="flex-start"
           alignItems="center"
           xs={12}
-          md={2}
-          lg={3}
-          xl={3}
+          md={4}
+          lg={6}
+          xl={6}
           className={classes.imageroot}
         >
         <img src="../images/Jordan Pierce.png" className={classes.consultant} alt="Jordan Pierce"/>
@@ -226,9 +257,9 @@ const Consultants = props => {
           className={classes.consultantimage}
           justify="flex-start"
           xs={12}
-          md={4}
-          lg={3}
-          xl={3}
+          md={8}
+          lg={6}
+          xl={6}
         > 
         <Typography variant="h5" display="block">
           Jordan Pierce
@@ -245,15 +276,20 @@ const Consultants = props => {
           We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
         </Typography>
         </Grid>
+      </Grid>     
+        <Grid
+        container
+        justify="space-between"
+      >
         <Grid
           item
           container
           justify="flex-start"
           alignItems="center"
           xs={12}
-          md={2}
-          lg={3}
-          xl={3}
+          md={4}
+          lg={6}
+          xl={6}
           className={classes.imageroot}
         >
         <img src="../images/vishal panchal.png" className={classes.consultant} alt="Vishal Panchal"/>
@@ -264,14 +300,13 @@ const Consultants = props => {
           className={classes.consultantimage}
           justify="flex-start"
           xs={12}
-          md={4}
-          lg={3}
-          xl={3}
+          md={8}
+          lg={6}
+          xl={6}
         > 
         <Typography variant="h5" display="block">
           Vishal Panchal
         </Typography>
-
         <Typography variant="subtitle2" className={classes.subline}>
           Senior Software Developer
         </Typography>
@@ -284,9 +319,9 @@ const Consultants = props => {
           We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
         </Typography>
         </Grid>
-      </Grid>
-    </Carousel>
-    </Grid>
+      </Grid>     
+      </Carousel>
+      </div>
     </div>
   );
 };

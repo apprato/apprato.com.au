@@ -48,13 +48,13 @@ const useStyles = makeStyles(theme => ({
   logo: {
     opacity: '1',
     margin: '80px 5em',
-    [theme.breakpoints.down('sm')]: {
-      maxWidth: '25vw',
-      margin: '20px 2em',
-    },
     [theme.breakpoints.down('md')]: {
       maxWidth: '20vw',
       margin: '20px 3em 0',
+    },
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '20vw',
+      margin: '20px 1em',
     },
     [theme.breakpoints.up('md')]: {
       maxWidth: '11vw',

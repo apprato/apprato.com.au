@@ -31,14 +31,43 @@
     font-display: swap;
 }
 
-@media only screen and (max-width: 1024px) {
-    .consultantreel .Carousel-buttonWrapper-60 .MuiIconButton-root {
-        display: none;
-    }
+
+.react-multiple-carousel__arrow--left{display: none;}
+.react-multi-carousel-dot button{
+    border-color: #fff;
+    background: #fff;
 }
+.react-multi-carousel-dot button:hover:active,
+.react-multi-carousel-dot--active button{
+    border-color: #3377ff;
+    background: #3377ff;
+}
+.react-multiple-carousel__arrow--right,
+.react-multiple-carousel__arrow--left{
+    background: none !important;
+}
+.react-multiple-carousel__arrow--right::before,
+.react-multiple-carousel__arrow--left::before{
+    content: '' !important;
+}
+
 @media only screen and (min-width: 1024px) {
     .consultantreel {
       margin: 0 -4em;
       padding: 0 4em;
+    }
+    .react-multi-carousel-list,
+    .react-multi-carousel-track {
+        padding-bottom: 3em;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .consultantreel > div:nth-child(4n+3),
+    .consultantreel > div:nth-child(4n+2) {
+        display: none;
+    }
+    .react-multi-carousel-list,
+    .react-multi-carousel-track {
+        padding-bottom: 2vw;
     }
 }
