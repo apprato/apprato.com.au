@@ -50,7 +50,7 @@ const SidebarNav = props => {
         </ListItemIcon>
       </ListItem>
         <ListItem className={classes.listItem}>
-        <Link to="home" smooth={true}>
+        <Link to="home" smooth={true} onClick={onClose}>
           <Typography
             variant="body1"
             color="textSecondary"
@@ -61,7 +61,7 @@ const SidebarNav = props => {
           </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
-          <Link to="about" smooth={true} duration={2500}>
+          <Link to="about" smooth={true} duration={2500} onClick={onClose}>
           <Typography
             variant="body1"
             color="textSecondary"
@@ -72,7 +72,7 @@ const SidebarNav = props => {
           </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
-        <Link to="services" smooth={true} duration={2500}>
+        <Link to="services" smooth={true} duration={2500} onClick={onClose}>
           <Typography
             variant="body1"
             color="textSecondary"
@@ -83,7 +83,7 @@ const SidebarNav = props => {
           </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
-        <Link to="team" smooth={true} duration={2500}>
+        <Link to="team" smooth={true} duration={2500} onClick={onClose}>
           <Typography
             variant="body1"
             color="textSecondary"
@@ -94,7 +94,7 @@ const SidebarNav = props => {
           </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
-        <Link to="case-studies" smooth={true} duration={2500}>
+        <Link to="case-studies" smooth={true} duration={2500} onClick={onClose}>
           <Typography
             variant="body1"
             color="textSecondary"
@@ -111,7 +111,7 @@ const SidebarNav = props => {
           color="primary"
           fullWidth
         >
-          <Link to="contact" smooth={true} duration={2500}>Contact</Link>
+          <Link to="contact" smooth={true} duration={2500} onClick={onClose}>Contact</Link>
         </Button>
       </ListItem>
     </List>
