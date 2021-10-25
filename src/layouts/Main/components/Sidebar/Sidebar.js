@@ -27,6 +27,8 @@ const Sidebar = props => {
 
   return (
     <Drawer
+      ModalProps={{disableRestoreFocus: true}} disableRestoreFocus
+      disableScrollLock={true}
       anchor="left"
       classes={{ paper: classes.drawer }}
       onClose={onClose}
