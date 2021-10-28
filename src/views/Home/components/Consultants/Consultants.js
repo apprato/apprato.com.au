@@ -163,7 +163,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
           xl={6}
           className={classes.imageroot}
         >
-        <img src="../images/Jordan Pierce.png" className={classes.consultant} alt="Jordan Pierce"/>
+        <img src="../images/consultants/Jordan.png" className={classes.consultant} alt="Jordan Pierce"/>
         </Grid>
         <Grid
           item
@@ -179,6 +179,44 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
           Jordan Pierce
         </Typography>
         <Typography variant="subtitle2" className={classes.subline}>
+          General Manager
+        </Typography>
+        <Typography variant="h6">
+          Jordan is a seasoned technology leader and systems developer, with experience in both the commercial and government sectors. Jordan is MBA graduate with extensive experience in developing all aspects of eCommerce businesses.
+        </Typography>
+        </Grid>
+      </Grid>     
+      <Grid
+        container
+        justify="space-between"
+      >
+        <Grid
+          item
+          container
+          justify="flex-start"
+          alignItems="center"
+          xs={12}
+          md={4}
+          lg={6}
+          xl={6}
+          className={classes.imageroot}
+        >
+        <img src="../images/consultants/Stephen.png" className={classes.consultant} alt="Stephen Goudie"/>
+        </Grid>
+        <Grid
+          item
+          container
+          className={classes.consultantimage}
+          justify="flex-start"
+          xs={12}
+          md={8}
+          lg={6}
+          xl={6}
+        > 
+        <Typography variant="h5" display="block">
+          Stephen Goudie
+        </Typography>
+        <Typography variant="subtitle2" className={classes.subline}>
           Senior Software Developer
         </Typography>
         <Typography variant="subtitle1">
@@ -187,7 +225,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
           System Integration<br/><br/>
         </Typography>
         <Typography variant="h6">
-          We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
+          Stephen has worked as a software engineer for several leading Australian companies both externally, client side and as an independent contractor and consultant. With over 10 years of IT experience particularly in the e-commerce space he is a qualified specialist in Magento 1 & 2 – one of the largest platforms in the world. He is a passionate full stack developer with skills in App Development, DevOps, integration and cloud systems.
         </Typography>
         </Grid>
       </Grid>     
@@ -206,7 +244,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
           xl={6}
           className={classes.imageroot}
         >
-        <img src="../images/vishal panchal.png" className={classes.consultant} alt="Vishal Panchal"/>
+        <img src="../images/consultants/Vishal.png" className={classes.consultant} alt="Vishal Panchal"/>
         </Grid>
         <Grid
           item
@@ -222,12 +260,10 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
           Vishal Panchal
         </Typography>
         <Typography variant="subtitle2" className={classes.subline}>
-          Senior Software Developer
+          Software Developer
         </Typography>
         <Typography variant="subtitle1">
           Adobe Certifed Developer<br/>
-          AWS Certified<br/>
-          System Integration<br/><br/>
         </Typography>
         <Typography variant="h6">
           We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
@@ -249,7 +285,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
           xl={6}
           className={classes.imageroot}
         >
-        <img src="../images/Jordan Pierce.png" className={classes.consultant} alt="Jordan Pierce"/>
+        <img src="../images/consultants/Jim.png" className={classes.consultant} alt="Jim Atanasovski"/>
         </Grid>
         <Grid
           item
@@ -262,18 +298,13 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
           xl={6}
         > 
         <Typography variant="h5" display="block">
-          Jordan Pierce
+          Jim Atanasovski
         </Typography>
         <Typography variant="subtitle2" className={classes.subline}>
-          Senior Software Developer
-        </Typography>
-        <Typography variant="subtitle1">
-          Adobe Certifed Developer<br/>
-          AWS Certified<br/>
-          System Integration<br/><br/>
+          Senior Designer
         </Typography>
         <Typography variant="h6">
-          We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
+          Building on 15 years agency experience across brand, creative and design, Jim helps businesses build value, purpose and direction through experiences that engage and convert.
         </Typography>
         </Grid>
       </Grid>     
@@ -292,7 +323,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
           xl={6}
           className={classes.imageroot}
         >
-        <img src="../images/vishal panchal.png" className={classes.consultant} alt="Vishal Panchal"/>
+        <img src="../images/consultants/Johnathan.png" className={classes.consultant} alt="Johnathan Encavey"/>
         </Grid>
         <Grid
           item
@@ -305,18 +336,13 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
           xl={6}
         > 
         <Typography variant="h5" display="block">
-          Vishal Panchal
+          Johnathan Encavey
         </Typography>
         <Typography variant="subtitle2" className={classes.subline}>
-          Senior Software Developer
-        </Typography>
-        <Typography variant="subtitle1">
-          Adobe Certifed Developer<br/>
-          AWS Certified<br/>
-          System Integration<br/><br/>
+          Project manager and client manager
         </Typography>
         <Typography variant="h6">
-          We can help you transform an idea into a viable product by defining your business goals and building a roadmap to the best possible solution.
+          His Role is to identify gaps in existing business that require a unique technical solution. If required, we will engage our team at Appsure and I will project manage the team to deliver whatever the solution is. Including Apps, CRM, back office processes, Websites, Social, Media, Marketing, PR
         </Typography>
         </Grid>
       </Grid>     
