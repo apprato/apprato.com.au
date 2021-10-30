@@ -333,7 +333,7 @@ const Carouselview = props => {
           Development
         </Typography>
         <Typography variant="h6">
-           ur online farmers market has a number of exciting benefits for farmers and customers alike. Firstly, all of our products are grown by local farmers and are available in their freshest possible condition. We avoid processing and packaging our various food products in order to maximise quality and freshness. Secondly, we understand that attending farmers markets can be difficult. Our online grocery shopping platform makes selling products easier for farmers and grocers who might not be able to attend a farmers market. The ability to buy groceries online also benefits customers, allowing them to enjoy the highest quality produce and enjoy fresh fruit and veg delivery.
+           Our online farmers market has a number of exciting benefits for farmers and customers alike. Firstly, all of our products are grown by local farmers and are available in their freshest possible condition. We avoid processing and packaging our various food products in order to maximise quality and freshness. Secondly, we understand that attending farmers markets can be difficult. Our online grocery shopping platform makes selling products easier for farmers and grocers who might not be able to attend a farmers market. The ability to buy groceries online also benefits customers, allowing them to enjoy the highest quality produce and enjoy fresh fruit and veg delivery.
         </Typography>
         </Grid>
       </Grid>            
