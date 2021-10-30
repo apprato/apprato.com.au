@@ -222,11 +222,11 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
         <Typography variant="subtitle1">
           Adobe Certifed Magento Developer<br/>
           AWS Certified<br/>
-          React / NodeJSr<br/>
+          React / NodeJS<br/>
           System Integrator<br/><br/>
         </Typography>
         <Typography variant="h6">
-          Stephen has worked as a software engineer for several leading Australian companies both externally, client side and as an independent contractor and consultant. With over 10 years of IT experience particularly in the e-commerce space as an export in the Magento platform. He is a passionate full stack developer with skills in App Development, React, NodeJs, AWS, DevOps, integration and cloud systems.
+          Stephen has worked as a software engineer for several leading Australian companies both externally, client side and as an independent contractor and consultant. With over 10 years of IT experience particularly in the e-commerce space as an expert in the Magento platform. He is a passionate full stack developer with skills in App Development, React, NodeJs, AWS, DevOps, integration and cloud systems.
         </Typography>
         </Grid>
       </Grid>     
