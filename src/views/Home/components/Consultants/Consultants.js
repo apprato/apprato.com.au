@@ -217,7 +217,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
           Stephen Goudie
         </Typography>
         <Typography variant="subtitle2" className={classes.subline}>
-          Senior Software Developer
+          Senior Software Engineer
         </Typography>
         <Typography variant="subtitle1">
           Adobe Certifed Magento Developer<br/>
