@@ -299,7 +299,7 @@ const Carouselview = props => {
           Development
         </Typography>
         <Typography variant="h6">
-          As part of the brand expansion, Apprato worked with Aquila to increase their digital reach and support their growing eCommerce requirements . We integrated Emarsys Omnichannel Customer Engagement Platform to allow Aquila to export data feeds and develop mail lists and record sales metric engagements with front-end engagement trackers. We updated the payment gateway to Braintree with Kount for AI Driven Fraud Protection. And implemented an Advanced Look Book Engine to show case seasonal fashion apparel.
+          Apprato assisted Adorn in augmenting their Development team to meet the appetite for their development goals.
         </Typography>
         </Grid>
       </Grid>            
