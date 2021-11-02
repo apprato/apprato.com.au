@@ -149,7 +149,7 @@ const Footer = props => {
               <span>
                 <LearnMoreLink
                 title="Discuss your project"
-                href="#"
+                href="mailto:hello@apprato.com.au"
                 typographyProps={{ variant: 'h5' }}
                 className={classes.learnmore}
               />
@@ -207,7 +207,7 @@ const Footer = props => {
             lg={4}
           >
           <a href="/" className={classes.sociallink}>Linkedin</a>
-          <a href="https://github.com/apprato" target="_blank" className={classes.sociallink}>Github</a>
+          <a href="https://github.com/apprato" rel="noreferrer" target="_blank" className={classes.sociallink}>Github</a>
           <a href="/" className={classes.sociallink}>Github</a>
           </Grid>          
         </Grid>

@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 import { SectionHeader } from 'components/molecules';
 import { LearnMoreLink, Image } from 'components/atoms';
+import { Link } from 'react-scroll';
 
 const useStyles = makeStyles(theme => ({
   heading: {
@@ -83,11 +84,12 @@ const Hero = props => {
             }
             subtitle="We leverage the power of partnerships, experience design and bespoke software development to drive digital transformation, eCommerce and product engineering initiatives."
             ctaGroup={[
+              <Link to="services" smooth={true} duration={2500}>
               <LearnMoreLink
                 title="Learn how"
                 href="#"
                 variant="h6"
-              />,
+              /></Link>,
             ]}
             align="left"
             disableGutter

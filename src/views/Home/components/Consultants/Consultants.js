@@ -135,7 +135,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
         showDots={true}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={5000}
+        autoPlaySpeed={20000}
         keyBoardControl={true}
         transitionDuration={500}
         removeArrowOnDeviceType={[]}
