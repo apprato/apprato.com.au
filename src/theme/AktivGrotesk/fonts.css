@@ -70,4 +70,10 @@
     .react-multi-carousel-track {
         padding-bottom: 2vw;
     }
+    .react-multiple-carousel__arrow--right,
+    .react-multiple-carousel__arrow--left{
+        top: 22vw;
+        position: absolute;
+        right: 5%;
+    }
 }

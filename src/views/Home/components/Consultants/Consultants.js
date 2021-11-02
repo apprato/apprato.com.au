@@ -103,21 +103,11 @@ const Consultants = props => {
   const classes = useStyles();
 
 const CustomRightArrow = ({ onClick, ...rest }) => {
-  const {
-    onMove,
-    carouselState: { currentSlide, deviceType }
-  } = rest;
-  // onMove means if dragging or swiping in progress.
-  return <button class="react-multiple-carousel__arrow react-multiple-carousel__arrow--right" onClick={() => onClick()}><img src="./images/right.png" width="20" /></button>;
+  return <button class="react-multiple-carousel__arrow react-multiple-carousel__arrow--right" onClick={() => onClick()}><img src="./images/right.png" width="20" alt="" /></button>;
 };
 
 const CustomLeftArrow = ({ onClick, ...rest }) => {
-  const {
-    onMove,
-    carouselState: { currentSlide, deviceType }
-  } = rest;
-  // onMove means if dragging or swiping in progress.
-  return <button class="react-multiple-carousel__arrow react-multiple-carousel__arrow--left" onClick={() => onClick()}><img src="./images/left.png" width="20" /></button>;
+  return <button class="react-multiple-carousel__arrow react-multiple-carousel__arrow--left" onClick={() => onClick()}><img src="./images/left.png" width="20" alt="" /></button>;
 };
 
   return (
@@ -132,6 +122,8 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
 
       <div className={classes.carouselContainer}>
       <Carousel 
+        swipeable={false}
+        draggable={false}
         showDots={true}
         infinite={true}
         autoPlay={true}

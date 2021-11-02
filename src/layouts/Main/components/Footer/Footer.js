@@ -208,7 +208,6 @@ const Footer = props => {
           >
           <a href="/" className={classes.sociallink}>Linkedin</a>
           <a href="https://github.com/apprato" rel="noreferrer" target="_blank" className={classes.sociallink}>Github</a>
-          <a href="/" className={classes.sociallink}>Github</a>
           </Grid>          
         </Grid>
         <Divider className={classes.devider} />

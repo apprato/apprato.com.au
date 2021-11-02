@@ -180,6 +180,7 @@ const Carouselview = props => {
       className = 'consultantreel'
       animation = 'fade'
       autoPlay =  'false'
+      swipe =  'false'
       interval = '20000'
       stopAutoPlayOnHover = 'true'
       cycleNavigation = 'false'
