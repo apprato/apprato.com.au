@@ -162,7 +162,7 @@ const Footer = props => {
       </Grid>
         <Typography variant="h6" className={classes.address}>
           <a href="mailto:hello@apprato.com.au">hello@apprato.com.au</a><br/>
-          <a href="tel:+6410477418257">Tel: +6410477418 257</a><br/>
+          <a href="tel:03 9046 8582">Tel: 03 9046 8582</a><br/>
           257 Chapel St, Prahran VIC 3181
         </Typography>
 
@@ -206,7 +206,7 @@ const Footer = props => {
             md={5}
             lg={4}
           >
-          <a href="/" className={classes.sociallink}>Linkedin</a>
+          <a href="https://www.linkedin.com/company/apprato" rel="noreferrer" target="_blank" className={classes.sociallink}>Linkedin</a>
           <a href="https://github.com/apprato" rel="noreferrer" target="_blank" className={classes.sociallink}>Github</a>
           </Grid>          
         </Grid>

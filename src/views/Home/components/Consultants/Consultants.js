@@ -155,7 +155,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
           xl={6}
           className={classes.imageroot}
         >
-        <img src="../images/consultants/Jordan.png" className={classes.consultant} alt="Jordan Pierce"/>
+        <img src="../images/consultants/Jordan.png" className={classes.consultant} alt="Jordan Pearce"/>
         </Grid>
         <Grid
           item
@@ -168,7 +168,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
           xl={6}
         > 
         <Typography variant="h5" display="block">
-          Jordan Pierce
+          Jordan Pearce
         </Typography>
         <Typography variant="subtitle2" className={classes.subline}>
           General Manager
@@ -335,7 +335,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
           Project manager and client manager
         </Typography>
         <Typography variant="h6">
-          His Role is to identify gaps in existing business that require a unique technical solution. If required, we will engage our team at Appsure and I will project manage the team to deliver whatever the solution is. Including Apps, CRM, back office processes, Websites, Social, Media, Marketing, PR
+          His Role is to identify gaps in existing business that require a unique technical solution. If required, we will engage our team at Apprato and I will project manage the team to deliver whatever the solution is. Including Apps, CRM, back office processes, Websites, Social, Media, Marketing, PR
         </Typography>
         </Grid>
       </Grid>     
