@@ -122,12 +122,11 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
 
       <div className={classes.carouselContainer}>
       <Carousel 
-        swipeable={false}
-        draggable={false}
+        swipeable={true}
+        draggable={true}
         showDots={true}
         infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={20000}
+        autoPlay={false}
         keyBoardControl={true}
         transitionDuration={500}
         removeArrowOnDeviceType={[]}
