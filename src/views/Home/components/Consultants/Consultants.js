@@ -172,6 +172,10 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
         <Typography variant="subtitle2" className={classes.subline}>
           General Manager
         </Typography>
+        <Typography variant="subtitle1">
+          Enterprise Architect<br/>
+          AWS Certified<br/><br/>
+        </Typography>
         <Typography variant="h6">
           Jordan is a seasoned technology leader and systems developer, with experience in both the commercial and government sectors. Jordan is MBA graduate with extensive experience in developing all aspects of eCommerce businesses.
         </Typography>

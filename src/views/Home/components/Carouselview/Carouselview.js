@@ -259,7 +259,7 @@ const Carouselview = props => {
         > 
         <img src="images/casestudies/ACER_Logo.jpg"  className={classes.logoimage} alt="" />
         <Typography variant="h4" style={{width:'100%'}}>
-          Supporting  Aquilas growth
+          Upgrading ACERs Technology
         </Typography>
 
         <Typography variant="subtitle2">
@@ -293,14 +293,14 @@ const Carouselview = props => {
         > 
         <img src="images/casestudies/Adorn Cosmetics.png" className={classes.logoimage} alt="" />
         <Typography variant="h4" style={{width:'100%'}}>
-          Supporting  Aquilas growth
+          Aiding Adorns Development
         </Typography>
 
         <Typography variant="subtitle2">
-          Development
+          Consulting, Developing, Support & Scaling
         </Typography>
         <Typography variant="h6">
-          Apprato assisted Adorn in augmenting their Development team to meet the appetite for their development goals.
+          Apprato assisted Adorn in augmenting their Development team to meet the appetite for their development goals. We upgraded Adorns server infrastructure to support increased capacity for expected customer growth. Apprato debugged and correct Magento extensions to work with out issues with in their environment. We also reconfigured Adorns checkout to include AfterPay and implemented Facebook Catalogue Sync for extended marketing capability.
         </Typography>
         </Grid>
       </Grid>            
@@ -327,14 +327,14 @@ const Carouselview = props => {
         > 
         <img src="images/casestudies/farm2Market_Logo.svg" className={classes.logoimage} alt="" />
         <Typography variant="h4" style={{width:'100%'}}>
-          Supporting  Aquilas growth
+          Supporting Farm2markets Technology
         </Typography>
 
         <Typography variant="subtitle2">
-          Development
+          Develop Maintain Continuous Improvement
         </Typography>
         <Typography variant="h6">
-           Our online farmers market has a number of exciting benefits for farmers and customers alike. Firstly, all of our products are grown by local farmers and are available in their freshest possible condition. We avoid processing and packaging our various food products in order to maximise quality and freshness. Secondly, we understand that attending farmers markets can be difficult. Our online grocery shopping platform makes selling products easier for farmers and grocers who might not be able to attend a farmers market. The ability to buy groceries online also benefits customers, allowing them to enjoy the highest quality produce and enjoy fresh fruit and veg delivery.
+           Apprato has helped Farm2market by advising and planning their technology stack as part of their initial development process. We have been a continued technology partner of Farm2market from their inception when establishing their double-ended marketplace. We have helped to sustain their growth strategy with technology by implementing and customising integrations to reach more customers with promotional and loyalty software and complex transport integrations.
         </Typography>
         </Grid>
       </Grid>            
