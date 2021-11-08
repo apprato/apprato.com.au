@@ -263,7 +263,7 @@ const Carouselview = props => {
         </Typography>
 
         <Typography variant="subtitle2">
-          Development
+          Consulting, Developing, Support & Scaling
         </Typography>
         <Typography variant="h6">
           Apprato assisted A.C.E.R in Migrating and upgrading their old project from the Magento 1 platform to the Magento 2 platform. We also advised on solutions to better support Multiple auto scaling architecture and admin node processes of staging and production systems through continuous deployment & integration of ERP product stock, exporting data to financial systems and backorder & On Account processes.
