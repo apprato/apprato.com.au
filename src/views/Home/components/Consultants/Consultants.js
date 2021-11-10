@@ -225,6 +225,50 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
         </Typography>
         </Grid>
       </Grid>     
+
+      <Grid
+        container
+        justify="space-between"
+      >
+        <Grid
+          item
+          container
+          justify="flex-start"
+          alignItems="center"
+          xs={12}
+          md={4}
+          lg={6}
+          xl={6}
+          className={classes.imageroot}
+        >
+        <img src="../images/consultants/Anja.png" className={classes.consultant} alt="Anja Ishmuk"/>
+        </Grid>
+        <Grid
+          item
+          container
+          className={classes.consultantimage}
+          justify="flex-start"
+          xs={12}
+          md={8}
+          lg={6}
+          xl={6}
+        > 
+        <Typography variant="h5" display="block">
+          Anja Ishmuk
+        </Typography>
+        <Typography variant="subtitle2" className={classes.subline}>
+          Senior Software Engineer
+        </Typography>
+        <Typography variant="subtitle1">
+          React, React Native<br/>
+          NodeJS, Golang,<br/>
+          Solidity Blockchain<br/><br/>
+        </Typography>
+        <Typography variant="h6">
+          Full Stack Senior software engineer frontend leading experience in React, React Native (Headless desktop & mobile), blockchain , NodeJS, GoLang, AWS Services & Security expert.
+        </Typography>
+        </Grid>
+      </Grid>     
         <Grid
         container
         justify="space-between"

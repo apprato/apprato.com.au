@@ -325,7 +325,7 @@ const Carouselview = props => {
           md={6}
           lg={6}
         > 
-        <img src="images/casestudies/farm2Market_Logo.svg" className={classes.logoimage} alt="" />
+        <img src="images/casestudies/Farm2Market_Logo_B.W.svg" className={classes.logoimage} alt="" />
         <Typography variant="h4" style={{width:'100%'}}>
           Supporting Farm2markets Technology
         </Typography>
