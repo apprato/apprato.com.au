@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Section } from 'components/organisms';
 import {
+  Header,
   Hero,
   Experts,
   Readysetcode,
@@ -36,7 +37,7 @@ const Blog = () => {
   return (
     <div className={classes.root}>
         <Section className={classes.pagePaddingTop}>
-          <Hero />
+          <Header />
         </Section>
         <Section className={classes.pagePaddingTop}>
           <Experts />
