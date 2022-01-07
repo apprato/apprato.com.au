@@ -26,7 +26,7 @@ const Routes = () => {
       <RouteWithLayout
         component={BlogView}
         exact
-        layout={MinimalLayout}
+        layout={MainLayout}
         path="/blog"
       />
       <RouteWithLayout

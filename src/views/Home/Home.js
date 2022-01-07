@@ -15,7 +15,7 @@ import { sas1, sas2, sas3, sas4, sas5 } from './data';
 const useStyles = makeStyles(theme => ({
   root: {
     height: '100%',
-    width: '100%',    
+    width: '100%',
   },
   pagePaddingTop: {
     paddingTop: theme.spacing(3),
@@ -40,7 +40,7 @@ const Home = () => {
         </Section>
         <Section className={classes.pagePaddingTop}>
           <Experts />
-        </Section>        
+        </Section>
         <Section className={classes.pagePaddingTop}>
           <Readysetcode />
         </Section>
