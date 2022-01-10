@@ -1,15 +1,7 @@
 import React from "react"
 import {makeStyles} from "@material-ui/core/styles"
 import {Section} from "components/organisms"
-import {
-  Header,
-  Categories,
-  Experts,
-  Readysetcode,
-  Consultants,
-  Carouselview,
-  Partners,
-} from "./components"
+import {Header, Categories, SubscribeBottom} from "./components"
 
 import {sas1, sas2, sas3, sas4, sas5} from "./data"
 
@@ -40,6 +32,9 @@ const Blog = () => {
       </Section>
       <Section className={classes.pagePaddingTop}>
         <Categories />
+      </Section>
+      <Section className={classes.pagePaddingTop}>
+        <SubscribeBottom />
       </Section>
     </div>
   )
