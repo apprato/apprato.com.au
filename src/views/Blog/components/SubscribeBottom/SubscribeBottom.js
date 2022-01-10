@@ -6,6 +6,7 @@ import {Grid, Button, Link} from "@material-ui/core"
 import Box from "@material-ui/core/Box"
 import Typography from "@material-ui/core/Typography"
 import TextField from "@material-ui/core/TextField"
+import {spacing} from "@material-ui/system/spacing"
 
 const bull = (
   <Box
@@ -29,6 +30,20 @@ const classes = {
 }
 
 const useStyles = makeStyles((theme) => ({
+  textfield: {
+    [theme.breakpoints.up("xs")]: {
+      paddingBottom: "1.0rem",
+    },
+    [theme.breakpoints.up("md")]: {
+      paddingRight: "1.0em",
+    },
+    [theme.breakpoints.up("lg")]: {
+      paddingRight: "1.0em",
+    },
+    [theme.breakpoints.up("xl")]: {
+      paddingRight: "1.0em",
+    },
+  },
   heading: {
     "& h2": {
       [theme.breakpoints.down("md")]: {
@@ -89,6 +104,21 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#000000",
     },
   },
+  listItemButton: {
+    whiteSpace: "nowrap",
+    borderRadius: "16px",
+    minWidth: "15.375rem",
+    fontSize: "2rem",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "1.5rem",
+      minWidth: "10rem",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1rem",
+      minWidth: "8rem",
+    },
+    textTransform: "initial",
+  },
 }))
 
 const SubscribeBottom = (props) => {
@@ -109,7 +139,7 @@ const SubscribeBottom = (props) => {
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          <Typography variant="h4" component="div" gutterBottom>
+          <Typography variant="h3" component="div" gutterBottom>
             subscribe to our newsletter
           </Typography>
         </Grid>
@@ -138,9 +168,10 @@ const SubscribeBottom = (props) => {
           lg={3}
           xl={3}
           data-aos={"fade-up"}
-          className={classes.heading}
+          className={classes.textfield}
         >
           <TextField
+            fullWidth
             id="filled-search"
             label="Your First Name"
             type="search"
@@ -157,9 +188,10 @@ const SubscribeBottom = (props) => {
           lg={3}
           xl={3}
           data-aos={"fade-up"}
-          className={classes.heading}
+          className={classes.textfield}
         >
           <TextField
+            fullWidth
             id="filled-search"
             label="Your Last Name"
             type="search"
@@ -176,9 +208,10 @@ const SubscribeBottom = (props) => {
           lg={3}
           xl={3}
           data-aos={"fade-up"}
-          className={classes.heading}
+          className={classes.textfield}
         >
           <TextField
+            fullWidth
             id="filled-search"
             label="Your Email"
             type="search"
@@ -195,7 +228,7 @@ const SubscribeBottom = (props) => {
           lg={3}
           xl={3}
           data-aos={"fade-up"}
-          className={classes.heading}
+          className={classes.textfield}
         >
           <Button
             size="large"
@@ -204,7 +237,7 @@ const SubscribeBottom = (props) => {
             className={classes.listItemButton}
           >
             <Link to="contact" smooth={true} duration={2500}>
-              Contact
+              Submit
             </Link>
           </Button>
         </Grid>
