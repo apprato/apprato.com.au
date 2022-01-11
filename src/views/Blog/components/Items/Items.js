@@ -121,55 +121,54 @@ const useStyles = makeStyles((theme) => ({
 const Items = (props) => {
   const {className, ...rest} = props
   const classes = useStyles()
-
   const {loading, error, data} = useQuery(GET_POSTS)
-  /* if (loading) return <Loader /> */
+  if (loading) return <p>Loading Posts...</p>
   if (error) return <p>An error occured!</p>
 
-  console.log(data)
+  if (data) {
+    //    const listItems = items.map((item) => (
+    //      <li key={item.title}>{item.title}</li>
+    //    ))
+  }
+  let items = data.posts.nodes
+  console.log(items)
+
+  const post = data.posts.nodes[0]
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Grid container justify="space-between" className={classes.reversemob}>
-        <Grid
-          item
-          container
-          alignItems="center"
-          xs={12}
-          md={6}
-          lg={4}
-          xl={4}
-          data-aos={"fade-up"}
-          className={classes.heading}
-        >
-          <Card sx={{maxWidth: 345}} className={classes.items}>
-            <CardMedia component="img" height="140" image="" alt="" />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lizard
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">last week</Button>
-              <Button size="small">5 min read</Button>
-            </CardActions>
-          </Card>
-        </Grid>
+        {items.map((item) => (
+          <Grid
+            item
+            container
+            justify="flex-start"
+            xs={12}
+            md={6}
+            lg={6}
+            xl={6}
+            data-aos={"fade-up"}
+          >
+            <Card sx={{maxWidth: 345}} className={classes.items}>
+              <CardMedia component="img" height="140" image="" alt="" />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {item.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">last week</Button>
+                <Button size="small">5 min read</Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
 
-        <Grid
-          item
-          container
-          justify="flex-start"
-          xs={12}
-          md={6}
-          lg={6}
-          xl={6}
-          data-aos={"fade-up"}
-        ></Grid>
+        {items ? <p></p> : <p>{post.title}</p>}
       </Grid>
     </div>
   )
