@@ -1,18 +1,19 @@
-import React from 'react';
-import { Switch, Redirect } from 'react-router-dom';
+import React from "react"
+import {Switch, Redirect} from "react-router-dom"
 
-import { RouteWithLayout } from './common';
-import { Main as MainLayout, Minimal as MinimalLayout } from './layouts';
+import {RouteWithLayout} from "./common"
+import {Main as MainLayout, Minimal as MinimalLayout} from "./layouts"
 
 import {
   Home as HomeView,
   About as AboutView,
   Blog as BlogView,
+  BlogListing as BlogListingView,
   Services as ServicesView,
   Team as TeamView,
   CaseStudies as CaseStudiesView,
   Contact as ContactView,
-} from './views';
+} from "./views"
 
 const Routes = () => {
   return (
@@ -28,6 +29,12 @@ const Routes = () => {
         exact
         layout={MainLayout}
         path="/blog"
+      />
+      <RouteWithLayout
+        component={BlogListingView}
+        exact
+        layout={MainLayout}
+        path="/:slug"
       />
       <RouteWithLayout
         component={ServicesView}
@@ -55,7 +62,7 @@ const Routes = () => {
       />
       <Redirect to="/not-found" status="404" />
     </Switch>
-  );
-};
+  )
+}
 
-export default Routes;
+export default Routes

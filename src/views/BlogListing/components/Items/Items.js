@@ -153,7 +153,7 @@ const Items = (props) => {
             data-aos={"fade-up"}
             className={classes.heading}
           >
-            <Link to={`/${item.slug}`}>
+            <Link to={`/blog/${item.slug}`}>
               <Card sx={{maxWidth: 345}} className={classes.items}>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
