@@ -11,10 +11,10 @@ import CardActions from "@material-ui/core/CardActions"
 import CardContent from "@material-ui/core/CardContent"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
-import {gql} from "apollo-boost"
-import {graphql} from "react-apollo"
+import {gql} from "graphql-tag"
+import {useQuery, useMutation} from "@apollo/react-hooks"
 
-const getPosts = gql`
+const GET_POSTS = gql`
   {
     posts {
       nodes {
@@ -121,6 +121,12 @@ const useStyles = makeStyles((theme) => ({
 const Items = (props) => {
   const {className, ...rest} = props
   const classes = useStyles()
+
+  const {loading, error, data} = useQuery(GET_POSTS)
+  /* if (loading) return <Loader /> */
+  if (error) return <p>An error occured!</p>
+
+  console.log(data)
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>

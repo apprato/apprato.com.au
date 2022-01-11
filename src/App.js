@@ -1,6 +1,11 @@
 import React from "react"
-import ApolloClient from "apollo-boost"
-import {ApolloProvider} from "react-apollo"
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  useQuery,
+  gql,
+} from "@apollo/client"
 import {Router} from "react-router-dom"
 import {createBrowserHistory} from "history"
 import {ThemeProvider} from "@material-ui/core/styles"
@@ -42,6 +47,7 @@ const App = () => {
 
   const client = new ApolloClient({
     uri: "http://3.24.116.71/graphql",
+    cache: new InMemoryCache(),
   })
 
   return (
