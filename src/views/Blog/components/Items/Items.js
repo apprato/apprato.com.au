@@ -13,6 +13,8 @@ import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import {gql} from "graphql-tag"
 import {useQuery, useMutation} from "@apollo/react-hooks"
+import TextTruncate from "react-text-truncate"
+import {Link} from "react-router-dom"
 
 const GET_POSTS = gql`
   {
@@ -22,6 +24,7 @@ const GET_POSTS = gql`
         uri
         slug
         date
+        content
       }
     }
     pages {
@@ -125,15 +128,15 @@ const Items = (props) => {
   if (loading) return <p>Loading Posts...</p>
   if (error) return <p>An error occured!</p>
 
-  if (data) {
-    //    const listItems = items.map((item) => (
-    //      <li key={item.title}>{item.title}</li>
-    //    ))
-  }
   let items = data.posts.nodes
   console.log(items)
+  //              <CardMedia component="img" height="140" image="" alt="" />
 
-  const post = data.posts.nodes[0]
+  function removeHTML(str) {
+    var tmp = document.createElement("DIV")
+    tmp.innerHTML = str
+    return tmp.textContent || tmp.innerText || ""
+  }
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
@@ -144,31 +147,36 @@ const Items = (props) => {
             container
             justify="flex-start"
             xs={12}
-            md={6}
-            lg={6}
-            xl={6}
+            md={4}
+            lg={4}
+            xl={4}
             data-aos={"fade-up"}
+            className={classes.heading}
           >
-            <Card sx={{maxWidth: 345}} className={classes.items}>
-              <CardMedia component="img" height="140" image="" alt="" />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {item.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">last week</Button>
-                <Button size="small">5 min read</Button>
-              </CardActions>
-            </Card>
+            <Link to={`/blog/${item.slug}`}>
+              <Card sx={{maxWidth: 345}} className={classes.items}>
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {item.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    <TextTruncate
+                      line={3}
+                      element="span"
+                      truncateText="…"
+                      text={removeHTML(item.content)}
+                      textTruncateChild={<a href="#"></a>}
+                    />
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small">{item.date}</Button>
+                  <Button size="small">5 min read</Button>
+                </CardActions>
+              </Card>
+            </Link>
           </Grid>
         ))}
-
-        {items ? <p></p> : <p>{post.title}</p>}
       </Grid>
     </div>
   )
