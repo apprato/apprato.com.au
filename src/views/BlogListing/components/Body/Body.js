@@ -52,10 +52,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Header = (props) => {
+const Body = (props) => {
   const {className, ...rest} = props
   const classes = useStyles()
-  console.log("header props")
+  console.log("body props")
   console.log(props.post)
   const post = props.post
 
@@ -67,19 +67,13 @@ const Header = (props) => {
           container
           alignItems="center"
           xs={12}
-          md={6}
-          lg={6}
-          xl={6}
+          md={9}
+          lg={9}
+          xl={9}
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          <SectionHeader
-            title={post.title}
-            subtitle="The Apprato blog is the hub for developers, business owners, managers and entrepreneurs featuring technology, news, resources and insights that help run smarter application and eCommerce businesses."
-            align="left"
-            disableGutter
-            titleVariant="h2"
-          />
+          {post.content}
         </Grid>
         <Grid
           item
@@ -96,11 +90,11 @@ const Header = (props) => {
   )
 }
 
-Header.propTypes = {
+Body.propTypes = {
   /**
    * External classes
    */
   className: PropTypes.string,
 }
 
-export default Header
+export default Body

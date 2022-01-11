@@ -129,7 +129,6 @@ const Items = (props) => {
   if (error) return <p>An error occured!</p>
 
   let items = data.posts.nodes
-  console.log(items)
   //              <CardMedia component="img" height="140" image="" alt="" />
 
   function removeHTML(str) {

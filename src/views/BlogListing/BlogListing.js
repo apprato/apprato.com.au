@@ -1,7 +1,10 @@
 import React from "react"
 import {makeStyles} from "@material-ui/core/styles"
 import {Section} from "components/organisms"
-import {Header, Categories, Items, SubscribeBottom} from "./components"
+import {Header, Body, Items, SubscribeBottom} from "./components"
+import {gql} from "graphql-tag"
+import {useQuery} from "@apollo/react-hooks"
+import {useLocation} from "react-router-dom"
 
 import {sas1, sas2, sas3, sas4, sas5} from "./data"
 
@@ -22,16 +25,40 @@ const useStyles = makeStyles((theme) => ({
   shape: {},
 }))
 
+const GET_POST = gql`
+  {
+    post(
+      id: "how-to-enable-tab-to-complete-for-new-users-in-ubuntu"
+      idType: SLUG
+    ) {
+      title
+      uri
+      slug
+      date
+      content
+    }
+  }
+`
+
 const BlogListing = () => {
   const classes = useStyles()
+  const location = useLocation()
+
+  console.log(location.pathname)
+  const {loading, error, data} = useQuery(GET_POST)
+
+  if (loading) return <p>Loading Posts...</p>
+  if (error) return <p>An error occured!</p>
+
+  console.log(data)
 
   return (
     <div className={classes.root}>
       <Section className={classes.pagePaddingTop}>
-        <Header />
+        <Header post={data.post} />
       </Section>
       <Section className={classes.pagePaddingTop}>
-        <Items />
+        <Body post={data.post} />
       </Section>
       <Section className={classes.pagePaddingTop}>
         <SubscribeBottom />

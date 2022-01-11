@@ -12,7 +12,7 @@ import CardContent from "@material-ui/core/CardContent"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import {gql} from "graphql-tag"
-import {useQuery, useMutation} from "@apollo/react-hooks"
+import {useQuery} from "@apollo/react-hooks"
 import TextTruncate from "react-text-truncate"
 import {Link} from "react-router-dom"
 
@@ -129,7 +129,6 @@ const Items = (props) => {
   if (error) return <p>An error occured!</p>
 
   let items = data.posts.nodes
-  console.log(items)
   //              <CardMedia component="img" height="140" image="" alt="" />
 
   function removeHTML(str) {
