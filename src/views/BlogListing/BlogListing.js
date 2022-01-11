@@ -3,6 +3,7 @@ import {makeStyles} from "@material-ui/core/styles"
 import {Section} from "components/organisms"
 import {Header, Body, Items, SubscribeBottom} from "./components"
 import {gql} from "graphql-tag"
+import {Query} from "react-apollo"
 import {useQuery} from "@apollo/react-hooks"
 import {useLocation} from "react-router-dom"
 
@@ -25,26 +26,30 @@ const useStyles = makeStyles((theme) => ({
   shape: {},
 }))
 
-const GET_POST = gql`
-  {
-    post(
-      id: "how-to-enable-tab-to-complete-for-new-users-in-ubuntu"
-      idType: SLUG
-    ) {
-      title
-      uri
-      slug
-      date
-      content
-    }
-  }
-`
-
 const BlogListing = () => {
   const classes = useStyles()
   const location = useLocation()
 
-  console.log(location.pathname)
+  console.log("location.pathname")
+  console.log(location)
+  var path = location.pathname.slice(1)
+  console.log(path)
+
+  const GET_POST = gql`
+    {
+      post(
+        id: "${path}"
+        idType: SLUG
+      ) {
+        title
+        uri
+        slug
+        date
+        content
+      }
+    }
+  `
+
   const {loading, error, data} = useQuery(GET_POST)
 
   if (loading) return <p>Loading Posts...</p>

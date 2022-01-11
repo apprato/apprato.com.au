@@ -67,15 +67,15 @@ const Header = (props) => {
           container
           alignItems="center"
           xs={12}
-          md={6}
-          lg={6}
-          xl={6}
+          md={9}
+          lg={9}
+          xl={9}
           data-aos={"fade-up"}
           className={classes.heading}
         >
           <SectionHeader
             title={post.title}
-            subtitle="The Apprato blog is the hub for developers, business owners, managers and entrepreneurs featuring technology, news, resources and insights that help run smarter application and eCommerce businesses."
+            subtitle={post.excerpt}
             align="left"
             disableGutter
             titleVariant="h2"

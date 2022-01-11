@@ -73,7 +73,9 @@ const Body = (props) => {
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          {post.content}
+          <div>
+            <div dangerouslySetInnerHTML={{__html: post.content}} />
+          </div>
         </Grid>
         <Grid
           item
