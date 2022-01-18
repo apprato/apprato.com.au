@@ -34,6 +34,12 @@ const Routes = () => {
         component={BlogListingView}
         exact
         layout={MainLayout}
+        path="/blog/:category"
+      />
+      <RouteWithLayout
+        component={BlogListingView}
+        exact
+        layout={MainLayout}
         path="/:slug"
       />
       <RouteWithLayout

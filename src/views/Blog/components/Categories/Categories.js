@@ -10,6 +10,8 @@ import CardActions from "@material-ui/core/CardActions"
 import CardContent from "@material-ui/core/CardContent"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
+import {Link} from "react-router-dom"
+import {useParams} from "react-router-dom"
 
 const bull = (
   <Box
@@ -98,6 +100,7 @@ const useStyles = makeStyles((theme) => ({
 const Categories = (props) => {
   const {className, ...rest} = props
   const classes = useStyles()
+  const {categories} = useParams()
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
@@ -113,32 +116,74 @@ const Categories = (props) => {
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          <Card sx={{minWidth: 275}}>
-            <CardContent>
-              <Typography
-                sx={{fontSize: 14}}
-                color="text.secondary"
-                gutterBottom
-              ></Typography>
-              <img
-                src="../images/blog/categories/upgrading.png"
-                className={classes.myimg}
-                alt=""
-              />
-              <Typography variant="h5" component="div">
-                Upgrading
-              </Typography>
-              <Typography sx={{mb: 1.5}} color="text.secondary"></Typography>
-              <Typography variant="body2">
-                We can architect a robust and scaleable backend solution,
-                integrate and evolve an existing system.
-                <br />
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small"></Button>
-            </CardActions>
-          </Card>
+          <Link to={`/blog/upgrading`}>
+            <Card sx={{minWidth: 275}}>
+              <CardContent>
+                <Typography
+                  sx={{fontSize: 14}}
+                  color="text.secondary"
+                  gutterBottom
+                ></Typography>
+                <img
+                  src="../images/blog/categories/upgrading.png"
+                  className={classes.myimg}
+                  alt=""
+                />
+                <Typography variant="h5" component="div">
+                  Upgrading
+                </Typography>
+                <Typography sx={{mb: 1.5}} color="text.secondary"></Typography>
+                <Typography variant="body2">
+                  We can architect a robust and scaleable backend solution,
+                  integrate and evolve an existing system.
+                  <br />
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small"></Button>
+              </CardActions>
+            </Card>
+          </Link>
+        </Grid>
+        <Grid
+          item
+          container
+          alignItems="center"
+          xs={12}
+          md={6}
+          lg={4}
+          xl={4}
+          data-aos={"fade-up"}
+          className={classes.heading}
+        >
+          <Link to={`/blog/shipping`}>
+            <Card sx={{minWidth: 275}}>
+              <CardContent>
+                <Typography
+                  sx={{fontSize: 14}}
+                  color="text.secondary"
+                  gutterBottom
+                ></Typography>
+                <img
+                  src="../images/blog/categories/shipping.png"
+                  className={classes.myimg}
+                  alt=""
+                />
+                <Typography variant="h5" component="div">
+                  Shipping
+                </Typography>
+                <Typography sx={{mb: 1.5}} color="text.secondary"></Typography>
+                <Typography variant="body2">
+                  We can architect a robust and scaleable backend solution,
+                  integrate and evolve an existing system.
+                  <br />
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small"></Button>
+              </CardActions>
+            </Card>
+          </Link>
         </Grid>
 
         <Grid
@@ -152,32 +197,34 @@ const Categories = (props) => {
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          <Card sx={{minWidth: 275}}>
-            <CardContent>
-              <Typography
-                sx={{fontSize: 14}}
-                color="text.secondary"
-                gutterBottom
-              ></Typography>
-              <img
-                src="../images/blog/categories/shipping.png"
-                className={classes.myimg}
-                alt=""
-              />
-              <Typography variant="h5" component="div">
-                Shipping
-              </Typography>
-              <Typography sx={{mb: 1.5}} color="text.secondary"></Typography>
-              <Typography variant="body2">
-                We can architect a robust and scaleable backend solution,
-                integrate and evolve an existing system.
-                <br />
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small"></Button>
-            </CardActions>
-          </Card>
+          <Link to={`/blog/shipping`}>
+            <Card sx={{minWidth: 275}}>
+              <CardContent>
+                <Typography
+                  sx={{fontSize: 14}}
+                  color="text.secondary"
+                  gutterBottom
+                ></Typography>
+                <img
+                  src="../images/blog/categories/payment.png"
+                  className={classes.myimg}
+                  alt=""
+                />
+                <Typography variant="h5" component="div">
+                  Payment
+                </Typography>
+                <Typography sx={{mb: 1.5}} color="text.secondary"></Typography>
+                <Typography variant="body2">
+                  We can architect a robust and scaleable backend solution,
+                  integrate and evolve an existing system.
+                  <br />
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small"></Button>
+              </CardActions>
+            </Card>
+          </Link>
         </Grid>
 
         <Grid
@@ -191,32 +238,34 @@ const Categories = (props) => {
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          <Card sx={{minWidth: 275}}>
-            <CardContent>
-              <Typography
-                sx={{fontSize: 14}}
-                color="text.secondary"
-                gutterBottom
-              ></Typography>
-              <img
-                src="../images/blog/categories/payment.png"
-                className={classes.myimg}
-                alt=""
-              />
-              <Typography variant="h5" component="div">
-                Payment
-              </Typography>
-              <Typography sx={{mb: 1.5}} color="text.secondary"></Typography>
-              <Typography variant="body2">
-                We can architect a robust and scaleable backend solution,
-                integrate and evolve an existing system.
-                <br />
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small"></Button>
-            </CardActions>
-          </Card>
+          <Link to={`/blog/customisation`}>
+            <Card sx={{minWidth: 275}}>
+              <CardContent>
+                <Typography
+                  sx={{fontSize: 14}}
+                  color="text.secondary"
+                  gutterBottom
+                ></Typography>
+                <img
+                  src="../images/blog/categories/customisation.png"
+                  className={classes.myimg}
+                  alt=""
+                />
+                <Typography variant="h5" component="div">
+                  Customisation
+                </Typography>
+                <Typography sx={{mb: 1.5}} color="text.secondary"></Typography>
+                <Typography variant="body2">
+                  We can architect a robust and scaleable backend solution,
+                  integrate and evolve an existing system.
+                  <br />
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small"></Button>
+              </CardActions>
+            </Card>
+          </Link>
         </Grid>
 
         <Grid
@@ -230,32 +279,34 @@ const Categories = (props) => {
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          <Card sx={{minWidth: 275}}>
-            <CardContent>
-              <Typography
-                sx={{fontSize: 14}}
-                color="text.secondary"
-                gutterBottom
-              ></Typography>
-              <img
-                src="../images/blog/categories/customisation.png"
-                className={classes.myimg}
-                alt=""
-              />
-              <Typography variant="h5" component="div">
-                Customisation
-              </Typography>
-              <Typography sx={{mb: 1.5}} color="text.secondary"></Typography>
-              <Typography variant="body2">
-                We can architect a robust and scaleable backend solution,
-                integrate and evolve an existing system.
-                <br />
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small"></Button>
-            </CardActions>
-          </Card>
+          <Link to={`/blog/customisation`}>
+            <Card sx={{minWidth: 275}}>
+              <CardContent>
+                <Typography
+                  sx={{fontSize: 14}}
+                  color="text.secondary"
+                  gutterBottom
+                ></Typography>
+                <img
+                  src="../images/blog/categories/design.png"
+                  className={classes.myimg}
+                  alt=""
+                />
+                <Typography variant="h5" component="div">
+                  Design
+                </Typography>
+                <Typography sx={{mb: 1.5}} color="text.secondary"></Typography>
+                <Typography variant="body2">
+                  We can architect a robust and scaleable backend solution,
+                  integrate and evolve an existing system.
+                  <br />
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small"></Button>
+              </CardActions>
+            </Card>
+          </Link>
         </Grid>
 
         <Grid
@@ -269,71 +320,34 @@ const Categories = (props) => {
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          <Card sx={{minWidth: 275}}>
-            <CardContent>
-              <Typography
-                sx={{fontSize: 14}}
-                color="text.secondary"
-                gutterBottom
-              ></Typography>
-              <img
-                src="../images/blog/categories/design.png"
-                className={classes.myimg}
-                alt=""
-              />
-              <Typography variant="h5" component="div">
-                Design
-              </Typography>
-              <Typography sx={{mb: 1.5}} color="text.secondary"></Typography>
-              <Typography variant="body2">
-                We can architect a robust and scaleable backend solution,
-                integrate and evolve an existing system.
-                <br />
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small"></Button>
-            </CardActions>
-          </Card>
-        </Grid>
-
-        <Grid
-          item
-          container
-          alignItems="center"
-          xs={12}
-          md={6}
-          lg={4}
-          xl={4}
-          data-aos={"fade-up"}
-          className={classes.heading}
-        >
-          <Card sx={{minWidth: 275}}>
-            <CardContent>
-              <Typography
-                sx={{fontSize: 14}}
-                color="text.secondary"
-                gutterBottom
-              ></Typography>
-              <img
-                src="../images/blog/categories/startups.png"
-                className={classes.myimg}
-                alt=""
-              />
-              <Typography variant="h5" component="div">
-                Startups
-              </Typography>
-              <Typography sx={{mb: 1.5}} color="text.secondary"></Typography>
-              <Typography variant="body2">
-                We can architect a robust and scaleable backend solution,
-                integrate and evolve an existing system.
-                <br />
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small"></Button>
-            </CardActions>
-          </Card>
+          <Link to={`/blog/customisation`}>
+            <Card sx={{minWidth: 275}}>
+              <CardContent>
+                <Typography
+                  sx={{fontSize: 14}}
+                  color="text.secondary"
+                  gutterBottom
+                ></Typography>
+                <img
+                  src="../images/blog/categories/startups.png"
+                  className={classes.myimg}
+                  alt=""
+                />
+                <Typography variant="h5" component="div">
+                  Startups
+                </Typography>
+                <Typography sx={{mb: 1.5}} color="text.secondary"></Typography>
+                <Typography variant="body2">
+                  We can architect a robust and scaleable backend solution,
+                  integrate and evolve an existing system.
+                  <br />
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small"></Button>
+              </CardActions>
+            </Card>
+          </Link>
         </Grid>
 
         <Grid

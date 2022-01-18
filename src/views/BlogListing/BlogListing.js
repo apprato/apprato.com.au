@@ -33,7 +33,6 @@ const BlogListing = () => {
   console.log("location.pathname")
   console.log(location)
   var path = location.pathname.slice(1)
-  console.log(path)
 
   const GET_POST = gql`
     {
@@ -54,8 +53,6 @@ const BlogListing = () => {
 
   if (loading) return <p>Loading Posts...</p>
   if (error) return <p>An error occured!</p>
-
-  console.log(data)
 
   return (
     <div className={classes.root}>
