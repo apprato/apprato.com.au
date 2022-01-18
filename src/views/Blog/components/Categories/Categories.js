@@ -120,6 +120,11 @@ const Categories = (props) => {
                 color="text.secondary"
                 gutterBottom
               ></Typography>
+              <img
+                src="../images/blog/categories/upgrading.png"
+                className={classes.myimg}
+                alt=""
+              />
               <Typography variant="h5" component="div">
                 Upgrading
               </Typography>
@@ -154,6 +159,11 @@ const Categories = (props) => {
                 color="text.secondary"
                 gutterBottom
               ></Typography>
+              <img
+                src="../images/blog/categories/shipping.png"
+                className={classes.myimg}
+                alt=""
+              />
               <Typography variant="h5" component="div">
                 Shipping
               </Typography>
@@ -188,6 +198,11 @@ const Categories = (props) => {
                 color="text.secondary"
                 gutterBottom
               ></Typography>
+              <img
+                src="../images/blog/categories/payment.png"
+                className={classes.myimg}
+                alt=""
+              />
               <Typography variant="h5" component="div">
                 Payment
               </Typography>
@@ -222,6 +237,11 @@ const Categories = (props) => {
                 color="text.secondary"
                 gutterBottom
               ></Typography>
+              <img
+                src="../images/blog/categories/customisation.png"
+                className={classes.myimg}
+                alt=""
+              />
               <Typography variant="h5" component="div">
                 Customisation
               </Typography>
@@ -256,6 +276,11 @@ const Categories = (props) => {
                 color="text.secondary"
                 gutterBottom
               ></Typography>
+              <img
+                src="../images/blog/categories/design.png"
+                className={classes.myimg}
+                alt=""
+              />
               <Typography variant="h5" component="div">
                 Design
               </Typography>
@@ -290,6 +315,11 @@ const Categories = (props) => {
                 color="text.secondary"
                 gutterBottom
               ></Typography>
+              <img
+                src="../images/blog/categories/startups.png"
+                className={classes.myimg}
+                alt=""
+              />
               <Typography variant="h5" component="div">
                 Startups
               </Typography>
