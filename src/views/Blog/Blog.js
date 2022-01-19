@@ -34,9 +34,6 @@ const Blog = () => {
         <Categories />
       </Section>
       <Section className={classes.pagePaddingTop}>
-        <Items />
-      </Section>
-      <Section className={classes.pagePaddingTop}>
         <SubscribeBottom />
       </Section>
     </div>

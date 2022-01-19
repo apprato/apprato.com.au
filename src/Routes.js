@@ -9,6 +9,7 @@ import {
   About as AboutView,
   Blog as BlogView,
   BlogListing as BlogListingView,
+  BlogListingCategory as BlogListingCategoryView,
   Services as ServicesView,
   Team as TeamView,
   CaseStudies as CaseStudiesView,
@@ -31,7 +32,7 @@ const Routes = () => {
         path="/blog"
       />
       <RouteWithLayout
-        component={BlogListingView}
+        component={BlogListingCategoryView}
         exact
         layout={MainLayout}
         path="/blog/:category"

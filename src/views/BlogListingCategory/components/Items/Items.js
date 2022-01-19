@@ -16,24 +16,6 @@ import {useQuery, useMutation} from "@apollo/react-hooks"
 import TextTruncate from "react-text-truncate"
 import {Link} from "react-router-dom"
 
-const GET_POSTS = gql`
-  {
-    posts {
-      nodes {
-        title
-        uri
-        slug
-        date
-        content
-      }
-    }
-    pages {
-      nodes {
-        id
-      }
-    }
-  }
-`
 const bull = (
   <Box
     component="span"
@@ -124,12 +106,9 @@ const useStyles = makeStyles((theme) => ({
 const Items = (props) => {
   const {className, ...rest} = props
   const classes = useStyles()
-  const {loading, error, data} = useQuery(GET_POSTS)
-  if (loading) return <p>Loading Posts...</p>
-  if (error) return <p>An error occured!</p>
 
-  let items = data.posts.nodes
   //              <CardMedia component="img" height="140" image="" alt="" />
+  const posts = props.post.nodes
 
   function removeHTML(str) {
     var tmp = document.createElement("DIV")
@@ -140,7 +119,7 @@ const Items = (props) => {
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Grid container justify="space-between" className={classes.reversemob}>
-        {items.map((item) => (
+        {posts.map((item) => (
           <Grid
             item
             container
@@ -152,7 +131,7 @@ const Items = (props) => {
             data-aos={"fade-up"}
             className={classes.heading}
           >
-            <Link to={`/blog/${item.slug}`}>
+            <Link to={`/${item.slug}`}>
               <Card sx={{maxWidth: 345}} className={classes.items}>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">

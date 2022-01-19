@@ -55,8 +55,6 @@ const useStyles = makeStyles((theme) => ({
 const Body = (props) => {
   const {className, ...rest} = props
   const classes = useStyles()
-  console.log("body props")
-  console.log(props.post)
   const post = props.post
 
   return (
@@ -67,7 +65,8 @@ const Body = (props) => {
           container
           alignItems="center"
           xs={12}
-          md={9}
+          sm={12}
+          md={12}
           lg={9}
           xl={9}
           data-aos={"fade-up"}
