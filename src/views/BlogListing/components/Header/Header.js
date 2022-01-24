@@ -54,11 +54,14 @@ const useStyles = makeStyles((theme) => ({
     height: 75,
     width: 75,
     marginRight: "20px",
+    marginTop: "0rem",
   },
   author: {
     marginRight: "20px",
   },
+  authorGrid: {},
   banner: {
+    marginTop: "4rem",
     height: "100%",
     width: "100%",
   },
@@ -116,7 +119,7 @@ const Header = (props) => {
             lg={9}
             xl={9}
             data-aos={"fade-up"}
-            className={classes.heading}
+            className={classes.authorGrid}
           >
             <p className={classes.author}>
               <strong>
@@ -135,9 +138,7 @@ const Header = (props) => {
             lg={12}
             xl={12}
             data-aos={"fade-up"}
-          >
-            <img className={classes.banner} src={headerImage} />
-          </Grid>
+          ></Grid>
         </Grid>
         <Grid
           item

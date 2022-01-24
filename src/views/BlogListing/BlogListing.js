@@ -75,9 +75,6 @@ const BlogListing = () => {
       <Section className={classes.pagePaddingTop}>
         <Body post={data.post} />
       </Section>
-      <Section className={classes.pagePaddingTop}>
-        <SubscribeBottom />
-      </Section>
     </div>
   )
 }
