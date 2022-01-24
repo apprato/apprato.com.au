@@ -86,6 +86,9 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column-reverse",
     },
   },
+  cardLink: {
+    textDecoration: "none",
+  },
   categories: {
     margin: "5rem",
     backgroundColor: "#000000",
@@ -116,7 +119,7 @@ const Categories = (props) => {
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          <Link to={`/blog/upgrading`}>
+          <Link to={`/blog/upgrading`} className={classes.cardLink}>
             <Card sx={{minWidth: 275}}>
               <CardContent>
                 <Typography
@@ -156,7 +159,7 @@ const Categories = (props) => {
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          <Link to={`/blog/shipping`}>
+          <Link to={`/blog/shipping`} className={classes.cardLink}>
             <Card sx={{minWidth: 275}}>
               <CardContent>
                 <Typography
@@ -197,7 +200,7 @@ const Categories = (props) => {
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          <Link to={`/blog/shipping`}>
+          <Link to={`/blog/shipping`} className={classes.cardLink}>
             <Card sx={{minWidth: 275}}>
               <CardContent>
                 <Typography
@@ -238,7 +241,7 @@ const Categories = (props) => {
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          <Link to={`/blog/customisation`}>
+          <Link to={`/blog/customisation`} className={classes.cardLink}>
             <Card sx={{minWidth: 275}}>
               <CardContent>
                 <Typography
@@ -279,7 +282,7 @@ const Categories = (props) => {
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          <Link to={`/blog/customisation`}>
+          <Link to={`/blog/customisation`} className={classes.cardLink}>
             <Card sx={{minWidth: 275}}>
               <CardContent>
                 <Typography
@@ -320,7 +323,7 @@ const Categories = (props) => {
           data-aos={"fade-up"}
           className={classes.heading}
         >
-          <Link to={`/blog/customisation`}>
+          <Link to={`/blog/customisation`} className={classes.cardLink}>
             <Card sx={{minWidth: 275}}>
               <CardContent>
                 <Typography

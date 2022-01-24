@@ -92,6 +92,9 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column-reverse",
     },
   },
+  cardLink: {
+    textDecoration: "none",
+  },
   categories: {
     margin: "5rem",
     backgroundColor: "#000000",
@@ -131,7 +134,7 @@ const Items = (props) => {
             data-aos={"fade-up"}
             className={classes.heading}
           >
-            <Link to={`/${item.slug}`}>
+            <Link to={`/${item.slug}`} className={classes.cardLink}>
               <Card sx={{maxWidth: 345}} className={classes.items}>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
