@@ -29,9 +29,6 @@ const useStyles = makeStyles((theme) => ({
 const BlogListing = () => {
   const classes = useStyles()
   const location = useLocation()
-
-  console.log("location.pathname")
-  console.log(location)
   var path = location.pathname.slice(1)
 
   const GET_POST = gql`
@@ -41,6 +38,22 @@ const BlogListing = () => {
         idType: SLUG
       ) {
         title
+        featuredImage {
+          node {
+            id
+            link
+            mediaDetails {
+              file
+            }
+          }
+        }
+        author {
+          node {
+            firstName
+            lastName
+            name
+          }
+        }
         uri
         slug
         date
