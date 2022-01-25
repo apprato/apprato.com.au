@@ -31,11 +31,20 @@ const classes = {
 
 const useStyles = makeStyles((theme) => ({
   textfield: {
-    color: "#FFF",
+    color: "#666",
     background: "#FFF",
     backgroundColor: "#FFF",
     input: {
       color: "#FFF",
+      background: "#FFF",
+    },
+    "&:hover": {
+      background: "#FFF",
+    },
+    "&:visited": {
+      background: "#FFF",
+    },
+    "&:active": {
       background: "#FFF",
     },
   },
@@ -180,7 +189,12 @@ const SubscribeBottom = (props) => {
             label="Your First Name"
             type="search"
             variant="filled"
-            className={classes.textfield}
+            InputProps={{
+              className: classes.textfield,
+            }}
+            InputLabelProps={{
+              className: classes.textfield,
+            }}
           />
         </Grid>
 
@@ -200,7 +214,12 @@ const SubscribeBottom = (props) => {
             label="Your Last Name"
             type="search"
             variant="filled"
-            className={classes.textfield}
+            InputProps={{
+              className: classes.textfield,
+            }}
+            InputLabelProps={{
+              className: classes.textfield,
+            }}
           />
         </Grid>
 
@@ -220,7 +239,12 @@ const SubscribeBottom = (props) => {
             label="Your Email"
             type="search"
             variant="filled"
-            className={classes.textfield}
+            InputProps={{
+              className: classes.textfield,
+            }}
+            InputLabelProps={{
+              className: classes.textfield,
+            }}
           />
         </Grid>
 
