@@ -7,6 +7,9 @@ import Box from "@material-ui/core/Box"
 import Typography from "@material-ui/core/Typography"
 import TextField from "@material-ui/core/TextField"
 import {spacing} from "@material-ui/system/spacing"
+import {useState} from "react"
+import jsonp from "jsonp"
+import queryString from "query-string"
 
 const bull = (
   <Box
@@ -139,135 +142,184 @@ const SubscribeBottom = (props) => {
   const {className, ...rest} = props
   const classes = useStyles()
 
+  // create state variables for each input
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // http://eepurl.com/hS2FCL
+    // url: https://apprato.us20.list-manage.com/subscribe/post
+    // <input type="hidden" name="u" value="6057569a58ca23e4af3b36f76">
+    // <input type="hidden" name="id" value="d1fd48334b">
+    // <label for="MERGE0">Email Address <span class="req asterisk">*</span></label>
+    // <label for="MERGE1">First Name</label>
+    // <label for="MERGE2">Last Name</label>
+
+    const formData = {
+      EMAIL: email,
+      FNAME: firstName,
+      LNAME: lastName,
+    }
+    if (email == "" || firstName == "" || lastName == "") {
+      alert("Please enter your first name, last name and email address")
+    } else {
+      jsonp(
+        `https://apprato.us20.list-manage.com/subscribe/post-json?u=6057569a58ca23e4af3b36f76&amp;id=d1fd48334b&${queryString.stringify(
+          formData
+        )}`,
+        {param: "c"},
+        (err, data) => {
+          console.log("err:", err)
+          console.log("data:", data)
+        }
+      )
+      alert("Thank you for signingup to our newsletter")
+    }
+  }
+
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Grid container justify="space-between">
-        <Grid
-          item
-          container
-          alignItems="center"
-          xs={12}
-          md={12}
-          lg={12}
-          xl={12}
-          data-aos={"fade-up"}
-        >
-          <Typography variant="h3" component="div" gutterBottom>
-            subscribe to our newsletter
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          alignItems="center"
-          xs={12}
-          md={12}
-          lg={12}
-          xl={12}
-          data-aos={"fade-up"}
-        >
-          <Typography variant="p" component="div" gutterBottom>
-            Get news and insights to optimise your business through a
-            application development and smarter eCommerce
-            <br />
-            <br />
-            <br />
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          alignItems="center"
-          xs={12}
-          md={3}
-          lg={3}
-          xl={3}
-          data-aos={"fade-up"}
-          className={classes.textfieldGrid}
-        >
-          <TextField
-            fullWidth
-            id="filled-search"
-            label="Your First Name"
-            type="search"
-            variant="filled"
-            InputProps={{
-              className: classes.textfield,
-            }}
-            InputLabelProps={{
-              className: classes.textfield,
-            }}
-          />
-        </Grid>
-
-        <Grid
-          item
-          alignItems="center"
-          xs={12}
-          md={3}
-          lg={3}
-          xl={3}
-          data-aos={"fade-up"}
-          className={classes.textfieldGrid}
-        >
-          <TextField
-            fullWidth
-            id="filled-search"
-            label="Your Last Name"
-            type="search"
-            variant="filled"
-            InputProps={{
-              className: classes.textfield,
-            }}
-            InputLabelProps={{
-              className: classes.textfield,
-            }}
-          />
-        </Grid>
-
-        <Grid
-          item
-          alignItems="center"
-          xs={12}
-          md={3}
-          lg={3}
-          xl={3}
-          data-aos={"fade-up"}
-          className={classes.textfieldGrid}
-        >
-          <TextField
-            fullWidth
-            id="filled-search"
-            label="Your Email"
-            type="search"
-            variant="filled"
-            InputProps={{
-              className: classes.textfield,
-            }}
-            InputLabelProps={{
-              className: classes.textfield,
-            }}
-          />
-        </Grid>
-
-        <Grid
-          item
-          alignItems="center"
-          xs={12}
-          md={3}
-          lg={3}
-          xl={3}
-          data-aos={"fade-up"}
-          className={classes.textfieldGrid}
-        >
-          <Button
-            size="large"
-            variant="contained"
-            color="primary"
-            className={classes.listItemButton}
+      <form onSubmit={handleSubmit}>
+        <Grid container justify="space-between">
+          <Grid
+            item
+            container
+            alignItems="center"
+            xs={12}
+            md={12}
+            lg={12}
+            xl={12}
+            data-aos={"fade-up"}
           >
-            Submit
-          </Button>
+            <Typography variant="h3" component="div" gutterBottom>
+              subscribe to our newsletter
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            alignItems="center"
+            xs={12}
+            md={12}
+            lg={12}
+            xl={12}
+            data-aos={"fade-up"}
+          >
+            <Typography variant="p" component="div" gutterBottom>
+              Get news and insights to optimise your business through a
+              application development and smarter eCommerce
+              <br />
+              <br />
+              <br />
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            alignItems="center"
+            xs={12}
+            md={3}
+            lg={3}
+            xl={3}
+            data-aos={"fade-up"}
+            className={classes.textfieldGrid}
+          >
+            <TextField
+              required
+              fullWidth
+              id="FNAME"
+              label="First Name"
+              type="search"
+              variant="filled"
+              InputProps={{
+                className: classes.textfield,
+              }}
+              InputLabelProps={{
+                className: classes.textfield,
+              }}
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+          </Grid>
+
+          <Grid
+            item
+            alignItems="center"
+            xs={12}
+            md={3}
+            lg={3}
+            xl={3}
+            data-aos={"fade-up"}
+            className={classes.textfieldGrid}
+          >
+            <TextField
+              required
+              fullWidth
+              id="LNAME"
+              label="Last Name"
+              type="text"
+              variant="filled"
+              InputProps={{
+                className: classes.textfield,
+              }}
+              InputLabelProps={{
+                className: classes.textfield,
+              }}
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+          </Grid>
+
+          <Grid
+            item
+            alignItems="center"
+            xs={12}
+            md={3}
+            lg={3}
+            xl={3}
+            data-aos={"fade-up"}
+            className={classes.textfieldGrid}
+          >
+            <TextField
+              fullWidth
+              id="EMAIL"
+              label="Email"
+              type="text"
+              variant="filled"
+              InputProps={{
+                className: classes.textfield,
+              }}
+              InputLabelProps={{
+                className: classes.textfield,
+              }}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Grid>
+
+          <Grid
+            item
+            alignItems="center"
+            xs={12}
+            md={3}
+            lg={3}
+            xl={3}
+            data-aos={"fade-up"}
+            className={classes.textfieldGrid}
+          >
+            <Button
+              size="large"
+              variant="contained"
+              color="primary"
+              className={classes.listItemButton}
+              onClick={handleSubmit}
+            >
+              Submit
+            </Button>
+          </Grid>
         </Grid>
-      </Grid>
+      </form>
     </div>
   )
 }
