@@ -120,6 +120,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   subscribeRight: {
+    display: "none",
     padding: "2rem",
     backgroundColor: "#f8f9fe",
   },
@@ -290,6 +291,7 @@ const Body = (props) => {
               variant="contained"
               color="primary"
               className={classes.listItemButton}
+              href="mailto:contact@apprato.com.au"
             >
               Get in touch
             </Button>
