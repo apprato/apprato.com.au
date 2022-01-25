@@ -112,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "2rem",
   },
   body: {
-    paddingRight: "4rem",
+    backgroundColor: "#FFF",
   },
   right: {
     [theme.breakpoints.down("sm")]: {
@@ -126,6 +126,18 @@ const useStyles = makeStyles((theme) => ({
   subscribeRightText: {
     color: "#FFF",
   },
+  content: {
+    paddingTop: "1rem",
+    paddingLeft: "1rem",
+    paddingRight: "1rem",
+  },
+  bannerGrid: {
+    backgroundColor: "#FFF",
+    paddingTop: "1rem",
+    paddingLeft: "1rem",
+    paddingRight: "1rem",
+  },
+  contentGrid: {},
 }))
 
 const Body = (props) => {
@@ -159,11 +171,14 @@ const Body = (props) => {
             lg={12}
             xl={12}
             data-aos={"fade-up"}
+            className={classes.bannerGrid}
           >
             <img className={classes.banner} src={headerImage} />
           </Grid>
           <div>
-            <div dangerouslySetInnerHTML={{__html: post.content}} />
+            <div className={classes.content}>
+              <div dangerouslySetInnerHTML={{__html: post.content}} />
+            </div>
           </div>
         </Grid>
         <Grid

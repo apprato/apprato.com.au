@@ -77,7 +77,7 @@ const Header = (props) => {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Grid container justify="space-between" className={classes.reversemob}>
+      <Grid container justify="space-between">
         <Grid
           item
           container
@@ -87,7 +87,6 @@ const Header = (props) => {
           lg={9}
           xl={9}
           data-aos={"fade-up"}
-          className={classes.heading}
         >
           <SectionHeader
             title={post.title}
