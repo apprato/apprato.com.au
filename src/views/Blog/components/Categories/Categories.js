@@ -35,7 +35,7 @@ const classes = {
 }
 
 const useStyles = makeStyles((theme) => ({
-  heading: {
+  gridContainer: {
     "& h2": {
       [theme.breakpoints.down("md")]: {
         margin: "1.5em 0 0",
@@ -51,15 +51,15 @@ const useStyles = makeStyles((theme) => ({
       },
     },
     [theme.breakpoints.up("xs")]: {
-      paddingRight: "3rem",
-      paddingBottom: "3rem",
+      paddingRight: "0rem",
+      paddingBottom: "2rem",
     },
     [theme.breakpoints.up("md")]: {
-      paddingRight: "3rem",
+      paddingRight: "2rem",
       paddingBottom: "3rem",
     },
     [theme.breakpoints.up("lg")]: {
-      paddingRight: "7rem",
+      paddingRight: "3rem",
       paddingBottom: "3rem",
     },
     [theme.breakpoints.up("xl")]: {
@@ -89,6 +89,11 @@ const useStyles = makeStyles((theme) => ({
   cardLink: {
     textDecoration: "none",
   },
+  card: {
+    backgroundColor: "#FFF",
+    paddingLeft: "2rem",
+    paddingRight: "2rem",
+  },
   categories: {
     margin: "5rem",
     backgroundColor: "#000000",
@@ -97,6 +102,10 @@ const useStyles = makeStyles((theme) => ({
       margin: "5rem",
       backgroundColor: "#000000",
     },
+  },
+  icon: {
+    marginTop: "2rem",
+    marginBottom: "2rem",
   },
 }))
 
@@ -107,20 +116,19 @@ const Categories = (props) => {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Grid container justify="space-between" className={classes.reversemob}>
+      <Grid container justify="space-between">
         <Grid
           item
-          container
           alignItems="center"
           xs={12}
-          md={6}
+          md={4}
           lg={4}
           xl={4}
           data-aos={"fade-up"}
-          className={classes.heading}
+          className={classes.gridContainer}
         >
           <Link to={`/blog/upgrading`} className={classes.cardLink}>
-            <Card sx={{minWidth: 275}}>
+            <Card sx={{minWidth: 275}} className={classes.card}>
               <CardContent>
                 <Typography
                   sx={{fontSize: 14}}
@@ -129,7 +137,7 @@ const Categories = (props) => {
                 ></Typography>
                 <img
                   src="../images/blog/categories/upgrading.png"
-                  className={classes.myimg}
+                  className={classes.icon}
                   alt=""
                 />
                 <Typography variant="h5" component="div">
@@ -153,14 +161,14 @@ const Categories = (props) => {
           container
           alignItems="center"
           xs={12}
-          md={6}
+          md={4}
           lg={4}
           xl={4}
           data-aos={"fade-up"}
-          className={classes.heading}
+          className={classes.gridContainer}
         >
           <Link to={`/blog/shipping`} className={classes.cardLink}>
-            <Card sx={{minWidth: 275}}>
+            <Card sx={{minWidth: 275}} className={classes.card}>
               <CardContent>
                 <Typography
                   sx={{fontSize: 14}}
@@ -169,7 +177,7 @@ const Categories = (props) => {
                 ></Typography>
                 <img
                   src="../images/blog/categories/shipping.png"
-                  className={classes.myimg}
+                  className={classes.icon}
                   alt=""
                 />
                 <Typography variant="h5" component="div">
@@ -194,14 +202,14 @@ const Categories = (props) => {
           container
           alignItems="center"
           xs={12}
-          md={6}
+          md={4}
           lg={4}
           xl={4}
           data-aos={"fade-up"}
-          className={classes.heading}
+          className={classes.gridContainer}
         >
-          <Link to={`/blog/shipping`} className={classes.cardLink}>
-            <Card sx={{minWidth: 275}}>
+          <Link to={`/blog/payment`} className={classes.cardLink}>
+            <Card sx={{minWidth: 275}} className={classes.card}>
               <CardContent>
                 <Typography
                   sx={{fontSize: 14}}
@@ -210,7 +218,7 @@ const Categories = (props) => {
                 ></Typography>
                 <img
                   src="../images/blog/categories/payment.png"
-                  className={classes.myimg}
+                  className={classes.icon}
                   alt=""
                 />
                 <Typography variant="h5" component="div">
@@ -235,14 +243,14 @@ const Categories = (props) => {
           container
           alignItems="center"
           xs={12}
-          md={6}
+          md={4}
           lg={4}
           xl={4}
           data-aos={"fade-up"}
-          className={classes.heading}
+          className={classes.gridContainer}
         >
           <Link to={`/blog/customisation`} className={classes.cardLink}>
-            <Card sx={{minWidth: 275}}>
+            <Card sx={{minWidth: 275}} className={classes.card}>
               <CardContent>
                 <Typography
                   sx={{fontSize: 14}}
@@ -251,7 +259,7 @@ const Categories = (props) => {
                 ></Typography>
                 <img
                   src="../images/blog/categories/customisation.png"
-                  className={classes.myimg}
+                  className={classes.icon}
                   alt=""
                 />
                 <Typography variant="h5" component="div">
@@ -276,14 +284,14 @@ const Categories = (props) => {
           container
           alignItems="center"
           xs={12}
-          md={6}
+          md={4}
           lg={4}
           xl={4}
           data-aos={"fade-up"}
-          className={classes.heading}
+          className={classes.gridContainer}
         >
-          <Link to={`/blog/customisation`} className={classes.cardLink}>
-            <Card sx={{minWidth: 275}}>
+          <Link to={`/blog/design`} className={classes.cardLink}>
+            <Card sx={{minWidth: 275}} className={classes.card}>
               <CardContent>
                 <Typography
                   sx={{fontSize: 14}}
@@ -292,7 +300,7 @@ const Categories = (props) => {
                 ></Typography>
                 <img
                   src="../images/blog/categories/design.png"
-                  className={classes.myimg}
+                  className={classes.icon}
                   alt=""
                 />
                 <Typography variant="h5" component="div">
@@ -317,14 +325,14 @@ const Categories = (props) => {
           container
           alignItems="center"
           xs={12}
-          md={6}
+          md={4}
           lg={4}
           xl={4}
           data-aos={"fade-up"}
-          className={classes.heading}
+          className={classes.gridContainer}
         >
-          <Link to={`/blog/customisation`} className={classes.cardLink}>
-            <Card sx={{minWidth: 275}}>
+          <Link to={`/blog/startups`} className={classes.cardLink}>
+            <Card sx={{minWidth: 275}} className={classes.card}>
               <CardContent>
                 <Typography
                   sx={{fontSize: 14}}
@@ -333,7 +341,7 @@ const Categories = (props) => {
                 ></Typography>
                 <img
                   src="../images/blog/categories/startups.png"
-                  className={classes.myimg}
+                  className={classes.icon}
                   alt=""
                 />
                 <Typography variant="h5" component="div">

@@ -38,8 +38,12 @@ const classes = {
 }
 
 const useStyles = makeStyles((theme) => ({
-  items: {
-    backgroundColor: "#FFFFFF",
+  card: {
+    backgroundColor: "#FFF",
+    paddingLeft: "2rem",
+    paddingRight: "2rem",
+    paddingTop: "2rem",
+    paddingBottom: "2rem",
   },
   heading: {
     "& h2": {
@@ -135,7 +139,7 @@ const Items = (props) => {
             className={classes.heading}
           >
             <Link to={`/${item.slug}`} className={classes.cardLink}>
-              <Card sx={{maxWidth: 345}} className={classes.items}>
+              <Card sx={{maxWidth: 345}} className={classes.card}>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     {item.title}

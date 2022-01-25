@@ -31,6 +31,15 @@ const classes = {
 
 const useStyles = makeStyles((theme) => ({
   textfield: {
+    color: "#FFF",
+    background: "#FFF",
+    backgroundColor: "#FFF",
+    input: {
+      color: "#FFF",
+      background: "#FFF",
+    },
+  },
+  textfieldGrid: {
     [theme.breakpoints.up("xs")]: {
       paddingBottom: "1.0rem",
     },
@@ -95,16 +104,11 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column-reverse",
     },
   },
-  categories: {
-    margin: "5rem",
-    backgroundColor: "#000000",
-    [theme.breakpoints.down("xs")]: {
-      flexDirection: "column-reverse",
-      margin: "5rem",
-      backgroundColor: "#000000",
-    },
-  },
   listItemButton: {
+    padding: "10px",
+    "&:hover": {},
+    "&:link": {},
+    color: "white",
     whiteSpace: "nowrap",
     borderRadius: "16px",
     minWidth: "15.375rem",
@@ -118,6 +122,7 @@ const useStyles = makeStyles((theme) => ({
       minWidth: "8rem",
     },
     textTransform: "initial",
+    color: "#FFF",
   },
 }))
 
@@ -127,7 +132,7 @@ const SubscribeBottom = (props) => {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Grid container justify="space-between" className={classes.reversemob}>
+      <Grid container justify="space-between">
         <Grid
           item
           container
@@ -137,7 +142,6 @@ const SubscribeBottom = (props) => {
           lg={12}
           xl={12}
           data-aos={"fade-up"}
-          className={classes.heading}
         >
           <Typography variant="h3" component="div" gutterBottom>
             subscribe to our newsletter
@@ -145,30 +149,30 @@ const SubscribeBottom = (props) => {
         </Grid>
         <Grid
           item
-          container
           alignItems="center"
           xs={12}
           md={12}
           lg={12}
           xl={12}
           data-aos={"fade-up"}
-          className={classes.heading}
         >
           <Typography variant="p" component="div" gutterBottom>
-            Get news and insights to optimise your business througha application
-            development and smarter eCommerce
+            Get news and insights to optimise your business through a
+            application development and smarter eCommerce
+            <br />
+            <br />
+            <br />
           </Typography>
         </Grid>
         <Grid
           item
-          container
           alignItems="center"
           xs={12}
-          md={12}
+          md={3}
           lg={3}
           xl={3}
           data-aos={"fade-up"}
-          className={classes.textfield}
+          className={classes.textfieldGrid}
         >
           <TextField
             fullWidth
@@ -176,19 +180,19 @@ const SubscribeBottom = (props) => {
             label="Your First Name"
             type="search"
             variant="filled"
+            className={classes.textfield}
           />
         </Grid>
 
         <Grid
           item
-          container
           alignItems="center"
           xs={12}
-          md={12}
+          md={3}
           lg={3}
           xl={3}
           data-aos={"fade-up"}
-          className={classes.textfield}
+          className={classes.textfieldGrid}
         >
           <TextField
             fullWidth
@@ -196,19 +200,19 @@ const SubscribeBottom = (props) => {
             label="Your Last Name"
             type="search"
             variant="filled"
+            className={classes.textfield}
           />
         </Grid>
 
         <Grid
           item
-          container
           alignItems="center"
           xs={12}
-          md={12}
+          md={3}
           lg={3}
           xl={3}
           data-aos={"fade-up"}
-          className={classes.textfield}
+          className={classes.textfieldGrid}
         >
           <TextField
             fullWidth
@@ -216,19 +220,19 @@ const SubscribeBottom = (props) => {
             label="Your Email"
             type="search"
             variant="filled"
+            className={classes.textfield}
           />
         </Grid>
 
         <Grid
           item
-          container
           alignItems="center"
           xs={12}
-          md={12}
+          md={3}
           lg={3}
           xl={3}
           data-aos={"fade-up"}
-          className={classes.textfield}
+          className={classes.textfieldGrid}
         >
           <Button
             size="large"
@@ -236,9 +240,7 @@ const SubscribeBottom = (props) => {
             color="primary"
             className={classes.listItemButton}
           >
-            <Link to="contact" smooth={true} duration={2500}>
-              Submit
-            </Link>
+            Submit
           </Button>
         </Grid>
       </Grid>
