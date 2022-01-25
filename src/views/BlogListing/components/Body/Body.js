@@ -6,6 +6,26 @@ import {Grid, Typography, TextField, Button, Link} from "@material-ui/core"
 import {SectionHeader} from "components/molecules"
 
 const useStyles = makeStyles((theme) => ({
+  textfield: {
+    marginBottom: "1rem",
+    color: "#666",
+    background: "#FFF",
+    backgroundColor: "#FFF",
+    input: {
+      color: "#FFF",
+      background: "#FFF",
+      borderBottomColor: "#FFF",
+    },
+    "&:hover": {
+      background: "#FFF",
+    },
+    "&:visited": {
+      background: "#FFF",
+    },
+    "&:active": {
+      background: "#FFF",
+    },
+  },
   heading: {
     "& h2": {
       [theme.breakpoints.down("md")]: {
@@ -51,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   banner: {
-    marginTop: "4rem",
     height: "100%",
     width: "100%",
   },
@@ -89,15 +108,23 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   workTogether: {
-    backgroundColor: "#000000",
+    backgroundColor: "#1d2a3c",
+    padding: "2rem",
   },
   body: {
     paddingRight: "4rem",
   },
   right: {
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "none",
     },
+  },
+  subscribeRight: {
+    padding: "2rem",
+    backgroundColor: "#f8f9fe",
+  },
+  subscribeRightText: {
+    color: "#FFF",
   },
 }))
 
@@ -116,8 +143,8 @@ const Body = (props) => {
           item
           alignItems="center"
           xs={12}
-          sm={12}
-          md={12}
+          sm={9}
+          md={9}
           lg={9}
           xl={9}
           data-aos={"fade-up"}
@@ -157,101 +184,63 @@ const Body = (props) => {
             lg={12}
             xl={12}
             data-aos={"fade-up"}
+            className={classes.subscribeRight}
           >
             <Typography variant="h3" component="div" gutterBottom>
               subscribe to our newsletter
             </Typography>
-          </Grid>
-          <Grid
-            item
-            alignItems="center"
-            xs={12}
-            md={12}
-            lg={12}
-            xl={12}
-            data-aos={"fade-up"}
-          >
             <Typography variant="p" component="div" gutterBottom>
-              Get news and insights to optimise your business througha
+              Get news and insights to optimise your business through
               application development and smarter eCommerce
+              <br />
+              <br />
             </Typography>
-          </Grid>
-          <Grid
-            item
-            alignItems="center"
-            xs={12}
-            md={12}
-            lg={12}
-            xl={12}
-            data-aos={"fade-up"}
-            className={classes.textfield}
-          >
             <TextField
               fullWidth
               id="filled-search"
               label="Your First Name"
               type="search"
               variant="filled"
+              InputProps={{
+                className: classes.textfield,
+              }}
+              InputLabelProps={{
+                className: classes.textfield,
+              }}
             />
-          </Grid>
-
-          <Grid
-            item
-            alignItems="center"
-            xs={12}
-            md={12}
-            lg={12}
-            xl={12}
-            data-aos={"fade-up"}
-            className={classes.textfield}
-          >
             <TextField
               fullWidth
               id="filled-search"
               label="Your Last Name"
               type="search"
               variant="filled"
+              InputProps={{
+                className: classes.textfield,
+              }}
+              InputLabelProps={{
+                className: classes.textfield,
+              }}
             />
-          </Grid>
-
-          <Grid
-            item
-            alignItems="center"
-            xs={12}
-            md={12}
-            lg={12}
-            xl={12}
-            data-aos={"fade-up"}
-            className={classes.textfield}
-          >
             <TextField
               fullWidth
               id="filled-search"
               label="Your Email"
               type="search"
               variant="filled"
+              InputProps={{
+                className: classes.textfield,
+              }}
+              InputLabelProps={{
+                className: classes.textfield,
+              }}
             />
-          </Grid>
-
-          <Grid
-            item
-            alignItems="center"
-            xs={12}
-            md={12}
-            lg={12}
-            xl={12}
-            data-aos={"fade-up"}
-            className={classes.textfield}
-          >
             <Button
               size="large"
               variant="contained"
               color="primary"
               className={classes.listItemButton}
             >
-              <Link to="contact" smooth={true} duration={2500}>
-                Submit
-              </Link>
+              Subscribe
             </Button>
           </Grid>
 
@@ -265,12 +254,30 @@ const Body = (props) => {
             xl={12}
             className={classes.workTogether}
           >
-            <Typography variant="h3" component="div" gutterBottom>
+            <Typography
+              variant="h3"
+              component="div"
+              gutterBottom
+              className={classes.subscribeRightText}
+            >
               let's work together
             </Typography>
-            <Typography variant="h4" component="div" gutterBottom>
+            <Typography
+              variant="h4"
+              component="div"
+              gutterBottom
+              className={classes.subscribeRightText}
+            >
               Speak to a digital specialist now - not a salesman
             </Typography>
+            <Button
+              size="large"
+              variant="contained"
+              color="primary"
+              className={classes.listItemButton}
+            >
+              Get in touch
+            </Button>
           </Grid>
         </Grid>
       </Grid>
