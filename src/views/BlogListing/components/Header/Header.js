@@ -71,9 +71,6 @@ const Header = (props) => {
   const {className, ...rest} = props
   const classes = useStyles()
   const post = props.post
-  const headerImage =
-    "http://3.24.116.71/wp-content/uploads/" +
-    post.featuredImage.node.mediaDetails.file
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>

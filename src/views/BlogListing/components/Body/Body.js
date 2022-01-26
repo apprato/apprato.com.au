@@ -145,9 +145,6 @@ const Body = (props) => {
   const {className, ...rest} = props
   const classes = useStyles()
   const post = props.post
-  const headerImage =
-    "http://3.24.116.71/wp-content/uploads/" +
-    post.featuredImage.node.mediaDetails.file
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
@@ -174,7 +171,15 @@ const Body = (props) => {
             data-aos={"fade-up"}
             className={classes.bannerGrid}
           >
-            <img className={classes.banner} src={headerImage} />
+            {post.featuredImage != null ? (
+              <img
+                className={classes.banner}
+                src={
+                  "http://3.24.116.71/wp-content/uploads/" +
+                  post.featuredImage.node.mediaDetails.file
+                }
+              />
+            ) : null}
           </Grid>
           <div>
             <div className={classes.content}>

@@ -140,7 +140,7 @@ const Footer = (props) => {
                 <span>
                   <LearnMoreLink
                     title="Discuss your project"
-                    href="mailto:support@apprato.com.au"
+                    href="mailto:contact@apprato.com.au"
                     typographyProps={{variant: "h5"}}
                     className={classes.learnmore}
                   />
@@ -152,7 +152,7 @@ const Footer = (props) => {
           </Grid>
         </Grid>
         <Typography variant="h6" className={classes.address}>
-          <a href="mailto:support@apprato.com.au">hello@apprato.com.au</a>
+          <a href="mailto:contact@apprato.com.au">contact@apprato.com.au</a>
           <br />
           <a href="tel:03 9046 8582">Tel: 03 9046 8582</a>
           <br />
