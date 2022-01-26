@@ -184,7 +184,7 @@ const Topbar = (props) => {
                 </Link>
               </ListItem>
               <ListItem className={classes.listItem}>
-                <LinkHref href="/blog" smooth={true} duration={2500}>
+                <LinkHref to="/blog">
                   <Typography
                     variant="body1"
                     color="textSecondary"

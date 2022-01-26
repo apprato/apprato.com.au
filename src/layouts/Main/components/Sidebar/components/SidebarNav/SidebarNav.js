@@ -105,7 +105,7 @@ const SidebarNav = (props) => {
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <LinkHref href="/blog" smooth={true} duration={2500} onClick={onClose}>
+        <LinkHref to="/blog" onClick={onClose}>
           <Typography
             variant="body1"
             color="textSecondary"
