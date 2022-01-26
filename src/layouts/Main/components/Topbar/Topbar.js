@@ -13,7 +13,7 @@ import {
   IconButton,
   Button,
 } from "@material-ui/core"
-import {Link as LinkHref} from "@material-ui/core"
+import {Link as LinkHref} from "react-router-dom"
 
 import {Image} from "components/atoms"
 

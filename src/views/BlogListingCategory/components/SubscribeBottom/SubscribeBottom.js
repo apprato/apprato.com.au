@@ -192,7 +192,6 @@ const SubscribeBottom = (props) => {
             md={12}
             lg={12}
             xl={12}
-            data-aos={"fade-up"}
           >
             <Typography variant="h3" component="div" gutterBottom>
               subscribe to our newsletter
@@ -205,7 +204,6 @@ const SubscribeBottom = (props) => {
             md={12}
             lg={12}
             xl={12}
-            data-aos={"fade-up"}
           >
             <Typography variant="p" component="div" gutterBottom>
               Get news and insights to optimise your business through a
@@ -222,7 +220,6 @@ const SubscribeBottom = (props) => {
             md={3}
             lg={3}
             xl={3}
-            data-aos={"fade-up"}
             className={classes.textfieldGrid}
           >
             <TextField
@@ -250,7 +247,6 @@ const SubscribeBottom = (props) => {
             md={3}
             lg={3}
             xl={3}
-            data-aos={"fade-up"}
             className={classes.textfieldGrid}
           >
             <TextField
@@ -278,7 +274,6 @@ const SubscribeBottom = (props) => {
             md={3}
             lg={3}
             xl={3}
-            data-aos={"fade-up"}
             className={classes.textfieldGrid}
           >
             <TextField
@@ -305,7 +300,6 @@ const SubscribeBottom = (props) => {
             md={3}
             lg={3}
             xl={3}
-            data-aos={"fade-up"}
             className={classes.textfieldGrid}
           >
             <Button

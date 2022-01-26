@@ -13,7 +13,7 @@ import {
 } from "@material-ui/core"
 import CloseIcon from "@material-ui/icons/Close"
 import {Link} from "react-scroll"
-import {Link as LinkHref} from "@material-ui/core"
+import {Link as LinkHref} from "react-router-dom"
 
 const useStyles = makeStyles((theme) => ({
   root: {},
