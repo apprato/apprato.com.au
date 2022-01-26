@@ -50,6 +50,13 @@ const App = () => {
     cache: new InMemoryCache(),
   })
 
+  // Reload cache for safari mobile as when you click back and forward the susbcribe form doesn't work.
+  window.onpageshow = function(event) {
+    if (event.persisted) {
+      window.location.reload()
+    }
+  }
+
   return (
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
