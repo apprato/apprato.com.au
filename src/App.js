@@ -51,8 +51,19 @@ const App = () => {
   })
 
   // Reload cache for safari mobile as when you click back and forward the susbcribe form doesn't work.
+  if (!!window.performance && window.performance.navigation.type === 2) {
+    // value 2 means "The page was accessed by navigating into the history"
+    console.log("Reloading")
+    window.location.reload() // reload whole page
+    //$("iframe").attr("src", function(i, val) {
+    //  return val
+    // }) // reload only iframes
+  }
+
+  // reload whole page if page is cached
   window.onpageshow = function(event) {
     if (event.persisted) {
+      console.log("reload whole page")
       window.location.reload()
     }
   }
