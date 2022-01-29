@@ -45,17 +45,17 @@ browserHistory.listen((location) => {
         const element = document.getElementById(id)
         const options = {
           behavior: "smooth",
-          block: "start",
-          duration: 2000,
+          duration: 2300,
         }
         if (element) {
           element.scrollIntoView(options)
         }
-      }, 0)
+      }, 200)
     } else {
       // Issue with Safari subscribe form not loading on /blog pages when hitting the back button, so just refresh the browser in this case.
       if (window.location.href.indexOf("blog") > -1) {
-        window.location.reload()
+        //alert("..")
+        window.location.reload(false)
       }
     }
   })
