@@ -36,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
   divider: {
     width: "100%",
   },
+  sidebarNavLink: {
+    textUnderline: "none",
+  },
 }))
 
 const SidebarNav = (props) => {
@@ -50,7 +53,7 @@ const SidebarNav = (props) => {
         </ListItemIcon>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <LinkHref to="/" onClick={onClose}>
+        <LinkHref to="/" onClick={onClose} className={classes.sidebarNavLink}>
           <Typography
             variant="body1"
             color="textSecondary"

@@ -50,7 +50,7 @@ browserHistory.listen((location) => {
         if (element) {
           element.scrollIntoView(options)
         }
-      }, 500)
+      }, 1500)
     } else {
       // Issue with Safari subscribe form not loading on /blog pages when hitting the back button, so just refresh the browser in this case.
       if (window.location.href.indexOf("blog") > -1) {
