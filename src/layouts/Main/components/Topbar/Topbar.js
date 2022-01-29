@@ -129,7 +129,7 @@ const Topbar = (props) => {
           <Hidden smDown>
             <List className={classes.navigationContainer}>
               <ListItem className={classes.listItem}>
-                <Link to="/" smooth={true}>
+                <LinkHref to="/">
                   <Typography
                     variant="body1"
                     color="textSecondary"
@@ -137,10 +137,10 @@ const Topbar = (props) => {
                   >
                     Home
                   </Typography>
-                </Link>
+                </LinkHref>
               </ListItem>
               <ListItem className={classes.listItem}>
-                <Link to="about" smooth={true} duration={2500}>
+                <LinkHref to="/#about">
                   <Typography
                     variant="body1"
                     color="textSecondary"
@@ -148,10 +148,10 @@ const Topbar = (props) => {
                   >
                     About
                   </Typography>
-                </Link>
+                </LinkHref>
               </ListItem>
               <ListItem className={classes.listItem}>
-                <Link to="services" smooth={true} duration={2500}>
+                <LinkHref to="/#services">
                   <Typography
                     variant="body1"
                     color="textSecondary"
@@ -159,10 +159,10 @@ const Topbar = (props) => {
                   >
                     Services
                   </Typography>
-                </Link>
+                </LinkHref>
               </ListItem>
               <ListItem className={classes.listItem}>
-                <Link to="team" smooth={true} duration={2500}>
+                <LinkHref to="/#team">
                   <Typography
                     variant="body1"
                     color="textSecondary"
@@ -170,10 +170,10 @@ const Topbar = (props) => {
                   >
                     Team
                   </Typography>
-                </Link>
+                </LinkHref>
               </ListItem>
               <ListItem className={classes.listItem}>
-                <Link to="case-studies" smooth={true} duration={2500}>
+                <LinkHref to="/#case-studies">
                   <Typography
                     variant="body1"
                     color="textSecondary"
@@ -181,7 +181,7 @@ const Topbar = (props) => {
                   >
                     Case Studies
                   </Typography>
-                </Link>
+                </LinkHref>
               </ListItem>
               <ListItem className={classes.listItem}>
                 <LinkHref to="/blog">

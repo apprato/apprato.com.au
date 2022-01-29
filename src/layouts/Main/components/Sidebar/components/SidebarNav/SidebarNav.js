@@ -50,7 +50,7 @@ const SidebarNav = (props) => {
         </ListItemIcon>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="/" smooth={true} onClick={onClose}>
+        <LinkHref to="/" onClick={onClose}>
           <Typography
             variant="body1"
             color="textSecondary"
@@ -58,10 +58,10 @@ const SidebarNav = (props) => {
           >
             Home
           </Typography>
-        </Link>
+        </LinkHref>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="about" smooth={true} duration={2500} onClick={onClose}>
+        <LinkHref to="/#about" onClick={onClose}>
           <Typography
             variant="body1"
             color="textSecondary"
@@ -69,10 +69,10 @@ const SidebarNav = (props) => {
           >
             About
           </Typography>
-        </Link>
+        </LinkHref>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="services" smooth={true} duration={2500} onClick={onClose}>
+        <LinkHref to="/#services" onClick={onClose}>
           <Typography
             variant="body1"
             color="textSecondary"
@@ -80,10 +80,10 @@ const SidebarNav = (props) => {
           >
             Services
           </Typography>
-        </Link>
+        </LinkHref>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="team" smooth={true} duration={2500} onClick={onClose}>
+        <LinkHref to="/#team" onClick={onClose}>
           <Typography
             variant="body1"
             color="textSecondary"
@@ -91,10 +91,10 @@ const SidebarNav = (props) => {
           >
             Team
           </Typography>
-        </Link>
+        </LinkHref>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="case-studies" smooth={true} duration={2500} onClick={onClose}>
+        <LinkHref to="/#case-studies" onClick={onClose}>
           <Typography
             variant="body1"
             color="textSecondary"
@@ -102,7 +102,7 @@ const SidebarNav = (props) => {
           >
             Case Studies
           </Typography>
-        </Link>
+        </LinkHref>
       </ListItem>
       <ListItem className={classes.listItem}>
         <LinkHref to="/blog" onClick={onClose}>

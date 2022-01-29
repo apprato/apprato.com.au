@@ -6,7 +6,7 @@ import {
   useQuery,
   gql,
 } from "@apollo/client"
-import {Router} from "react-router-dom"
+import {Router, useLocation, useHistory} from "react-router-dom"
 import {createBrowserHistory} from "history"
 import {ThemeProvider} from "@material-ui/core/styles"
 import {Paper, CssBaseline} from "@material-ui/core"
@@ -22,6 +22,8 @@ import "aos/dist/aos.css"
 const browserHistory = createBrowserHistory()
 
 browserHistory.listen((location) => {
+  const hash = window.location.hash
+
   // Use setTimeout to make sure this runs after React Router's own listener
   setTimeout(() => {
     // Keep default behavior of restoring scroll position when user:
@@ -34,6 +36,25 @@ browserHistory.listen((location) => {
     }
     // In all other cases, scroll to top
     window.scrollTo(0, 0)
+
+    // Scroll to from other pages to home page ids
+    if (window.location.hash) {
+      // Fragment exists
+      setTimeout(() => {
+        const id = hash.replace("#", "")
+        const element = document.getElementById(id)
+        const options = {
+          behavior: "smooth",
+          block: "start",
+          duration: 2000,
+        }
+        if (element) {
+          element.scrollIntoView(options)
+        }
+      }, 0)
+    } else {
+      // Fragment doesn't exist
+    }
   })
 })
 
