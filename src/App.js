@@ -31,7 +31,7 @@ browserHistory.listen((location) => {
     // - clicked on a link that programmatically calls `history.goBack()`
     // - manually changed the URL in the address bar (here we might want
     // to scroll to top, but we can't differentiate it from the others)
-    if (location.action === "POP") {
+    if (window.location.action === "POP") {
       return
     }
     // In all other cases, scroll to top
@@ -53,14 +53,17 @@ browserHistory.listen((location) => {
         }
       }, 0)
     } else {
-      //window.location.reload(false)
-      // Reload cache for safari mobile as when you click back and forward the susbcribe form doesn't work.
-      window.onpageshow = function(event) {
-        if (event.persisted) {
-          console.log("reload whole page")
-          window.location.reload()
-        }
-      }
+      window.addEventListener(
+        "pageshow",
+        function(evt) {
+          if (evt.persisted) {
+            setTimeout(function() {
+              window.location.reload()
+            }, 10)
+          }
+        },
+        false
+      )
     }
   })
 })
