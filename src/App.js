@@ -53,17 +53,10 @@ browserHistory.listen((location) => {
         }
       }, 0)
     } else {
-      window.addEventListener(
-        "pageshow",
-        function(evt) {
-          if (evt.persisted) {
-            setTimeout(function() {
-              window.location.reload()
-            }, 10)
-          }
-        },
-        false
-      )
+      // Issue with Safari subscribe form not loading on /blog pages when hitting the back button, so just refresh the browser in this case.
+      if (window.location.href.indexOf("blog") > -1) {
+        window.location.reload()
+      }
     }
   })
 })
