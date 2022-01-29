@@ -54,6 +54,7 @@ browserHistory.listen((location) => {
       }, 0)
     } else {
       // Fragment doesn't exist
+      window.location.reload(false)
     }
   })
 })
