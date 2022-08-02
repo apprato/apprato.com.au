@@ -70,7 +70,7 @@ const App = () => {
   })
 
   const client = new ApolloClient({
-    uri: "http://3.24.116.71/graphql",
+    uri: "https://backend.apprato.com.au/graphql",
     cache: new InMemoryCache(),
   })
 
