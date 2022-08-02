@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import {
   ApolloClient,
   InMemoryCache,
@@ -18,6 +18,19 @@ import Routes from "./Routes"
 import "./theme/AktivGrotesk/fonts.css"
 import "react-lazy-load-image-component/src/effects/opacity.css"
 import "aos/dist/aos.css"
+
+/* Google Tag Manager
+import TagManager from "react-gtm-module"
+const tagManagerArgs = {
+  gtmId: "G-3SNKMGKWLV",
+}
+TagManager.initialize(tagManagerArgs)
+*/
+
+// Set up Google Analytics inside our project, GA needs to be initialized. This needs to be done before any of the other tracking functions will record any data.
+import ReactGA from "react-ga"
+const TRACKING_ID = "G-3SNKMGKWLV" // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID)
 
 const browserHistory = createBrowserHistory()
 
@@ -73,6 +86,10 @@ const App = () => {
     uri: "http://3.24.116.71/graphql",
     cache: new InMemoryCache(),
   })
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, [])
 
   return (
     <ApolloProvider client={client}>
