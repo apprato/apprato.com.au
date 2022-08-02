@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3ecfafc3.chunk.css",
+    "main.js": "/static/js/main.b4776e5b.chunk.js",
+    "runtime-main.js": "/static/js/runtime-main.91bf27bf.js",
+    "static/css/2.fc7edc18.chunk.css": "/static/css/2.fc7edc18.chunk.css",
+    "static/js/2.93745c8d.chunk.js": "/static/js/2.93745c8d.chunk.js",
+    "index.html": "/index.html",
+    "static/js/2.93745c8d.chunk.js.LICENSE.txt": "/static/js/2.93745c8d.chunk.js.LICENSE.txt",
+    "static/media/fonts.css": "/static/media/AktivGrotesk-Regular.d98e750c.svg",
+    "static/media/styles.css": "/static/media/revicons.e8746a62.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.91bf27bf.js",
+    "static/css/2.fc7edc18.chunk.css",
+    "static/js/2.93745c8d.chunk.js",
+    "static/css/main.3ecfafc3.chunk.css",
+    "static/js/main.b4776e5b.chunk.js"
+  ]
+}

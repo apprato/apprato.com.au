@@ -175,7 +175,7 @@ const Body = (props) => {
               <img
                 className={classes.banner}
                 src={
-                  "http://3.24.116.71/wp-content/uploads/" +
+                  "https://backend.apprato.com.au/wp-content/uploads/" +
                   post.featuredImage.node.mediaDetails.file
                 }
               />
