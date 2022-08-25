@@ -28,7 +28,6 @@ In the root folder there are 2 folders:
 - **|----theme** *In this folder there are overrides of the default color palette and typography coming from MUI*
 - **|----views** *All the views/pages that are available. Here are the combination and composition of re-usable components and pages representations.*
 
-
 ## Landing Pages Built For Customization
 
 Landing page examples can be used out of the box, but since they’re built on flexible components, you can also create new pages all your own with ease. Copy-paste a section here, a component there, switch up a few variables, and you have an entirely new landing!
